@@ -16,7 +16,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
     public void onClick(View v) {
         if (v.getId() == R.id.loginButton) {
-            Intent intent = new Intent(this, LoginAcitivity.class);
+            Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.registrationButton) {
 

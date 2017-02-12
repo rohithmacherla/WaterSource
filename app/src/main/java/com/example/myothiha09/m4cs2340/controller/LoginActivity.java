@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
-public class LoginAcitivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     EditText username;
     EditText password;
     @Override
