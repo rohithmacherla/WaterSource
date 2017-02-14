@@ -4,15 +4,13 @@
     android:id="@+id/activity_login_acitivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.myothiha09.m4cs2340.controller.controller.LoginActivity">
+    tools:context="com.example.myothiha09.m4cs2340.controller.controller.LoginActivity"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
@@ -26,14 +24,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:ems="10"
+            android:ems="13"
             android:id="@+id/userNameText" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
         <TextView
             android:text="Password"
             android:layout_width="wrap_content"
@@ -45,16 +44,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:ems="10"
+            android:ems="13"
             android:id="@+id/passwordText" />
     </LinearLayout>
-
-    <Button
-        android:text="Login"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/loginButton"
-        android:onClick="onLoginPressed" />
+        android:onClick="onLoginPressed"
+        android:elevation="24dp"
+        android:layout_marginRight="20dp" />
+
+    <Button
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:onClick="onCancelPressed"
+        android:paddingTop="10dp"
+        android:elevation="0dp"
+        android:layout_marginLeft="20dp" />
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

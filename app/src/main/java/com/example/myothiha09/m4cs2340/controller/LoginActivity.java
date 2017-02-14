@@ -30,6 +30,9 @@ public class LoginActivity extends AppCompatActivity {
             dialog.show();
         }
     }
+    public void onCancelPressed(View v) {
+        finish();
+    }
     private boolean checkPassword() {
         String username2 = username.getText().toString();
         String password2 = password.getText().toString();
