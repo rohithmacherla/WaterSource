@@ -1,11 +1,13 @@
 package com.example.myothiha09.m4cs2340.controller;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
@@ -30,6 +32,11 @@ public class RegistrationActivity extends AppCompatActivity {
         userType.setAdapter(adapter);
     }
     protected void onRegistrationPressed(View v) {
-        
+        if (password.getText().toString().length() < 6) {
+            Toast.makeText(getApplicationContext(), "Password requirement not met", Toast.LENGTH_LONG).show();
+        } else {
+            
+        }
+
     }
 }
