@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     public void onLoginPressed(View v) {
         if (checkPassword()) {
-            Intent intent = new Intent(this, MainScreen.class);
+            Intent intent = new Intent(this, MainScreenActivity.class);
             startActivity(intent);
         } else {
             AlertDialog dialog = createDialogBox();
