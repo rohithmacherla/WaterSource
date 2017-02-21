@@ -35,8 +35,14 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onRegistrationPressed(View v) {
         if (checkUsername()) {
             Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_LONG).show();
+        } else if (userName.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(), "Please input a username", Toast.LENGTH_LONG).show();
         } else if (password.getText().toString().length() < 6) {
             Toast.makeText(getApplicationContext(), "Password requirement not met", Toast.LENGTH_LONG).show();
+        }  else if (email.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(), "Please input an email", Toast.LENGTH_LONG).show();
+        } else if (userType.getSelectedItemPosition() == 0) {
+            Toast.makeText(getApplicationContext(), "Please select a user type", Toast.LENGTH_LONG).show();
         } else {
             User user = new User(userName.getText().toString(),
                     password.getText().toString(),
