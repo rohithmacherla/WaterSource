@@ -20,7 +20,7 @@ public class RegistrationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        userName = (EditText) findViewById(R.id.email_field);
+        userName = (EditText) findViewById(R.id.name_field);
         password = (EditText) findViewById(R.id.password_field);
         email = (EditText) findViewById(R.id.email_field);
         userType = (Spinner) findViewById(R.id.spinner);
@@ -30,6 +30,6 @@ public class RegistrationActivity extends AppCompatActivity {
         userType.setAdapter(adapter);
     }
     protected void onRegistrationPressed(View v) {
-
+        
     }
 }

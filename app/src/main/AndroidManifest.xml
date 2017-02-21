@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".controller.LoginActivity" />
-        <activity android:name=".controller.Registration" />
+        <activity android:name=".controller.RegistrationActivity" />
         <activity
             android:name=".controller.MainScreenActivity"
             android:label="@string/title_activity_main_screen"
