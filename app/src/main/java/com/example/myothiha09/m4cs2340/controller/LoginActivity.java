@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.myothiha09.m4cs2340.R;
+import com.example.myothiha09.m4cs2340.model.User;
 
 public class LoginActivity extends AppCompatActivity {
     EditText username;
@@ -36,8 +37,9 @@ public class LoginActivity extends AppCompatActivity {
     private boolean checkPassword() {
         String username2 = username.getText().toString();
         String password2 = password.getText().toString();
-        if (username2.equals("user") && password2.equals("pass")) {
-            return true;
+        for(User user: User.usersList) {
+            if (user.getName().equals(username2)&&user.getPassword().equals(password2))
+                return true;
         }
         return false;
     }

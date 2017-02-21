@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
+import com.example.myothiha09.m4cs2340.model.UserType;
 
 public class RegistrationActivity extends AppCompatActivity {
     EditText userName;
@@ -32,11 +33,26 @@ public class RegistrationActivity extends AppCompatActivity {
         userType.setAdapter(adapter);
     }
     protected void onRegistrationPressed(View v) {
-        if (password.getText().toString().length() < 6) {
+        if (checkUsername()) {
+            Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_LONG).show();
+        } else if (password.getText().toString().length() < 6) {
             Toast.makeText(getApplicationContext(), "Password requirement not met", Toast.LENGTH_LONG).show();
         } else {
-            
+            User user = new User(userName.getText().toString(),
+                    password.getText().toString(),
+                    email.getText().toString(),
+                    (UserType) userType.getSelectedItem());
+            User.usersList.add(user);
+            finish();
         }
 
+    }
+    private boolean checkUsername() {
+        String username2 = userName.getText().toString();
+        for(User user: User.usersList) {
+            if (user.getName().equals(username2))
+                return true;
+        }
+        return false;
     }
 }
