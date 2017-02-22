@@ -52,9 +52,8 @@ public class MainScreenActivity extends AppCompatActivity {
                 if (id == R.id.nav_home_screen) {
                     // Handle the camera action
                 } else if (id == R.id.nav_edit_screen) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EditScreen());
                     Intent intent = new Intent(getApplicationContext(), UserDetailsActivity.class);
-                    intent.putExtra(EditScreen.ARG_USER, user);
+                    intent.putExtra(User.ARG_USER, user);
                     startActivity(intent);
                 }
 

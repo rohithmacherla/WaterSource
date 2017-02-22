@@ -31,9 +31,9 @@ public class UserDetailsActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email_field);
         userType = (Spinner) findViewById(R.id.spinner);
 
-        if (getIntent().hasExtra(EditScreen.ARG_USER)) {
+        if (getIntent().hasExtra(User.ARG_USER)) {
             newAccount = false;
-            User user = getIntent().getParcelableExtra(EditScreen.ARG_USER);
+            User user = getIntent().getParcelableExtra(User.ARG_USER);
             userName.setText(user.getName());
             password.setText(user.getPassword());
             email.setText(user.getEmail());

@@ -14,6 +14,7 @@ import java.util.List;
 public class User implements Parcelable {
     public static List<UserType> userTypeList = Arrays.asList(UserType.values());
     public static ArrayList<User> usersList = new ArrayList<User>();
+    public static final String ARG_USER = "M5.GATECH.USER";
     private String name;
     private String password;
     private String email;
@@ -82,7 +83,7 @@ public class User implements Parcelable {
 
         @Override
         public User createFromParcel(Parcel in) {
-            return null;
+            return new User(in);
         }
 
         @Override
