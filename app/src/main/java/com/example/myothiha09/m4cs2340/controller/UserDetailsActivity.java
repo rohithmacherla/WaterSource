@@ -31,19 +31,20 @@ public class UserDetailsActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email_field);
         userType = (Spinner) findViewById(R.id.spinner);
 
+        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, User.userTypeList);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        userType.setAdapter(adapter);
         if (getIntent().hasExtra(User.ARG_USER)) {
             newAccount = false;
             User user = getIntent().getParcelableExtra(User.ARG_USER);
             userName.setText(user.getName());
             password.setText(user.getPassword());
             email.setText(user.getEmail());
+            userType.setSelection(user.getUserType().getPosition());
         } else {
             newAccount = true;
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, User.userTypeList);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        userType.setAdapter(adapter);
 
         Button registerButton = (Button) findViewById(R.id.registerButton);
         registerButton.setOnClickListener(new View.OnClickListener() {
