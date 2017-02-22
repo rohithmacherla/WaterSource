@@ -30,6 +30,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password_field);
         email = (EditText) findViewById(R.id.email_field);
         userType = (Spinner) findViewById(R.id.spinner);
+        Button registerButton = (Button) findViewById(R.id.registerButton);
 
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, User.userTypeList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -38,19 +39,21 @@ public class UserDetailsActivity extends AppCompatActivity {
             newAccount = false;
             User user = getIntent().getParcelableExtra(User.ARG_USER);
             userName.setText(user.getName());
+            userName.setEnabled(false);
             password.setText(user.getPassword());
             email.setText(user.getEmail());
             userType.setSelection(user.getUserType().getPosition());
+            registerButton.setText("Save Changes");
         } else {
             newAccount = true;
         }
 
 
-        Button registerButton = (Button) findViewById(R.id.registerButton);
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (checkUsername()) {
+                if (!getIntent().hasExtra(User.ARG_USER) && checkUsername()) {
                     Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_LONG).show();
                 } else if (userName.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "Please input a username", Toast.LENGTH_LONG).show();
@@ -61,16 +64,26 @@ public class UserDetailsActivity extends AppCompatActivity {
                 } else if (userType.getSelectedItemPosition() == 0) {
                     Toast.makeText(getApplicationContext(), "Please select a user type", Toast.LENGTH_LONG).show();
                 } else {
-                    User user = new User(userName.getText().toString(),
-                            password.getText().toString(),
-                            email.getText().toString(),
-                            (UserType) userType.getSelectedItem());
-                    User.usersList.add(user);
-
-                    Intent intent = new Intent(getApplicationContext(), MainScreenActivity.class);
-                    intent.putExtra("Username", user.getName());
-                    startActivity(intent);
-
+                    if (getIntent().hasExtra(User.ARG_USER)) {
+                        for (User user : User.usersList) {
+                            if (user.getName().equals(userName.getText().toString())) {
+                                user.setPassword(password.getText().toString());
+                                user.setEmail(email.getText().toString());
+                                user.setUserType((UserType) userType.getSelectedItem());
+                            }
+                        }
+                        finish();
+                    }
+                    else {
+                        User user = new User(userName.getText().toString(),
+                                password.getText().toString(),
+                                email.getText().toString(),
+                                (UserType) userType.getSelectedItem());
+                        User.usersList.add(user);
+                        Intent intent = new Intent(getApplicationContext(), MainScreenActivity.class);
+                        intent.putExtra("Username", user.getName());
+                        startActivity(intent);
+                    }
                 }
             }
         });
@@ -80,8 +93,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         registerCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
     }
@@ -92,5 +104,11 @@ public class UserDetailsActivity extends AppCompatActivity {
                 return true;
         }
         return false;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
     }
 }

@@ -21,6 +21,8 @@ import com.example.myothiha09.m4cs2340.model.User;
 
 public class MainScreenActivity extends AppCompatActivity {
     User user;
+    TextView userHeader;
+    TextView userTypeHeader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +65,8 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         });
         View layout = navigationView.getHeaderView(0);
-        TextView userHeader = (TextView) layout.findViewById(R.id.headerUsername);
-        TextView userTypeHeader = (TextView) layout.findViewById(R.id.headerUserType);
+        userHeader = (TextView) layout.findViewById(R.id.headerUsername);
+        userTypeHeader = (TextView) layout.findViewById(R.id.headerUserType);
         userHeader.setText(user.getName());
         userTypeHeader.setText(user.getUserType().toString());
     }
@@ -99,5 +101,12 @@ public class MainScreenActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        userHeader.setText(user.getName());
+        userTypeHeader.setText(user.getUserType().toString());
     }
 }
