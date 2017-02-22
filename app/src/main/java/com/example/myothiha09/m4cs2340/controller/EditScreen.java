@@ -11,6 +11,7 @@ import com.example.myothiha09.m4cs2340.R;
 
 public class EditScreen extends Fragment {
 
+    public static final String ARG_USER = "user";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

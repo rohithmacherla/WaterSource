@@ -1,6 +1,8 @@
 package com.example.myothiha09.m4cs2340.controller;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -17,8 +19,7 @@ import android.widget.TextView;
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
 
-public class MainScreenActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainScreenActivity extends AppCompatActivity {
     User user;
 
     @Override
@@ -34,17 +35,6 @@ public class MainScreenActivity extends AppCompatActivity
             }
         }
 
-
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -53,7 +43,26 @@ public class MainScreenActivity extends AppCompatActivity
 
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // Handle navigation view item clicks here.
+                int id = item.getItemId();
+
+                if (id == R.id.nav_home_screen) {
+                    // Handle the camera action
+                } else if (id == R.id.nav_edit_screen) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EditScreen());
+                    Intent intent = new Intent(getApplicationContext(), UserDetailsActivity.class);
+                    intent.putExtra(EditScreen.ARG_USER, user);
+                    startActivity(intent);
+                }
+
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
+            }
+        });
         View layout = navigationView.getHeaderView(0);
         TextView userHeader = (TextView) layout.findViewById(R.id.headerUsername);
         TextView userTypeHeader = (TextView) layout.findViewById(R.id.headerUserType);
@@ -91,22 +100,5 @@ public class MainScreenActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_home_screen) {
-            // Handle the camera action
-        } else if (id == R.id.nav_edit_screen) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EditScreen());
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 }

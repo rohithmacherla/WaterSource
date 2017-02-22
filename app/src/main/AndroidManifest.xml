@@ -16,11 +16,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".controller.LoginActivity" />
-        <activity android:name=".controller.RegistrationActivity" />
+        <activity android:name=".controller.UserDetailsActivity" />
         <activity
             android:name=".controller.MainScreenActivity"
             android:label="@string/title_activity_main_screen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

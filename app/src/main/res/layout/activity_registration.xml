@@ -73,7 +73,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_margin="5dp"
         android:layout_weight="1">
 
@@ -90,14 +90,32 @@
             android:layout_weight="1"
             android:gravity="top" />
 
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        android:layout_weight="1">
+
         <Button
             android:text="Register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button2"
-            android:layout_weight="0.11"
-            android:onClick="onRegistrationPressed" />
+            android:id="@+id/registerButton"
+            android:layout_weight="0.11" />
+
+        <Button
+            android:text="Cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/registerCancel"
+            android:layout_weight="0.11" />
 
     </LinearLayout>
+
 
 </LinearLayout>

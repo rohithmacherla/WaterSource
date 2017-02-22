@@ -19,7 +19,7 @@ public class WelcomeActivity extends AppCompatActivity {
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.registrationButton) {
-            Intent intent = new Intent(this, RegistrationActivity.class);
+            Intent intent = new Intent(this, UserDetailsActivity.class);
             startActivity(intent);
         }
     }
