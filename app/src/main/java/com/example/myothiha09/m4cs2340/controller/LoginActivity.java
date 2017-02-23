@@ -12,9 +12,30 @@ import android.widget.EditText;
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
 
+//Team: 27
+
+/**
+ * The activity that allows the user to enter in their credentials.
+ * They see this activity right after clicking on the LOGIN button.
+ *
+ * The user has the option of logging in or by cancelling.
+ */
+
 public class LoginActivity extends AppCompatActivity {
+
+    //References to the text views.
     EditText username;
     EditText password;
+
+    /**
+     * Assign the edit text views.
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle
+     *                           contains the data it most recently supplied in
+     *                           onSaveInstanceState(Bundle).
+     *                           Note: Otherwise it is null.
+     */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +43,13 @@ public class LoginActivity extends AppCompatActivity {
         username = (EditText) findViewById(R.id.userNameText);
         password = (EditText) findViewById(R.id.passwordText);
     }
+
+    /**
+     * When the login button is pressed, the login credentials
+     * are first verified. If credentials are correct, the user
+     * is redirected to their homescreen.
+     * @param v The view that triggered this event.
+     */
     public void onLoginPressed(View v) {
         if (checkPassword()) {
             Intent intent = new Intent(this, MainScreenActivity.class);
@@ -32,9 +60,21 @@ public class LoginActivity extends AppCompatActivity {
             dialog.show();
         }
     }
+
+    /**
+     * Return to home screen if the cancel button is pressed.
+     * @param v The view that triggered this event.
+     */
+
     public void onCancelPressed(View v) {
         finish();
     }
+
+    /**
+     * Verifies the login credentials entered by the user.
+     * @return Whether the login credentials are valid.
+     */
+
     private boolean checkPassword() {
         String username2 = username.getText().toString();
         String password2 = password.getText().toString();
@@ -44,6 +84,11 @@ public class LoginActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    /**
+     * Displays an error if the login credentials are incorrect.
+     * @return The error dialog.
+     */
     private android.app.AlertDialog createDialogBox() {
         android.app.AlertDialog.Builder myDialogBuilder = new android.app.AlertDialog.Builder(this);
         myDialogBuilder.setTitle("Error!");
@@ -61,6 +106,11 @@ public class LoginActivity extends AppCompatActivity {
 
         return myDialogBuilder.create();
     }
+
+    /**
+     * Overrides the onStop function to return to home screen.
+     */
+
     @Override
     protected void onStop() {
         super.onStop();

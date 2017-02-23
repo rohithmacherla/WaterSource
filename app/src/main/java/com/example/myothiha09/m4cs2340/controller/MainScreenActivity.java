@@ -19,10 +19,32 @@ import android.widget.TextView;
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
 
+// Team: 27
+
+/**
+ * This the homepage for each user. They see this after
+ * signing in.
+ */
+
 public class MainScreenActivity extends AppCompatActivity {
+
+    /**
+     * References to the user and the text views of this activity
+     */
+
     User user;
     TextView userHeader;
     TextView userTypeHeader;
+
+    /**
+     * Loads the user's data, sets the layout and view, set references
+     * to the text views.
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle
+     *                           contains the data it most recently supplied in
+     *                           onSaveInstanceState(Bundle).
+     *                           Note: Otherwise it is null.
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +93,10 @@ public class MainScreenActivity extends AppCompatActivity {
         userTypeHeader.setText(user.getUserType().toString());
     }
 
+    /**
+     * Handles if the back button is pressed by modifying the drawer layout appropriately.
+     */
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -81,6 +107,12 @@ public class MainScreenActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Inflates the options menu.
+     * @param menu The menu to inflate
+     * @return whether this was successful.
+     */
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -88,6 +120,11 @@ public class MainScreenActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Handles when an item on the options item menu was selected.
+     * @param item The item selected
+     * @return Whether this method was successful.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -102,6 +139,10 @@ public class MainScreenActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    /**
+     * Obtains the user data if this activity is restarted.
+     */
 
     @Override
     protected void onRestart() {
