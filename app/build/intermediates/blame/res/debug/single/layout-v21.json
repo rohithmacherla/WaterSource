@@ -1,15 +1,7 @@
 [
     {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_icon_group.xml"
-    },
-    {
         "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
         "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_icon_group.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action.xml"
     },
     {
         "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
@@ -20,15 +12,7 @@
         "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action.xml"
     },
     {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_custom_big.xml"
-    },
-    {
         "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
         "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_custom_big.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action_tombstone.xml"
     }
 ]

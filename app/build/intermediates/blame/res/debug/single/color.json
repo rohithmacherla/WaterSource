@@ -1,11 +1,23 @@
 [
     {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_material_dark.xml"
+        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/design_error.xml",
+        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/color/design_error.xml"
+    },
+    {
+        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
+        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
+        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_secondary_text_material_light.xml"
     },
     {
         "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_dark.xml",
         "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
+        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_disable_only_material_dark.xml"
     },
     {
         "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
@@ -20,20 +32,12 @@
         "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_secondary_text_material_dark.xml"
     },
     {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_search_url_text.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_search_url_text.xml"
+        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
+        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_material_light.xml"
     },
     {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_hint_foreground_material_light.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_disable_only_material_light.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_dark.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_hint_foreground_material_dark.xml"
+        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
+        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/switch_thumb_material_light.xml"
     },
     {
         "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
@@ -42,57 +46,5 @@
     {
         "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_light.xml",
         "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_disable_only_material_light.xml"
-    },
-    {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/design_error.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/color/design_error.xml"
-    },
-    {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_hint_foreground_material_light.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_hint_foreground_material_light.xml"
-    },
-    {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_secondary_text_material_light.xml"
-    },
-    {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_secondary_text_material_dark.xml"
-    },
-    {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_material_light.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_disable_only_material_dark.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_disable_only_material_dark.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_light.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_secondary_text_material_light.xml"
-    },
-    {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/switch_thumb_material_light.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/design_error.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/color/design_error.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/switch_thumb_material_light.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/switch_thumb_material_light.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/switch_thumb_material_dark.xml"
-    },
-    {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color/abc_primary_text_material_light.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/color/abc_primary_text_material_light.xml"
     }
 ]

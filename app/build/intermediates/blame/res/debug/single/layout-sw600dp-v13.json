@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/nidhi/Desktop/M4/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/layout-sw600dp-v13/design_layout_snackbar.xml"
-    },
-    {
         "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     }

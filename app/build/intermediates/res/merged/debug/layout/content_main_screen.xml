@@ -27,8 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:id="@+id/loginButton"
-            android:onClick="onLoginPressed"
+            android:id="@+id/addWaterReportButton"
+            android:onClick="onAddWaterReportPressed"
             android:elevation="24dp"
             android:layout_marginRight="20dp" />
     </RelativeLayout>
