@@ -1,59 +1,61 @@
 package com.example.myothiha09.m4cs2340.model;
+import java.util.ArrayList;
 
 /**
  * Created by vgiridhar on 2/26/17.
  */
 
 public class WaterSourceReport {
-    private String date;
-    private String time;
-    private String reportNumber;
+    private String dateAndTime;
+    private int reportNumber;
     private String reporterName;
     private String waterLocation;
     private WaterType waterType;
     private WaterCondition waterCondition;
 
-    public WaterSourceReport(String d, String t, String rN1, String rN2,
+
+    public WaterSourceReport(String dt, int rNum, String rName,
                              String wL, WaterType wT, WaterCondition wC) {
-        this.date = d;
-        this.time = t;
-        this.reportNumber = rN1;
-        this.reporterName = rN2;
+        this.dateAndTime = dt;
+        this.reportNumber = rNum;
+        this.reporterName = rName;
         this.waterLocation = wL;
         this.waterType = wT;
         this.waterCondition = wC;
     }
 
-    public String getDate() {
-        return this.date;
+    //empty constructor
+    public WaterSourceReport() {
+        this.dateAndTime = "";
+        this.reportNumber = 0;
+        this.reporterName = "";
+        this.waterLocation = "";
+        this.waterType = WaterType.BOTTLED;
+        this.waterCondition = WaterCondition.POTABLE;
     }
 
-    public void setDate(String d) {
-        date = d;
+    public String getDateAndTime() {
+        return this.dateAndTime;
     }
 
-    public String getTime() {
-        return this.time;
+    public void setDateAndTime(String dt) {
+        dateAndTime = dt;
     }
 
-    public void setTime(String t) {
-        time = t;
-    }
-
-    public String getReportNumber() {
+    public int getReportNumber() {
         return this.reportNumber;
     }
 
-    public void setReportNumber(String rN1) {
-        reportNumber = rN1;
+    public void setReportNumber(int rNum) {
+        reportNumber = rNum;
     }
 
     public String getReporterName() {
         return this.reporterName;
     }
 
-    public void setReporterName(String rN2) {
-        reporterName = rN2;
+    public void setReporterName(String rName) {
+        reporterName = rName;
     }
 
     public String getWaterLocation() {

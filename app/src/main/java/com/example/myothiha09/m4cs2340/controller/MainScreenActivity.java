@@ -32,9 +32,13 @@ public class MainScreenActivity extends AppCompatActivity {
      * References to the user and the text views of this activity
      */
 
-    User user;
-    TextView userHeader;
-    TextView userTypeHeader;
+    private static User user;
+    private static TextView userHeader;
+    private static TextView userTypeHeader;
+
+    public static User getCurrentUser() {
+        return user;
+    }
 
     /**
      * Loads the user's data, sets the layout and view, set references
@@ -140,6 +144,14 @@ public class MainScreenActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * When the add water report button is pressed, the user is
+     *  sent to the water report activity screen.
+     */
+    public void onAddWaterReportPressed(View v) {
+        Intent intent = new Intent(this, WaterReportActivity.class);
+        startActivity(intent);
+    }
     /**
      * Obtains the user data if this activity is restarted.
      */
