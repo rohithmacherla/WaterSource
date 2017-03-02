@@ -21,12 +21,25 @@ public class CustomArrayAdapter extends ArrayAdapter<WaterSourceReport> {
     private final ArrayList<WaterSourceReport> report;
 
 
+    /**
+     * A constructor for the ArrayAdapter
+     * @param context the context from which this adapter was created
+     * @param report The arraylist of reports to create this adapter.
+     */
     public CustomArrayAdapter(Context context, ArrayList<WaterSourceReport> report) {
         super(context,-1,report);
         this.context = context;
         this.report = report;
     }
 
+    /**
+     * Get a View that displays the data at the specified position in the data set.
+     * @param position The position of the item within the adapter's data set of the item whose
+     *                 view we want.
+     * @param convertView The old view to reuse, if possible.
+     * @param parent The parent that this view will eventually be attached to
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

@@ -49,46 +49,83 @@ public class User implements Parcelable {
         userType = (UserType) in.readSerializable();
     }
 
-    // Getters and setters for the user info.
+    /**
+     * Getter for the user type.
+     * @return the user type
+     */
     public UserType getUserType() {
         return userType;
     }
 
+    /**
+     * Sets the user type
+     * @param userType the user type to set the type of this user to.
+     */
     public void setUserType(UserType userType) {
         this.userType = userType;
     }
 
+    /**
+     * Gets the username of the user.
+     * @return the username.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets the username of the user.
+     * @param name the username to set the user's username to.
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Gets the password of the user.
+     * @return the password to get.
+     */
     public String getPassword() {
         return password;
     }
 
+    /**
+     * Sets the password of the user
+     * @param password the password to set to
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * Gets the user's email.
+     * @return the user's email
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     * Sets the user's email.
+     * @param email The email to set to.
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    //Needed for parcelable class.
+    /**
+     * Describes the contents of the parcel class (not really implemented, but not really needed)
+     * @return the contents.
+     */
     @Override
     public int describeContents() {
         return 0;
     }
 
-    // Converts the user into a parcel object.
+    /**
+     * Converts the user into a parcel object.
+     */
+
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(name);
@@ -97,14 +134,26 @@ public class User implements Parcelable {
         parcel.writeSerializable(userType);
     }
 
-    // Creates a User class. Required for the Parcelable User class.
+    /**
+     * Creates a User class. Required for the Parcelable User class.
+     */
     public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
 
+        /**
+         * Creates a user based on the parcel
+         * @param in the parcel from which to create the user.
+         * @return the created user
+         */
         @Override
         public User createFromParcel(Parcel in) {
             return new User(in);
         }
 
+        /**
+         * Creates an array of users
+         * @param i The size of the array
+         * @return the array of users
+         */
         @Override
         public User[] newArray(int i) {
             return new User[i];

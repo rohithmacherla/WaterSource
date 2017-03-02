@@ -58,6 +58,11 @@ public class WaterReportActivity extends AppCompatActivity {
 
     private static Spinner waterConditions;
 
+    /**
+     * Method that initializes the water report activity. Provides all the UI elements.
+     * @param savedInstanceState If the fragment is being re-created from a previous saved state,
+     *                           this is the state.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

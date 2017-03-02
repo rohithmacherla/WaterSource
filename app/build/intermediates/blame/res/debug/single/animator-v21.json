@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/design/25.1.1/res/animator-v21/design_appbar_state_list_animator.xml"
+        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M6 Implementation\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21\\design_appbar_state_list_animator.xml",
+        "source": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M6 Implementation\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.1\\res\\animator-v21\\design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "C:\\Users\\vgiridhar\\Google Drive\\Academic\\College\\Year 2\\Spring 2017\\classes\\cs 2340\\project\\CS2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21\\design_appbar_state_list_animator.xml",
+        "source": "C:\\Users\\vgiridhar\\Google Drive\\Academic\\College\\Year 2\\Spring 2017\\classes\\cs 2340\\project\\CS2340\\M4\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.1.1\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     }
 ]

@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\vgiridhar\\Google Drive\\Academic\\College\\Year 2\\Spring 2017\\classes\\cs 2340\\project\\CS2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\vgiridhar\\Google Drive\\Academic\\College\\Year 2\\Spring 2017\\classes\\cs 2340\\project\\CS2340\\M4\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M6 Implementation\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M6 Implementation\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }
 ]
