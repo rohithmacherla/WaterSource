@@ -14,6 +14,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -60,12 +61,14 @@ public class WaterReportActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.waterreport);
+        setContentView(R.layout.waterreport2);
 
         //Autogenerating Date and Time
         Calendar rightNow = Calendar.getInstance();
         SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
         dateAndTime = format.format(rightNow.getTime());
+
+        model = Model.getInstance();
 
         TextView dateTime = (TextView) findViewById(R.id.date_time);
         dateTime.setText(dateAndTime);
@@ -83,13 +86,19 @@ public class WaterReportActivity extends AppCompatActivity {
 
         //Setting the Location of the Water
         location = (EditText) findViewById(R.id.waterLocation_field);
-        chosenLocation = location.getText().toString();
+
 
         //Spinner for Water Type
         waterTypes = (Spinner) findViewById(R.id.waterType_spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, WaterSourceReport.waterTypeList);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        waterTypes.setAdapter(adapter);
 
         //Spinner for Water Condition
-        waterConditions = (Spinner) findViewById(R.id.waterType_spinner);
+        waterConditions = (Spinner) findViewById(R.id.waterCondition_spinner);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, WaterSourceReport.waterConditionList);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        waterConditions.setAdapter(adapter2);
 
         //Cancel button
         Button backButton = (Button) findViewById(R.id.backButton);
@@ -104,6 +113,7 @@ public class WaterReportActivity extends AppCompatActivity {
         Button addButton = (Button) findViewById(R.id.addButton);
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                chosenLocation = location.getText().toString();
                 waterSourceReport = new WaterSourceReport();
                 waterSourceReport.setDateAndTime(dateAndTime);
                 waterSourceReport.setReportNumber(reportNumber);

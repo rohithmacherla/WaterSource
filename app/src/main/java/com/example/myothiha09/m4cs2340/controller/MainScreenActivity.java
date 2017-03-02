@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -69,6 +70,17 @@ public class MainScreenActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), WaterReportActivity.class);
+                startActivity(intent);
+            }
+        });
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
+
+
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -78,7 +90,7 @@ public class MainScreenActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.nav_home_screen) {
-                    // Handle the camera action
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
                 } else if (id == R.id.nav_edit_screen) {
                     Intent intent = new Intent(getApplicationContext(), UserDetailsActivity.class);
                     intent.putExtra(User.ARG_USER, user);
@@ -95,6 +107,8 @@ public class MainScreenActivity extends AppCompatActivity {
         userTypeHeader = (TextView) layout.findViewById(R.id.headerUserType);
         userHeader.setText(user.getName());
         userTypeHeader.setText(user.getUserType().toString());
+
+
     }
 
     /**
@@ -144,14 +158,6 @@ public class MainScreenActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * When the add water report button is pressed, the user is
-     *  sent to the water report activity screen.
-     */
-    public void onAddWaterReportPressed(View v) {
-        Intent intent = new Intent(this, WaterReportActivity.class);
-        startActivity(intent);
-    }
     /**
      * Obtains the user data if this activity is restarted.
      */

@@ -1,5 +1,7 @@
 package com.example.myothiha09.m4cs2340.model;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by vgiridhar on 2/26/17.
@@ -12,6 +14,8 @@ public class WaterSourceReport {
     private String waterLocation;
     private WaterType waterType;
     private WaterCondition waterCondition;
+    public static List<WaterType> waterTypeList = Arrays.asList(WaterType.values());
+    public static List<WaterCondition> waterConditionList = Arrays.asList(WaterCondition.values());
 
 
     public WaterSourceReport(String dt, int rNum, String rName,

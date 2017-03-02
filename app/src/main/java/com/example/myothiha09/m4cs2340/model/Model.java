@@ -10,8 +10,16 @@ public class Model {
     ArrayList<WaterSourceReport> waterSourceReports = new ArrayList<>();
     int reportNumber = 0;
 
-    public Model() {
+    private static Model model;
 
+    private Model() {
+
+    }
+    public static Model getInstance() {
+        if (model == null) {
+            model = new Model();
+        }
+        return model;
     }
 
     public void addWaterReport(WaterSourceReport w) {
@@ -20,5 +28,9 @@ public class Model {
 
     public int getReportNumber() {
         return (++reportNumber);
+    }
+
+    public ArrayList<WaterSourceReport> getWaterSourceReports() {
+        return waterSourceReports;
     }
 }
