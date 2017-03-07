@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5dp">
+
+<TableRow>
+    <TextView
+        android:text="Date and Time"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/date_timeLabel"
+        android:layout_weight="1" />
+</TableRow>
+        <TableRow>
+
+            <TextView
+                android:text="Report Number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/numLabel"
+                android:layout_weight="1" />
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+                android:text="Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/nameLabel"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Location of Water"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:text="Location of Water"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/waterLocationLabel"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Water Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.11" />
+
+            <TextView
+                android:text="Water Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/waterTypeLabel"
+                android:layout_weight="0.11" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Water Condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.11" />
+
+            <TextView
+                android:text="Water Condition"
+                android:id="@+id/waterConditionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.11" />
+        </TableRow>
+
+
+</TableLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
