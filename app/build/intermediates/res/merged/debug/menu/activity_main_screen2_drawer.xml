@@ -9,6 +9,10 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Home" />
             <item
+                android:id="@+id/mapView"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="MapView" />
+            <item
                 android:id="@+id/nav_edit_screen"
                 android:icon="@drawable/ic_menu_manage"
                 android:title="Edit Profile" />

@@ -50,15 +50,15 @@ public class CustomArrayAdapter extends ArrayAdapter<WaterSourceReport> {
         TextView location = (TextView) rowView.findViewById(R.id.waterLocationLabel);
         TextView waterType = (TextView) rowView.findViewById(R.id.waterTypeLabel);
         TextView waterCondition = (TextView) rowView.findViewById(R.id.waterConditionLabel);
-        for (int i = 0; i < report.size(); i++) {
-            WaterSourceReport current = report.get(i);
+
+            WaterSourceReport current = report.get(position);
             dateLabel.setText(current.getDateAndTime());
             nameLabel.setText(current.getReporterName());
             reportNumber.setText(""+current.getReportNumber());
             location.setText(current.getWaterLocation());
             waterType.setText(current.getWaterType().toString());
             waterCondition.setText(current.getWaterCondition().toString());
-        }
+
         return rowView;
     }
 

@@ -18,7 +18,11 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.myothiha09.m4cs2340.R;
+import com.example.myothiha09.m4cs2340.model.Model;
 import com.example.myothiha09.m4cs2340.model.User;
+import com.example.myothiha09.m4cs2340.model.WaterCondition;
+import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
+import com.example.myothiha09.m4cs2340.model.WaterType;
 
 // Team: 27
 
@@ -53,6 +57,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final MapViewFragment mapFragment = new MapViewFragment();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -78,6 +83,9 @@ public class MainScreenActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Model model = Model.getInstance();
+        WaterSourceReport report = new WaterSourceReport("Preadded", 0, "Preadded", "Sydney", WaterType.BOTTLED, WaterCondition.POTABLE);
+        model.addWaterReport(report);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
 
 
@@ -95,6 +103,8 @@ public class MainScreenActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), UserDetailsActivity.class);
                     intent.putExtra(User.ARG_USER, user);
                     startActivity(intent);
+                } else if (id == R.id.mapView) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mapFragment).commit();
                 }
 
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
