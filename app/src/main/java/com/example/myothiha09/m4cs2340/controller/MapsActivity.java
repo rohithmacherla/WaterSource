@@ -1,28 +1,55 @@
 package com.example.myothiha09.m4cs2340.controller;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.app.ShareCompat;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.R;
+import com.example.myothiha09.m4cs2340.model.Model;
+import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 
-    private GoogleMap mMap;
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMapLongClickListener {
 
+    private static GoogleMap mMap;
+    private Model model;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        AlertDialog alertDialog = new AlertDialog.Builder(MapsActivity.this).create();
+        alertDialog.setTitle("Alert");
+        alertDialog.setMessage("Long click to add a new location. Click a pin to edit/view details");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+        model = Model.getInstance();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        
     }
 
 
@@ -41,7 +68,58 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.setOnMarkerClickListener(this);
+        mMap.setOnMapLongClickListener(this);
+        for (WaterSourceReport report: model.getWaterSourceReports()) {
+            String latLongLocation = report.getWaterLocation();
+            LatLng location = convertStringtoLatLng(latLongLocation);
+            mMap.addMarker(new MarkerOptions().position(location));
+        }
+
+
     }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
+        for (WaterSourceReport current : arrayList) {
+            if(current.getWaterLocation().equals(marker.getPosition().toString())) {
+                Intent intent = new Intent(this, WaterReportActivity.class);
+                intent.putExtra(WaterSourceReport.ARG_REPORT, current);
+                startActivity(intent);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public void onMapLongClick(LatLng latLng) {
+        latLng = convertStringtoLatLng(latLng.toString());
+
+        Intent intent = new Intent(this, WaterReportActivity.class);
+        intent.putExtra(WaterSourceReport.NEW_ARG_REPORT, latLng.toString());
+        startActivity(intent);
+    }
+    public static void addMarker(LatLng latLng) {
+        mMap.addMarker(new MarkerOptions().position(latLng));
+    }
+    public static LatLng convertStringtoLatLng(String str) {
+        String latLongLocation = str;
+        int index = latLongLocation.indexOf(",");
+        int index2 = latLongLocation.indexOf("(");
+        String lat = latLongLocation.substring(index2+1, index).trim();
+        String lng = latLongLocation.substring(index+1, latLongLocation.length()-1).trim();
+        double latitude = Double.parseDouble(lat);
+        double longitude = Double.parseDouble(lng);
+        DecimalFormat format = new DecimalFormat("###.00");
+        latitude = Double.parseDouble(format.format(latitude));
+        longitude = Double.parseDouble(format.format(longitude));
+        return new LatLng(latitude, longitude);
+    }
+    public void onGoBackPressed(View v) {
+        this.onBackPressed();
+    }
+
+
 }

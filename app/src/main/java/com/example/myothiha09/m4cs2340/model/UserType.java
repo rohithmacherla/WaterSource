@@ -14,11 +14,10 @@ public enum UserType implements Serializable {
      * First parameter is the string label for each user type,
      * second parameter is the position the user type has in the spinner.
      */
-    EMPTY("", 0),
-    USER("User", 1),
-    WORKER("Worker", 2),
-    MANAGER("Manager", 3),
-    ADMIN("Admin", 4);
+    USER("User", 0),
+    WORKER("Worker", 1),
+    MANAGER("Manager", 2),
+    ADMIN("Admin", 3);
 
     String user;
     int position;

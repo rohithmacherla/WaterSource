@@ -2,11 +2,13 @@ package com.example.myothiha09.m4cs2340.model;
 
 // Team 27
 
+import java.io.Serializable;
+
 /**
  * An enum that represents the condition of a water source.
  * Each entry consists of the actual label, and the position in the spinner.
  */
-public enum WaterCondition {
+public enum WaterCondition implements Serializable{
     /**
      * First parameter is the string label for each water condition,
      * second parameter is the position the water condition has in the spinner.

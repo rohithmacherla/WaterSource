@@ -21,6 +21,8 @@ import android.widget.TextView;
 
 
 import android.support.v7.app.AppCompatActivity;
+
+import java.text.DecimalFormat;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import android.widget.Button;
@@ -32,6 +34,7 @@ import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
 import com.example.myothiha09.m4cs2340.model.User;
 import com.example.myothiha09.m4cs2340.model.Model;
 import com.example.myothiha09.m4cs2340.model.WaterType;
+import com.google.android.gms.maps.model.LatLng;
 
 
 /**
@@ -45,6 +48,7 @@ public class WaterReportActivity extends AppCompatActivity {
     private static WaterSourceReport waterSourceReport;
     private static Model model;
 
+
     private static String dateAndTime;
 
     private static int reportNumber;
@@ -57,6 +61,7 @@ public class WaterReportActivity extends AppCompatActivity {
     private static Spinner waterTypes;
 
     private static Spinner waterConditions;
+    private WaterSourceReport report;
 
     /**
      * Method that initializes the water report activity. Provides all the UI elements.
@@ -78,8 +83,11 @@ public class WaterReportActivity extends AppCompatActivity {
         TextView dateTime = (TextView) findViewById(R.id.date_time);
         dateTime.setText(dateAndTime);
 
+
+
+
         //Autogenerating report number
-        reportNumber = model.getReportNumber();
+
 
         //Autogenerating User Name
         User currentUser = MainScreenActivity.getCurrentUser();
@@ -89,8 +97,7 @@ public class WaterReportActivity extends AppCompatActivity {
         TextView user = (TextView) findViewById(R.id.name);
         user.setText(reporterName);
 
-        //Setting the Location of the Water
-        location = (EditText) findViewById(R.id.waterLocation_field);
+
 
 
         //Spinner for Water Type
@@ -105,25 +112,47 @@ public class WaterReportActivity extends AppCompatActivity {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         waterConditions.setAdapter(adapter2);
 
+        if(getIntent().hasExtra(WaterSourceReport.NEW_ARG_REPORT)) {
+            chosenLocation = getIntent().getStringExtra(WaterSourceReport.NEW_ARG_REPORT);
+        } else if(getIntent().hasExtra(WaterSourceReport.ARG_REPORT)) {
+            report = getIntent().getParcelableExtra(WaterSourceReport.ARG_REPORT);
+            chosenLocation = report.getWaterLocation();
+            dateTime.setText(report.getDateAndTime());
+            user.setText(report.getReporterName());
+            waterTypes.setSelection(report.getWaterType().getPosition());
+            waterConditions.setSelection(report.getWaterCondition().getPosition());
+            location.setText(chosenLocation);
+        }
+        //Setting the Location of the Water
+        location = (EditText) findViewById(R.id.waterLocation_field);
+        location.setText(chosenLocation);
+        location.setEnabled(false);
+
         //Cancel button
         Button backButton = (Button) findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 WaterReportActivity.super.onBackPressed();
+                //implement deleting marker
             }
         });
 
         //Add button
-        Button addButton = (Button) findViewById(R.id.addButton);
+        final Button addButton = (Button) findViewById(R.id.addButton);
+        if (report == null) {
+            waterSourceReport = new WaterSourceReport();
+        }
+        else {
+            waterSourceReport = model.getWaterSourceReports().get(report.getReportNumber()-1);
+            addButton.setText("Save");
+        }
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                chosenLocation = location.getText().toString();
-                waterSourceReport = new WaterSourceReport();
+                waterSourceReport.setWaterLocation(chosenLocation.toString());
                 waterSourceReport.setDateAndTime(dateAndTime);
-                waterSourceReport.setReportNumber(reportNumber);
+
                 waterSourceReport.setReporterName(reporterName);
-                waterSourceReport.setWaterLocation(chosenLocation);
 
                 //watertype
                 waterSourceReport.setWaterType((WaterType) waterTypes.getSelectedItem());
@@ -132,7 +161,12 @@ public class WaterReportActivity extends AppCompatActivity {
                 waterSourceReport.setWaterConditionW(
                         (WaterCondition) waterConditions.getSelectedItem());
 
-                model.addWaterReport(waterSourceReport);
+                if (report == null) {
+                    model.addWaterReport(waterSourceReport);
+                    reportNumber = model.getReportNumber();
+                    waterSourceReport.setReportNumber(reportNumber);
+                    MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
+                }
 
                 WaterReportActivity.super.onBackPressed();
             }

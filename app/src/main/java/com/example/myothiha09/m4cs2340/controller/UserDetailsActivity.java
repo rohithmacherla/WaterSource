@@ -86,8 +86,6 @@ public class UserDetailsActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Password requirement not met", Toast.LENGTH_LONG).show();
                 }  else if (email.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "Please input an email", Toast.LENGTH_LONG).show();
-                } else if (userType.getSelectedItemPosition() == 0) {
-                    Toast.makeText(getApplicationContext(), "Please select a user type", Toast.LENGTH_LONG).show();
                 } else {
                     if (getIntent().hasExtra(User.ARG_USER)) {
                         for (User user : User.usersList) {
