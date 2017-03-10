@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "outputFile": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/res/values/values.xml",
+                    "file": "C:\\Users\\myoth\\.android\\build-cache\\ff6702e1ceb5da3fece3fe2a0739f9eb597be6c9\\output\\res\\values\\values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

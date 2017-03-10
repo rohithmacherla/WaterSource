@@ -57,7 +57,6 @@ public class MainScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final MapViewFragment mapFragment = new MapViewFragment();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -104,7 +103,7 @@ public class MainScreenActivity extends AppCompatActivity {
                     intent.putExtra(User.ARG_USER, user);
                     startActivity(intent);
                 } else if (id == R.id.mapView) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, mapFragment).commit();
+                    startActivity(new Intent(getApplicationContext(), MapsActivity.class));
                 }
 
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

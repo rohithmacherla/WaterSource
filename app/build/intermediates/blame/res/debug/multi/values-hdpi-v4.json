@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+        "outputFile": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 327
                 },
                 "from": {
-                    "file": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "file": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

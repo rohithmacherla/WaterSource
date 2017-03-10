@@ -1,18 +1,18 @@
 [
     {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action_tombstone.xml"
+        "merged": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\layout-v21\\notification_template_icon_group.xml"
     },
     {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action.xml"
+        "merged": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\layout-v21\\notification_action_tombstone.xml"
     },
     {
-        "merged": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/CS2340/M4/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     }
 ]
