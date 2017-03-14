@@ -31,6 +31,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static GoogleMap mMap;
     private Model model;
     @Override
+    /**
+     * Do the initials setup necessary for a map activity and show instruction to users throguh alert..
+     * @param savedInstanceState If the activity is being re-initialized after
+     *                           previously being shut down then this Bundle
+     *                           contains the data it most recently supplied in
+     *                           onSaveInstanceState(Bundle).
+     *                           Note: Otherwise it is null.
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
@@ -79,6 +87,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    /**
+     * The listener method to decide action if a user click a marker
+     * @param marker the marker that is clicked
+     * @return whether an action is executed or not
+     */
     @Override
     public boolean onMarkerClick(Marker marker) {
         ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
@@ -93,6 +106,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         return false;
     }
 
+    /**
+     * Start the ability to add a water report at the location user long pressed at.
+     * @param latLng the location of where user long press.
+     */
     @Override
     public void onMapLongClick(LatLng latLng) {
         latLng = convertStringtoLatLng(latLng.toString());
@@ -101,9 +118,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         intent.putExtra(WaterSourceReport.NEW_ARG_REPORT, latLng.toString());
         startActivity(intent);
     }
+
+    /**
+     * A static method to add marker from WaterReportActivity
+     * @param latLng the location of the the marker
+     */
     public static void addMarker(LatLng latLng) {
         mMap.addMarker(new MarkerOptions().position(latLng));
     }
+
+    /**
+     * Format the latLng to be more readble
+     * @param str LatLng passed in as string
+     * @return the formatted LatLng
+     */
     public static LatLng convertStringtoLatLng(String str) {
         String latLongLocation = str;
         int index = latLongLocation.indexOf(",");
@@ -117,6 +145,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         longitude = Double.parseDouble(format.format(longitude));
         return new LatLng(latitude, longitude);
     }
+
+    /**
+     * What to do on backPressed
+     * @param v the view back is pressed at
+     */
     public void onGoBackPressed(View v) {
         this.onBackPressed();
     }
