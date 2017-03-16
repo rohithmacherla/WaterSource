@@ -124,22 +124,45 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage("Would you like to submit a Water Source Report or a " +
                     "Water Purity Report?");
-            builder.setNeutralButton("Water Source Report", new DialogInterface.OnClickListener() {
+            /*
+            builder.setItems(new CharSequence[]
+                            {"Source", "Purity"},
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            // The 'which' argument contains the index position
+                            // of the selected item
+                            switch (which) {
+                                case 0:
+                                    startWaterSourceReport(latLng);
+                                case 1:
+                                    startWaterPurityReport(latLng);
+                            }
+                        }
+                    });*/
+            builder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+
+            builder.setNegativeButton("Source", new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     startWaterSourceReport(latLng);
                 }
-            });
-            builder.setNeutralButton("Water Purity Report", new DialogInterface.OnClickListener() {
+            })
+                    .setPositiveButton("Purity", new DialogInterface.OnClickListener() {
 
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     startWaterPurityReport(latLng);
                 }
             });
-            AlertDialog dialog = builder.create();
-            dialog.show();
+
+            builder.create().show();
         }
 
     }
