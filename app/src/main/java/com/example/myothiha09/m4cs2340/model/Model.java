@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Model {
     ArrayList<User> users = new ArrayList<>();
     ArrayList<WaterSourceReport> waterSourceReports = new ArrayList<>();
+    ArrayList<WaterPurityReport> waterPurityReports = new ArrayList<>();
     int reportNumber = 0;
 
     private static Model model;
@@ -40,6 +41,16 @@ public class Model {
         waterSourceReports.add(w);
     }
 
+
+    /**
+     * Method to add a new water report to the model instance.
+     * @param w the new water report that's being added to the model instance
+     */
+    public void addWaterPurityReport(WaterPurityReport w) {
+
+        waterPurityReports.add(w);
+    }
+
     /**
      * Getter for the report number.
      * @return the an report number
@@ -55,5 +66,13 @@ public class Model {
      */
     public ArrayList<WaterSourceReport> getWaterSourceReports() {
         return waterSourceReports;
+    }
+
+    /**
+     * Getter for the list of water reports added.
+     * @return the list of water reports added
+     */
+    public ArrayList<WaterPurityReport> getWaterPurityReports() {
+        return waterPurityReports;
     }
 }
