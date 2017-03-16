@@ -9,6 +9,7 @@ import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -121,9 +122,41 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if (user.getUserType() == USER) {
             startWaterSourceReport(latLng);
         } else {
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            final Dialog dialog = new Dialog(this);
+            dialog.setContentView(R.layout.map_report_alert_dialog);
+            dialog.setTitle("Type of Report");
+            Button sourceButton = (Button) dialog.findViewById(R.id.sourceButton);
+            Button purityButton = (Button) dialog.findViewById(R.id.purityButton);
+            Button cancelButton = (Button) dialog.findViewById(R.id.cancelButton);
+
+            sourceButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startWaterSourceReport(latLng);
+                }
+            });
+
+            purityButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startWaterPurityReport(latLng);
+                }
+            });
+
+            cancelButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.show();
+
+            //AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            /*
             builder.setMessage("Would you like to submit a Water Source Report or a " +
                     "Water Purity Report?");
+                    */
             /*
             builder.setItems(new CharSequence[]
                             {"Source", "Purity"},
@@ -139,6 +172,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             }
                         }
                     });*/
+            /*
             builder.setNeutralButton("Cancel", new DialogInterface.OnClickListener() {
 
                 @Override
@@ -163,6 +197,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             });
 
             builder.create().show();
+            */
+
+
         }
 
     }
