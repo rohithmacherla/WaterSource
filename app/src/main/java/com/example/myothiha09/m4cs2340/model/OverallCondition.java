@@ -1,24 +1,19 @@
 package com.example.myothiha09.m4cs2340.model;
 
-// Team 27
-
 import java.io.Serializable;
 
 /**
- * An enum that represents the condition of a water source.
- * Each entry consists of the actual label, and the position in the spinner.
+ * Created by nidhi on 3/15/17.
  */
-public enum WaterCondition implements Serializable{
+
+public enum OverallCondition implements Serializable {
 
 
-    /**
-     * First parameter is the string label for each water condition,
-     * second parameter is the position the water condition has in the spinner.
-     */
-    WASTE("Waste", 0),
-    TREATABLE_CLEAR("Treatable-Clear", 1),
-    TREATABLE_MUDDY("Treatable-Muddy", 2),
-    POTABLE("Potable", 3);
+
+    SAFE("Safe", 0),
+    TREATABLE("Treatable", 1),
+    UNSAFE("Unsafe", 2);
+    //POTABLE("Potable", 3);
 
     private String name;
     private int position;
@@ -28,7 +23,7 @@ public enum WaterCondition implements Serializable{
      * @param n
      * @param p
      */
-    private WaterCondition(String n, int p) {
+    private OverallCondition(String n, int p) {
         name = n;
         position = p;
     }
@@ -60,5 +55,3 @@ public enum WaterCondition implements Serializable{
         return position;
     }
 }
-
-
