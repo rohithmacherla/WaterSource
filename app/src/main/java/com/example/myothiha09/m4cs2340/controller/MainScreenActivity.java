@@ -61,6 +61,7 @@ public class MainScreenActivity extends AppCompatActivity {
         for (User user2: User.usersList) {
             if (user2.getName().equals(username)) {
                 user = user2;
+
             }
         }
 
@@ -74,6 +75,7 @@ public class MainScreenActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mapIntent.putExtra("User", user);
                 startActivity(mapIntent);
             }
         });

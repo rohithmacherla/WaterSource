@@ -3,327 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\e4e09e9083152659da7ceebfbe1c15c663daf9a3\output\jars\classes.jar"
+        jar="C:\Users\Kevin\.android\build-cache\213f1b8d24ce100c6b01f31a75c28376c172eec5\output\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0fcbf3541a9101da6ae82c5515c776a56d2e5827\classes.dex" />
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b51ed1bfd8955b257e95dd77c696d0b26acc2bab\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\a6ea5463755efa03edfbf46cc81d01ea9834b286\output\jars\classes.jar"
+        jar="C:\Users\Kevin\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e26e9c2fcbea386eec201f5b19e4c98442ebf93e\classes.dex" />
+        sha1="0a9cb567dc008f570c28531720168f19148da965">
+        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-beta4_287f0ec6830426fef546f7f25763033788d9492c\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\120b628fe34dd99642c60397a20174e1f74ba02a\output\jars\classes.jar"
+        jar="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_af7a36e4c700f4e6f9c874607d6af169a7660445\classes.dex" />
+        sha1="3ad7cbe0426e4a9cc1a071ed59dfdf943f5cc476">
+        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_0d62ce51b81cef3ba8aee989e1069953689c1724\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\3ba135f58b029f1d3c9839fc5aa8cb9c4a229326\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="93a0248fe0524b4fa2d16f5f7c3cff8452796454">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8047f0db2a25f95c7cec366888ac96f260a5eec7\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\a6ea5463755efa03edfbf46cc81d01ea9834b286\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_e26e9c2fcbea386eec201f5b19e4c98442ebf93e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\46e25505985d6be51dcae3266683e331391308f9\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f6afcfbf1989631424f9ceaae6ee24777d3cf6ba">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_0f3f818b982c7b3280e099a8069c154207daf9d1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\120b628fe34dd99642c60397a20174e1f74ba02a\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c9649557905bf7a80fca9e0d54cbcb7662627860">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_af7a36e4c700f4e6f9c874607d6af169a7660445.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\3ba135f58b029f1d3c9839fc5aa8cb9c4a229326\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="93a0248fe0524b4fa2d16f5f7c3cff8452796454">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_8047f0db2a25f95c7cec366888ac96f260a5eec7.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\46e25505985d6be51dcae3266683e331391308f9\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f6afcfbf1989631424f9ceaae6ee24777d3cf6ba">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0f3f818b982c7b3280e099a8069c154207daf9d1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\91b07e18d377d962898212d85319f2d19d90f909\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d7c221483fb1d49ee34a0c2fa971ff120034e679\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\d788a5293b4cff4c0020737e7ee7dc2857a68a42\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7357a05eea2a049c33488c7e8c6f887b3483d4b8">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_ac438d66f6bab5c0ab575364a7325d51ecaba670.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\dcb9e7bd6b37488cbc3737c5c85b6e01ed90b190\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="614b2ffd04818e865e1c02cc149c6b92e518e862">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_265dc076fe4669ab495245ce1d3f6ab99f65749d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\3a19b00f6c7abd919721b26da0d6cc089e4058a0\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_df0e9e2f2c6add8e2b0448383513f7d2cb73096a.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e8ee17727b76f183ba5032f5dbd3daa23b333665">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cf7a71073cb2db3ea84e6d17912b82219d0da185\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\01cd8a636fe222eb3288848fe96b36fe893ac110\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_b61757f6ad59968c1c54f8cfe9fda81bddebda3f.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\3a19b00f6c7abd919721b26da0d6cc089e4058a0\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cd7951e04cfb9a8bf008d544a478d9a8d8192d38">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_df0e9e2f2c6add8e2b0448383513f7d2cb73096a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\01cd8a636fe222eb3288848fe96b36fe893ac110\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b61757f6ad59968c1c54f8cfe9fda81bddebda3f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\dcb9e7bd6b37488cbc3737c5c85b6e01ed90b190\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="614b2ffd04818e865e1c02cc149c6b92e518e862">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_265dc076fe4669ab495245ce1d3f6ab99f65749d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\88733a2061fb44d45a1fd63806a3fabd9a7d1feb\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ae623350d5e252199acda1cd4f97fb59cc78972e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\1bf71735ea2920af9d8fa4dd1735b55719ca0433\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_15cc93324b9833358b6336c36127a348ad980491\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\1bf71735ea2920af9d8fa4dd1735b55719ca0433\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="15b049fedbd8e3926bf99d9e45dfc9b2a1043bb9">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_15cc93324b9833358b6336c36127a348ad980491.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\5c5873b74c2e56a8b6d65d560637cea5ef50d86c\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c146f6f3e8177fcfbcfb09a65f6b42dfcdc730cc\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\88733a2061fb44d45a1fd63806a3fabd9a7d1feb\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_ae623350d5e252199acda1cd4f97fb59cc78972e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\91b07e18d377d962898212d85319f2d19d90f909\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_d7c221483fb1d49ee34a0c2fa971ff120034e679.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\b7a7e35663879345b276e90acd2add9529ab44ce\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_28e40e8dcfa0bedc7a1f4bfb7d95b428b5298ff5\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\5c5873b74c2e56a8b6d65d560637cea5ef50d86c\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_c146f6f3e8177fcfbcfb09a65f6b42dfcdc730cc.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\d788a5293b4cff4c0020737e7ee7dc2857a68a42\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7357a05eea2a049c33488c7e8c6f887b3483d4b8">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ac438d66f6bab5c0ab575364a7325d51ecaba670\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\b7a7e35663879345b276e90acd2add9529ab44ce\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_28e40e8dcfa0bedc7a1f4bfb7d95b428b5298ff5.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\3afe41716ef190a5b4cb6d4cc613fc62b66a9aa9\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_455254c082ad1b9c924a7d0adabc228af3f2f836\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\3afe41716ef190a5b4cb6d4cc613fc62b66a9aa9\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_455254c082ad1b9c924a7d0adabc228af3f2f836.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\89e21c74284b318bf39a923a787dd9b6013ef73c\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_d4532fa7d551fdba65415ad1cac1902a85bf4bc1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\.android\build-cache\e4e09e9083152659da7ceebfbe1c15c663daf9a3\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\classes_0fcbf3541a9101da6ae82c5515c776a56d2e5827.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\.android\build-cache\89e21c74284b318bf39a923a787dd9b6013ef73c\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_d4532fa7d551fdba65415ad1cac1902a85bf4bc1\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\myoth\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_57c421bd548c27de9fd78c5067e8e511fc55c361.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_126d2c865550460847f9416cd3cd13fd656c65c8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\myoth\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
-        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_57c421bd548c27de9fd78c5067e8e511fc55c361\classes.dex" />
+        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_d1b51e5a268fdd7f06f46a4c5f783c63af16839d\classes.dex" />
     </item>
 
 </items>

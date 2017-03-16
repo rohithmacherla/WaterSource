@@ -26,14 +26,20 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import com.example.myothiha09.m4cs2340.model.User;
+
+import static com.example.myothiha09.m4cs2340.model.UserType.USER;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMapLongClickListener {
 
     private static GoogleMap mMap;
     private Model model;
+    private User user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        user = getIntent().getParcelableExtra("User");
         AlertDialog alertDialog = new AlertDialog.Builder(MapsActivity.this).create();
         alertDialog.setTitle("Alert");
         alertDialog.setMessage("Long click to add a new location. Click a pin to edit/view details");
@@ -94,7 +100,42 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
-    public void onMapLongClick(LatLng latLng) {
+    public void onMapLongClick(final LatLng latLng) {
+        if (user.getUserType() == USER) {
+            startWaterSourceReport(latLng);
+        } else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("Would you like to submit a Water Source Report or a " +
+                    "Water Purity Report?");
+            builder.setNeutralButton("Water Source Report", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    startWaterSourceReport(latLng);
+                }
+            });
+            builder.setNeutralButton("Water Purity Report", new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    startWaterPurityReport(latLng);
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+
+    }
+
+    public void startWaterPurityReport(LatLng latLng) {
+        latLng = convertStringtoLatLng(latLng.toString());
+
+        Intent intent = new Intent(this, WaterPurityActivity.class);
+        intent.putExtra(WaterSourceReport.NEW_ARG_REPORT, latLng.toString());
+        startActivity(intent);
+    }
+
+    public void startWaterSourceReport(LatLng latLng) {
         latLng = convertStringtoLatLng(latLng.toString());
 
         Intent intent = new Intent(this, WaterReportActivity.class);

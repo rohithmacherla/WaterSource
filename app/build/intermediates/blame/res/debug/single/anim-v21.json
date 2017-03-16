@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\myoth\\.android\\build-cache\\3a19b00f6c7abd919721b26da0d6cc089e4058a0\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M8\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Kevin\\.android\\build-cache\\d388e70550ed812b5f6fe4b82797007d51053d09\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\myoth\\.android\\build-cache\\3a19b00f6c7abd919721b26da0d6cc089e4058a0\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M8\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Kevin\\.android\\build-cache\\d388e70550ed812b5f6fe4b82797007d51053d09\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
     }
 ]
