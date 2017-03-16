@@ -33,6 +33,7 @@ import com.example.myothiha09.m4cs2340.model.OverallCondition;
 import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
 import com.example.myothiha09.m4cs2340.model.User;
 import com.example.myothiha09.m4cs2340.model.Model;
+import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
 import com.example.myothiha09.m4cs2340.model.WaterType;
 import com.google.android.gms.maps.model.LatLng;
 

@@ -27,7 +27,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import com.example.myothiha09.m4cs2340.model.User;
+import com.example.myothiha09.m4cs2340.model.*;
 
 import static com.example.myothiha09.m4cs2340.model.UserType.USER;
 
@@ -110,6 +110,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return true;
             }
         }
+        ArrayList<WaterPurityReport> arrayList2 = model.getWaterPurityReports();
+        for (WaterPurityReport current : arrayList2) {
+            if(current.getWaterLocation().equals(marker.getPosition().toString())) {
+                Intent intent = new Intent(this, WaterPurityReportActivity.class);
+                intent.putExtra(WaterSourceReport.ARG_REPORT, current);
+                startActivity(intent);
+                return true;
+            }
+        }
         return false;
     }
 
@@ -133,6 +142,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 @Override
                 public void onClick(View v) {
                     startWaterSourceReport(latLng);
+                    dialog.dismiss();
                 }
             });
 
@@ -140,6 +150,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 @Override
                 public void onClick(View v) {
                     startWaterPurityReport(latLng);
+                    dialog.dismiss();
                 }
             });
 
@@ -207,8 +218,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void startWaterPurityReport(LatLng latLng) {
         latLng = convertStringtoLatLng(latLng.toString());
 
-        Intent intent = new Intent(this, WaterPurityActivity.class);
-        intent.putExtra(WaterSourceReport.NEW_ARG_REPORT, latLng.toString());
+        Intent intent = new Intent(this, WaterPurityReportActivity.class);
+        intent.putExtra(WaterPurityReport.NEW_ARG_REPORT, latLng.toString());
         startActivity(intent);
     }
 

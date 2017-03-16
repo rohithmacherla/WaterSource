@@ -1,4 +1,4 @@
-#Wed Mar 15 22:21:44 EDT 2017
+#Wed Mar 15 23:15:08 EDT 2017
 base.0=C\:\\Users\\Kevin\\Documents\\Android_Apps\\M8\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d1b51e5a268fdd7f06f46a4c5f783c63af16839d
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Kevin\\.android\\build-cache\\3d2b631628b39228d7f9960280d67167cc2f302a\\output\\res\\drawable\\abc_cab_background_top_material.xml"
     },
     {
-        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M8\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
-        "source": "C:\\Users\\Kevin\\.android\\build-cache\\3d2b631628b39228d7f9960280d67167cc2f302a\\output\\res\\drawable\\abc_dialog_material_background.xml"
-    },
-    {
         "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M8\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
         "source": "C:\\Users\\Kevin\\.android\\build-cache\\3d2b631628b39228d7f9960280d67167cc2f302a\\output\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M8\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\Kevin\\.android\\build-cache\\3d2b631628b39228d7f9960280d67167cc2f302a\\output\\res\\drawable\\abc_dialog_material_background.xml"
     },
     {
         "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M8\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",

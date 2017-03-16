@@ -25,6 +25,7 @@
         <activity android:name=".controller.LoginActivity" />
         <activity android:name=".controller.UserDetailsActivity" />
         <activity android:name=".controller.WaterReportActivity" />
+        <activity android:name=".controller.WaterPurityReportActivity"/>
         <activity
             android:name=".controller.MainScreenActivity"
             android:label="@string/title_activity_main_screen"
@@ -56,7 +57,6 @@
         <activity
             android:name=".controller.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".controller.WaterPurityActivity"></activity>
     </application>
 
 </manifest>
