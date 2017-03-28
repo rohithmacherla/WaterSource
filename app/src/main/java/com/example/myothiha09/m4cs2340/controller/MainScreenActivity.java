@@ -79,7 +79,7 @@ public class MainScreenActivity extends AppCompatActivity {
                 startActivity(mapIntent);
             }
         });
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
 
 
 
@@ -91,7 +91,7 @@ public class MainScreenActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.nav_home_screen) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
                 } else if (id == R.id.nav_edit_screen) {
                     Intent intent = new Intent(getApplicationContext(), UserDetailsActivity.class);
                     intent.putExtra(User.ARG_USER, user);

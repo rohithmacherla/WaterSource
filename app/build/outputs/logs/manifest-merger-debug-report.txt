@@ -1,159 +1,159 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:2:1-62:12
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:2:1-62:12
 	package
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:3:5-46
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:3:5-46
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:10:5-79
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:10:5-79
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:10:22-76
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:10:22-76
 application
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:12:5-60:19
-MERGED from [com.android.support:design:25.1.1] C:\Users\Kevin\.android\build-cache\efc917fe3e4a48b22682356f5f5dfd3285da4ec4\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\Kevin\.android\build-cache\ac7e103ec8643087e317c1a6b35f8ec4b3abda6f\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\Kevin\.android\build-cache\c8a45bfbd1c8de8cf67e09d41a25c62b80e5d523\output\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\Kevin\.android\build-cache\435c9cab4c06026b9fd4eee8bff101a5702f83fc\output\AndroidManifest.xml:23:5-20
-MERGED from [com.android.support:transition:25.1.1] C:\Users\Kevin\.android\build-cache\8a59cf4e8ecac0ca09e9e74e65c3c63be0a1ef65\output\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\Kevin\.android\build-cache\c6e22a1d5d8c992ab244da4ce6a0aa0fc6d043ae\output\AndroidManifest.xml:24:5-19
-MERGED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\Kevin\.android\build-cache\334dc3780169d6422e75b1f6188e6a802c726f50\output\AndroidManifest.xml:18:5-20:19
-MERGED from [com.google.android.gms:play-services-tasks:9.6.0] C:\Users\Kevin\.android\build-cache\c57d02121d094f805477fbaf9db267a45adc1500\output\AndroidManifest.xml:4:5-19
-MERGED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\Kevin\.android\build-cache\4fcbeb2e251c4dcf8c2ea60aa414ef4434a3608d\output\AndroidManifest.xml:19:5-21:19
-MERGED from [com.android.support:support-v4:25.1.1] C:\Users\Kevin\.android\build-cache\3297cda6c72ec493fb56c85c2798d389d752c461\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\Kevin\.android\build-cache\59625537bef9275673b765b0b366002a96cfc50a\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\Kevin\.android\build-cache\2eccec822db56b1880ee9382c666c4b5ca80f943\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\Kevin\.android\build-cache\04920732d701cd59a6f792b894f2b5f3ec769ba4\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\Kevin\.android\build-cache\de39c6ecdd585002b978e5b23d147e801cebd018\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-compat:25.1.1] C:\Users\Kevin\.android\build-cache\83807b12f52bcad36d9331cc61bfbde9fe01e39d\output\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] C:\Users\Kevin\.android\build-cache\213f1b8d24ce100c6b01f31a75c28376c172eec5\output\AndroidManifest.xml:9:5-20
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:12:5-60:19
+MERGED from [com.android.support:design:25.1.1] C:\Users\myoth\.android\build-cache\3a19b00f6c7abd919721b26da0d6cc089e4058a0\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\myoth\.android\build-cache\91b07e18d377d962898212d85319f2d19d90f909\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\myoth\.android\build-cache\89e21c74284b318bf39a923a787dd9b6013ef73c\output\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\myoth\.android\build-cache\88733a2061fb44d45a1fd63806a3fabd9a7d1feb\output\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:transition:25.1.1] C:\Users\myoth\.android\build-cache\1bf71735ea2920af9d8fa4dd1735b55719ca0433\output\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\myoth\.android\build-cache\d788a5293b4cff4c0020737e7ee7dc2857a68a42\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\myoth\.android\build-cache\3ba135f58b029f1d3c9839fc5aa8cb9c4a229326\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:9.6.0] C:\Users\myoth\.android\build-cache\dcb9e7bd6b37488cbc3737c5c85b6e01ed90b190\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\myoth\.android\build-cache\46e25505985d6be51dcae3266683e331391308f9\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.1.1] C:\Users\myoth\.android\build-cache\01cd8a636fe222eb3288848fe96b36fe893ac110\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\myoth\.android\build-cache\e4e09e9083152659da7ceebfbe1c15c663daf9a3\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\myoth\.android\build-cache\5c5873b74c2e56a8b6d65d560637cea5ef50d86c\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\myoth\.android\build-cache\b7a7e35663879345b276e90acd2add9529ab44ce\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\myoth\.android\build-cache\a6ea5463755efa03edfbf46cc81d01ea9834b286\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.1] C:\Users\myoth\.android\build-cache\3afe41716ef190a5b4cb6d4cc613fc62b66a9aa9\output\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] C:\Users\myoth\.android\build-cache\4f233bfbed5281c8df8ef0aa02173ef357442bee\output\AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:15:9-41
 	android:supportsRtl
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:16:9-35
 	android:allowBackup
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:13:9-35
 	android:icon
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:14:9-43
 	android:theme
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:17:9-40
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:17:9-40
 activity#com.example.myothiha09.m4cs2340.controller.WelcomeActivity
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:18:9-24:20
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:18:9-24:20
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:18:19-61
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:18:19-61
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:19:13-23:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:20:17-69
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:20:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:22:17-77
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:22:27-74
 activity#com.example.myothiha09.m4cs2340.controller.LoginActivity
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:25:9-62
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:25:9-62
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:25:19-59
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:25:19-59
 activity#com.example.myothiha09.m4cs2340.controller.UserDetailsActivity
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:26:9-68
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:26:9-68
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:26:19-65
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:26:19-65
 activity#com.example.myothiha09.m4cs2340.controller.WaterReportActivity
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:27:9-68
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:27:9-68
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:27:19-65
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:27:19-65
 activity#com.example.myothiha09.m4cs2340.controller.WaterPurityReportActivity
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:28:9-73
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:28:9-73
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:28:19-71
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:28:19-71
 activity#com.example.myothiha09.m4cs2340.controller.MainScreenActivity
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:29:9-32:59
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:29:9-32:59
 	android:label
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:31:13-63
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:31:13-63
 	android:theme
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:32:13-56
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:32:13-56
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:30:13-58
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:30:13-58
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:34:9-83
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:34:9-83
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:34:26-80
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:34:26-80
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:35:9-71
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:35:9-71
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:35:26-68
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:35:26-68
 permission#com.pkg.map.permission.MAPS_RECEIVE
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:37:9-39:51
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:37:9-39:51
 	android:protectionLevel
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:39:13-48
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:39:13-48
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:38:13-63
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:38:13-63
 meta-data#com.google.android.gms.version
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:41:9-43:69
-MERGED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\Kevin\.android\build-cache\4fcbeb2e251c4dcf8c2ea60aa414ef4434a3608d\output\AndroidManifest.xml:20:9-121
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:41:9-43:69
+MERGED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\myoth\.android\build-cache\46e25505985d6be51dcae3266683e331391308f9\output\AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:43:13-66
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:43:13-66
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:42:13-58
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:42:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:53:9-55:55
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:53:9-55:55
 	android:value
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:55:13-52
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:55:13-52
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:54:13-58
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:54:13-58
 activity#com.example.myothiha09.m4cs2340.controller.MapsActivity
-ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:57:9-59:59
+ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:57:9-59:59
 	android:label
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:59:13-56
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:59:13-56
 	android:name
-		ADDED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml:58:13-52
+		ADDED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml:58:13-52
 uses-sdk
-INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:design:25.1.1] C:\Users\Kevin\.android\build-cache\efc917fe3e4a48b22682356f5f5dfd3285da4ec4\output\AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\Kevin\.android\build-cache\ac7e103ec8643087e317c1a6b35f8ec4b3abda6f\output\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\Kevin\.android\build-cache\c8a45bfbd1c8de8cf67e09d41a25c62b80e5d523\output\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\Kevin\.android\build-cache\435c9cab4c06026b9fd4eee8bff101a5702f83fc\output\AndroidManifest.xml:21:5-43
-MERGED from [com.android.support:recyclerview-v7:25.1.1] C:\Users\Kevin\.android\build-cache\0e88bc6fa4e129a67759c8ce23b6570167650dfb\output\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.1.1] C:\Users\Kevin\.android\build-cache\8a59cf4e8ecac0ca09e9e74e65c3c63be0a1ef65\output\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\Kevin\.android\build-cache\c6e22a1d5d8c992ab244da4ce6a0aa0fc6d043ae\output\AndroidManifest.xml:23:5-42
-MERGED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\Kevin\.android\build-cache\334dc3780169d6422e75b1f6188e6a802c726f50\output\AndroidManifest.xml:17:5-42
-MERGED from [com.google.android.gms:play-services-tasks:9.6.0] C:\Users\Kevin\.android\build-cache\c57d02121d094f805477fbaf9db267a45adc1500\output\AndroidManifest.xml:3:5-42
-MERGED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\Kevin\.android\build-cache\4fcbeb2e251c4dcf8c2ea60aa414ef4434a3608d\output\AndroidManifest.xml:17:5-42
-MERGED from [com.android.support:support-v4:25.1.1] C:\Users\Kevin\.android\build-cache\3297cda6c72ec493fb56c85c2798d389d752c461\output\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\Kevin\.android\build-cache\59625537bef9275673b765b0b366002a96cfc50a\output\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\Kevin\.android\build-cache\2eccec822db56b1880ee9382c666c4b5ca80f943\output\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\Kevin\.android\build-cache\04920732d701cd59a6f792b894f2b5f3ec769ba4\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\Kevin\.android\build-cache\de39c6ecdd585002b978e5b23d147e801cebd018\output\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:25.1.1] C:\Users\Kevin\.android\build-cache\83807b12f52bcad36d9331cc61bfbde9fe01e39d\output\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] C:\Users\Kevin\.android\build-cache\213f1b8d24ce100c6b01f31a75c28376c172eec5\output\AndroidManifest.xml:5:5-7:41
+INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.1.1] C:\Users\myoth\.android\build-cache\3a19b00f6c7abd919721b26da0d6cc089e4058a0\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.1.1] C:\Users\myoth\.android\build-cache\91b07e18d377d962898212d85319f2d19d90f909\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] C:\Users\myoth\.android\build-cache\89e21c74284b318bf39a923a787dd9b6013ef73c\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.1.1] C:\Users\myoth\.android\build-cache\88733a2061fb44d45a1fd63806a3fabd9a7d1feb\output\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:recyclerview-v7:25.1.1] C:\Users\myoth\.android\build-cache\120b628fe34dd99642c60397a20174e1f74ba02a\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.1.1] C:\Users\myoth\.android\build-cache\1bf71735ea2920af9d8fa4dd1735b55719ca0433\output\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\myoth\.android\build-cache\d788a5293b4cff4c0020737e7ee7dc2857a68a42\output\AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\myoth\.android\build-cache\3ba135f58b029f1d3c9839fc5aa8cb9c4a229326\output\AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.6.0] C:\Users\myoth\.android\build-cache\dcb9e7bd6b37488cbc3737c5c85b6e01ed90b190\output\AndroidManifest.xml:3:5-42
+MERGED from [com.google.android.gms:play-services-basement:9.6.0] C:\Users\myoth\.android\build-cache\46e25505985d6be51dcae3266683e331391308f9\output\AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:support-v4:25.1.1] C:\Users\myoth\.android\build-cache\01cd8a636fe222eb3288848fe96b36fe893ac110\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.1.1] C:\Users\myoth\.android\build-cache\e4e09e9083152659da7ceebfbe1c15c663daf9a3\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\myoth\.android\build-cache\5c5873b74c2e56a8b6d65d560637cea5ef50d86c\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\myoth\.android\build-cache\b7a7e35663879345b276e90acd2add9529ab44ce\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\myoth\.android\build-cache\a6ea5463755efa03edfbf46cc81d01ea9834b286\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.1.1] C:\Users\myoth\.android\build-cache\3afe41716ef190a5b4cb6d4cc613fc62b66a9aa9\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] C:\Users\myoth\.android\build-cache\4f233bfbed5281c8df8ef0aa02173ef357442bee\output\AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:25.1.1] C:\Users\Kevin\.android\build-cache\efc917fe3e4a48b22682356f5f5dfd3285da4ec4\output\AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:design:25.1.1] C:\Users\myoth\.android\build-cache\3a19b00f6c7abd919721b26da0d6cc089e4058a0\output\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\src\main\AndroidManifest.xml
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\Kevin\.android\build-cache\c6e22a1d5d8c992ab244da4ce6a0aa0fc6d043ae\output\AndroidManifest.xml:21:5-77
+ADDED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\myoth\.android\build-cache\d788a5293b4cff4c0020737e7ee7dc2857a68a42\output\AndroidManifest.xml:21:5-77
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\Kevin\.android\build-cache\c6e22a1d5d8c992ab244da4ce6a0aa0fc6d043ae\output\AndroidManifest.xml:21:19-51
+		ADDED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\myoth\.android\build-cache\d788a5293b4cff4c0020737e7ee7dc2857a68a42\output\AndroidManifest.xml:21:19-51
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\Kevin\.android\build-cache\c6e22a1d5d8c992ab244da4ce6a0aa0fc6d043ae\output\AndroidManifest.xml:21:52-75
+		ADDED from [com.google.android.gms:play-services-maps:9.6.0] C:\Users\myoth\.android\build-cache\d788a5293b4cff4c0020737e7ee7dc2857a68a42\output\AndroidManifest.xml:21:52-75
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\Kevin\.android\build-cache\334dc3780169d6422e75b1f6188e6a802c726f50\output\AndroidManifest.xml:19:9-172
+ADDED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\myoth\.android\build-cache\3ba135f58b029f1d3c9839fc5aa8cb9c4a229326\output\AndroidManifest.xml:19:9-172
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\Kevin\.android\build-cache\334dc3780169d6422e75b1f6188e6a802c726f50\output\AndroidManifest.xml:19:146-170
+		ADDED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\myoth\.android\build-cache\3ba135f58b029f1d3c9839fc5aa8cb9c4a229326\output\AndroidManifest.xml:19:146-170
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\Kevin\.android\build-cache\334dc3780169d6422e75b1f6188e6a802c726f50\output\AndroidManifest.xml:19:86-145
+		ADDED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\myoth\.android\build-cache\3ba135f58b029f1d3c9839fc5aa8cb9c4a229326\output\AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\Kevin\.android\build-cache\334dc3780169d6422e75b1f6188e6a802c726f50\output\AndroidManifest.xml:19:19-85
+		ADDED from [com.google.android.gms:play-services-base:9.6.0] C:\Users\myoth\.android\build-cache\3ba135f58b029f1d3c9839fc5aa8cb9c4a229326\output\AndroidManifest.xml:19:19-85

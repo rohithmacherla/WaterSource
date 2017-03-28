@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="83f9449cba6a7ef2b99160f99d1336d4a89ead9d">
+        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_cf7a71073cb2db3ea84e6d17912b82219d0da185\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ba86e7383e6cbb243ca6c86f5a8a8ffa8812757a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="79a28005eee8473aafae65d5a03ce6d9ac3be511">
-        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c17f9de9af2880168d43efa7111053495b7615e2\classes.dex" />
+        <dex dex="C:\Users\myoth\Google Drive\Georgia Tech\Spring 2017\CS 2340\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_126d2c865550460847f9416cd3cd13fd656c65c8\classes.dex" />
     </item>
 
 </items>

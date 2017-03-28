@@ -90,46 +90,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LatLng location = convertStringtoLatLng(latLongLocation);
             mMap.addMarker(new MarkerOptions().position(location));
         }
+        for (WaterPurityReport current : model.getWaterPurityReports()) {
+            String latLongLocation = current.getWaterLocation();
+            LatLng location = convertStringtoLatLng(latLongLocation);
+            mMap.addMarker(new MarkerOptions().position(location));
+        }
 
 
     }
 
     /**
      * The listener method to decide action if a user click a marker
-     * @param marker the marker that is clicked
+     * @param marker2 the marker that is clicked
      * @return whether an action is executed or not
      */
     @Override
-    public boolean onMarkerClick(Marker marker) {
-        ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
-        for (WaterSourceReport current : arrayList) {
-            if(current.getWaterLocation().equals(marker.getPosition().toString())) {
-                Intent intent = new Intent(this, WaterReportActivity.class);
-                intent.putExtra(WaterSourceReport.ARG_REPORT, current);
-                startActivity(intent);
-                return true;
-            }
-        }
-        ArrayList<WaterPurityReport> arrayList2 = model.getWaterPurityReports();
-        for (WaterPurityReport current : arrayList2) {
-            if(current.getWaterLocation().equals(marker.getPosition().toString())) {
-                Intent intent = new Intent(this, WaterPurityReportActivity.class);
-                intent.putExtra(WaterPurityReport.ARG_REPORT, current);
-                startActivity(intent);
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
-     * Start the ability to add a water report at the location user long pressed at.
-     * @param latLng the location of where user long press.
-     */
-    @Override
-    public void onMapLongClick(final LatLng latLng) {
+    public boolean onMarkerClick(final Marker marker2) {
+        final Marker marker = marker2;
         if (user.getUserType() == USER) {
-            startWaterSourceReport(latLng);
+            Intent intent = null;
+            ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
+            for (WaterSourceReport current : arrayList) {
+                if (current.getWaterLocation().equals(marker.getPosition().toString())) {
+                    intent = new Intent(this, WaterReportActivity.class);
+                    intent.putExtra(WaterSourceReport.ARG_REPORT, current);
+                    startActivity(intent);
+                    return true;
+                }
+            }
+            if (intent == null) {
+                startWaterSourceReport(marker.getPosition());
+            }
         } else {
             final Dialog dialog = new Dialog(this);
             dialog.setContentView(R.layout.map_report_alert_dialog);
@@ -141,7 +132,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             sourceButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startWaterSourceReport(latLng);
+                    ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
+                    for (WaterSourceReport current : arrayList) {
+                        if (current.getWaterLocation().equals(marker.getPosition().toString())) {
+                            Intent intent = new Intent(getApplicationContext(), WaterReportActivity.class);
+                            intent.putExtra(WaterSourceReport.ARG_REPORT, current);
+                            startActivity(intent);
+                        }
+                    }
                     dialog.dismiss();
                 }
             });
@@ -149,12 +147,67 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             purityButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startWaterPurityReport(latLng);
+                    ArrayList<WaterPurityReport> arrayList2 = model.getWaterPurityReports();
+                    Intent intent = null;
+                    for (WaterPurityReport current : arrayList2) {
+                        if (current.getWaterLocation().equals(marker.getPosition().toString())) {
+                            intent = new Intent(getApplicationContext(), WaterPurityReportActivity.class);
+                            intent.putExtra(WaterPurityReport.ARG_REPORT, current);
+                            startActivity(intent);
+                        }
+                    }
+                    if (intent == null) {
+                        startWaterPurityReport(marker.getPosition());
+                    }
                     dialog.dismiss();
                 }
             });
 
             cancelButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.show();
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Start the ability to add a water report at the location user long pressed at.
+     * @param latLng the location of where user long press.
+     */
+    @Override
+    public void onMapLongClick(final LatLng latLng) {
+        if (user.getUserType() == USER) {
+                startWaterSourceReport(latLng);
+            } else {
+                final Dialog dialog = new Dialog(this);
+                dialog.setContentView(R.layout.map_report_alert_dialog);
+                dialog.setTitle("Type of Report");
+                Button sourceButton = (Button) dialog.findViewById(R.id.sourceButton);
+                Button purityButton = (Button) dialog.findViewById(R.id.purityButton);
+                Button cancelButton = (Button) dialog.findViewById(R.id.cancelButton);
+
+                sourceButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startWaterSourceReport(latLng);
+                        dialog.dismiss();
+                    }
+                });
+
+                purityButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startWaterPurityReport(latLng);
+                        dialog.dismiss();
+                    }
+                });
+
+                cancelButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     dialog.dismiss();

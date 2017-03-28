@@ -129,12 +129,12 @@
             android:layout_weight="0.11" />
 
         <EditText
+            android:id="@+id/contaminantPPM_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:layout_weight="1"
             android:ems="10"
-            android:id="@+id/contaminantPPM_field"
-            android:layout_weight="1" />
+            android:inputType="number" />
 
     </LinearLayout>
 
@@ -153,12 +153,12 @@
             android:layout_weight="0.11" />
 
         <EditText
+            android:id="@+id/virusPPM_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:layout_weight="1"
             android:ems="10"
-            android:id="@+id/virusPPM_field"
-            android:layout_weight="1" />
+            android:inputType="number" />
 
     </LinearLayout>
 

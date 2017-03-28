@@ -174,7 +174,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
 
                 if (report == null) {
                     model.addWaterPurityReport(waterPurityReport);
-                    reportNumber = model.getReportNumber();
+                    reportNumber = model.getPurityReportNumber();
                     waterPurityReport.setReportNumber(reportNumber);
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
                 }

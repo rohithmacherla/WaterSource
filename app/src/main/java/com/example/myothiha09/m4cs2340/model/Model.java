@@ -11,6 +11,7 @@ public class Model {
     ArrayList<WaterSourceReport> waterSourceReports = new ArrayList<>();
     ArrayList<WaterPurityReport> waterPurityReports = new ArrayList<>();
     int reportNumber = 0;
+    int purityReportNumber = 0;
 
     private static Model model;
 
@@ -58,6 +59,16 @@ public class Model {
     public int getReportNumber() {
 
         return (++reportNumber);
+    }
+
+    /**
+     * Getter for purity report number
+     * @return the purity report number
+     */
+
+    public int getPurityReportNumber() {
+
+        return (++purityReportNumber);
     }
 
     /**
