@@ -40,7 +40,9 @@ public class Reports extends Fragment implements TabHost.OnTabChangeListener, Vi
 
     }
 
-
+    /**
+     * Add the fragments to the view pager
+     */
     private void initiateViewPager(){
         List<Fragment> list = new ArrayList<Fragment>();
         viewPager =   (ViewPager) view.findViewById(R.id.myViewPager);
@@ -51,6 +53,10 @@ public class Reports extends Fragment implements TabHost.OnTabChangeListener, Vi
         viewPager.setAdapter(fm);
         viewPager.setOnPageChangeListener(this);
     }
+
+    /**
+     * Set the titles for view pager.
+     */
     private void initiateTabHost() {
         tabHost = (TabHost) view.findViewById(R.id.tabHost);
         tabHost.setup();

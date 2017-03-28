@@ -95,8 +95,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LatLng location = convertStringtoLatLng(latLongLocation);
             mMap.addMarker(new MarkerOptions().position(location));
         }
-
-
     }
 
     /**
@@ -268,6 +266,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    /**
+     * Start water purity report activity at the clicked location.
+     * @param latLng clicked location
+     */
     public void startWaterPurityReport(LatLng latLng) {
         latLng = convertStringtoLatLng(latLng.toString());
 
@@ -275,6 +277,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         intent.putExtra(WaterPurityReport.NEW_ARG_REPORT, latLng.toString());
         startActivity(intent);
     }
+
+    /**
+     * Start water source report activity at clicked location.
+     * @param latLng clicked location.
+     */
 
     public void startWaterSourceReport(LatLng latLng) {
         latLng = convertStringtoLatLng(latLng.toString());
