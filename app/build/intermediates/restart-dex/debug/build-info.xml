@@ -6,91 +6,83 @@
     density="560dpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1489635021051"
-    token="-6983316408217656707"
+    timestamp="1490665245273"
+    token="1553863699358773150"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="262" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="19" />
     <task
         name="verifier"
-        duration="0" />
+        duration="2" />
+
+    <artifact
+        location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1489632488316"
+        timestamp="1490662850670"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\outputs\apk\app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
             type="SPLIT" />
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1489633557963"
-        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1489634106461"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1489634187867"
+        timestamp="1490664674450"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1489635021051"
-        verifier="COLD_SWAP_REQUESTED" />
+        timestamp="1490665245273"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+    </build>
 
 </instant-run>

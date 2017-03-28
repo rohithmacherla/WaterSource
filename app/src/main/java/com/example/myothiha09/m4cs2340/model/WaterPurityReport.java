@@ -241,6 +241,8 @@ public class WaterPurityReport implements Parcelable {
         parcel.writeString(waterLocation);
         parcel.writeSerializable(waterType);
         parcel.writeSerializable(overallCondition);
+        parcel.writeInt(contaminantPPM);
+        parcel.writeInt(virusPPM);
 
     }
     public static final Parcelable.Creator<WaterPurityReport> CREATOR = new Parcelable.Creator<WaterPurityReport>() {

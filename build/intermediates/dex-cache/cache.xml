@@ -3,39 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\Kevin\.android\build-cache\213f1b8d24ce100c6b01f31a75c28376c172eec5\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
-        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b51ed1bfd8955b257e95dd77c696d0b26acc2bab\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a9cb567dc008f570c28531720168f19148da965">
-        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-beta4_287f0ec6830426fef546f7f25763033788d9492c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4408c8b5ffd61512ea3dd0e6203c0e35ebdd3f00">
-        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_0d62ce51b81cef3ba8aee989e1069953689c1724\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_d1b51e5a268fdd7f06f46a4c5f783c63af16839d\classes.dex" />
+        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ba86e7383e6cbb243ca6c86f5a8a8ffa8812757a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="79a28005eee8473aafae65d5a03ce6d9ac3be511">
+        <dex dex="C:\Users\Kevin\Documents\Android_Apps\M8 Implementation\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_c17f9de9af2880168d43efa7111053495b7615e2\classes.dex" />
     </item>
 
 </items>

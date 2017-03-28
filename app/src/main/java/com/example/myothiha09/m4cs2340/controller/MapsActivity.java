@@ -114,7 +114,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         for (WaterPurityReport current : arrayList2) {
             if(current.getWaterLocation().equals(marker.getPosition().toString())) {
                 Intent intent = new Intent(this, WaterPurityReportActivity.class);
-                intent.putExtra(WaterSourceReport.ARG_REPORT, current);
+                intent.putExtra(WaterPurityReport.ARG_REPORT, current);
                 startActivity(intent);
                 return true;
             }

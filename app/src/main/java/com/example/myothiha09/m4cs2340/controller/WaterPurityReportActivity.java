@@ -63,6 +63,9 @@ public class WaterPurityReportActivity extends AppCompatActivity {
     private static Spinner waterTypes;
 
     private static Spinner overallConditions;
+    private static EditText contaminantPPM_field;
+    private static EditText virusPPM_field;
+
     private WaterPurityReport report;
 
     /**
@@ -100,7 +103,8 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         user.setText(reporterName);
 
 
-
+        contaminantPPM_field = (EditText) findViewById(R.id.contaminantPPM_field);
+        virusPPM_field = (EditText) findViewById(R.id.virusPPM_field);
 
         //Spinner for Water Type
         waterTypes = (Spinner) findViewById(R.id.waterType_spinner);
@@ -123,6 +127,8 @@ public class WaterPurityReportActivity extends AppCompatActivity {
             user.setText(report.getReporterName());
             waterTypes.setSelection(report.getWaterType().getPosition());
             overallConditions.setSelection(report.getOverallCondition().getPosition());
+            contaminantPPM_field.setText(Integer.toString(report.getContaminantPPM()));
+            virusPPM_field.setText(Integer.toString(report.getVirusPPM()));
             location.setText(chosenLocation);
         }
         //Setting the Location of the Water
@@ -162,6 +168,9 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                 //watercondition
                 waterPurityReport.setOverallConditionW(
                         (OverallCondition) overallConditions.getSelectedItem());
+
+                waterPurityReport.setContaminantPPM(Integer.parseInt(contaminantPPM_field.getText().toString()));
+                waterPurityReport.setVirusPPM(Integer.parseInt(virusPPM_field.getText().toString()));
 
                 if (report == null) {
                     model.addWaterPurityReport(waterPurityReport);
