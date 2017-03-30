@@ -1,5 +1,6 @@
 package com.example.myothiha09.m4cs2340.controller;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.content.Intent;
@@ -32,6 +34,9 @@ public class UserDetailsActivity extends AppCompatActivity {
     Spinner userType;
     boolean newAccount;
 
+    //progress bar for fire base registering
+    private ProgressDialog progressDialog;
+
     /**
      * Sets references to all the views, creates the adapter,
      * sets the views to the user details the user is just editing their profile,
@@ -47,12 +52,18 @@ public class UserDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        //instantiate views from activity_registration.xml
         userName = (EditText) findViewById(R.id.name_field);
         password = (EditText) findViewById(R.id.password_field);
         email = (EditText) findViewById(R.id.email_field);
         userType = (Spinner) findViewById(R.id.spinner);
         Button registerButton = (Button) findViewById(R.id.registerButton);
 
+        //instantiate the progressBar
+        progressDialog = new ProgressDialog(this);
+
+        //create the spinner for usertype
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, User.userTypeList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userType.setAdapter(adapter);
@@ -87,6 +98,8 @@ public class UserDetailsActivity extends AppCompatActivity {
                 }  else if (email.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "Please input an email", Toast.LENGTH_LONG).show();
                 } else {
+                    progressDialog.setMessage("Registering user! Please wait :)");
+                    progressDialog.show();
                     if (getIntent().hasExtra(User.ARG_USER)) {
                         for (User user : User.usersList) {
                             if (user.getName().equals(userName.getText().toString())) {
@@ -97,7 +110,8 @@ public class UserDetailsActivity extends AppCompatActivity {
                         }
                         finish();
                     }
-                    else {
+                    else {progressDialog.setMessage("Registering user! Please wait :)");
+                        progressDialog.show();
                         User user = new User(userName.getText().toString(),
                                 password.getText().toString(),
                                 email.getText().toString(),
