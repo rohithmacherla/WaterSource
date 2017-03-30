@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_in.xml",
-        "source": "C:\\Users\\myoth\\.android\\build-cache\\3a19b00f6c7abd919721b26da0d6cc089e4058a0\\output\\res\\anim-v21\\design_bottom_sheet_slide_in.xml"
+        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/79928759ec4ae497f5879217622455d7685b224e/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
     },
     {
-        "merged": "C:\\Users\\myoth\\Google Drive\\Georgia Tech\\Spring 2017\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\anim-v21\\design_bottom_sheet_slide_out.xml",
-        "source": "C:\\Users\\myoth\\.android\\build-cache\\3a19b00f6c7abd919721b26da0d6cc089e4058a0\\output\\res\\anim-v21\\design_bottom_sheet_slide_out.xml"
+        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/79928759ec4ae497f5879217622455d7685b224e/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
     }
 ]

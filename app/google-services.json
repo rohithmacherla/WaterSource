@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "756759131781",
+    "firebase_url": "https://watercrowdsource.firebaseio.com",
+    "project_id": "watercrowdsource",
+    "storage_bucket": "watercrowdsource.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756759131781:android:1020382d431d0f96",
+        "android_client_info": {
+          "package_name": "com.example.myothiha09.m4cs2340"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756759131781-kegk96s3aql3hnsv8snscf2bilhmseod.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoDc83crbUbjg8zWj75M6GOwNNTTml9wY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

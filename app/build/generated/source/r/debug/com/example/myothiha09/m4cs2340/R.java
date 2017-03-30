@@ -3710,19 +3710,26 @@ containing a value of this type.
         public static final int common_open_on_phone=0x7f070024;
         public static final int common_signin_button_text=0x7f070025;
         public static final int common_signin_button_text_long=0x7f070026;
-        public static final int google_maps_key=0x7f07003a;
-        public static final int hello_blank_fragment=0x7f07003b;
-        public static final int navigation_drawer_close=0x7f07003c;
-        public static final int navigation_drawer_open=0x7f07003d;
-        public static final int password_toggle_content_description=0x7f07003e;
-        public static final int path_password_eye=0x7f07003f;
-        public static final int path_password_eye_mask_strike_through=0x7f070040;
-        public static final int path_password_eye_mask_visible=0x7f070041;
-        public static final int path_password_strike_through=0x7f070042;
+        public static final int default_web_client_id=0x7f07003a;
+        public static final int firebase_database_url=0x7f07003b;
+        public static final int gcm_defaultSenderId=0x7f07003c;
+        public static final int google_api_key=0x7f07003d;
+        public static final int google_app_id=0x7f07003e;
+        public static final int google_crash_reporting_api_key=0x7f07003f;
+        public static final int google_maps_key=0x7f070040;
+        public static final int google_storage_bucket=0x7f070041;
+        public static final int hello_blank_fragment=0x7f070042;
+        public static final int navigation_drawer_close=0x7f070043;
+        public static final int navigation_drawer_open=0x7f070044;
+        public static final int password_toggle_content_description=0x7f070045;
+        public static final int path_password_eye=0x7f070046;
+        public static final int path_password_eye_mask_strike_through=0x7f070047;
+        public static final int path_password_eye_mask_visible=0x7f070048;
+        public static final int path_password_strike_through=0x7f070049;
         public static final int search_menu_title=0x7f070027;
         public static final int status_bar_notification_info_overflow=0x7f070028;
-        public static final int title_activity_main_screen=0x7f070043;
-        public static final int title_activity_maps=0x7f070044;
+        public static final int title_activity_main_screen=0x7f07004a;
+        public static final int title_activity_maps=0x7f07004b;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0900a2;
