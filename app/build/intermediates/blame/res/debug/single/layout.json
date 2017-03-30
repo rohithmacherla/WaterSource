@@ -20,12 +20,12 @@
         "source": "/Users/rohithmacherla/.android/build-cache/79928759ec4ae497f5879217622455d7685b224e/output/res/layout/design_navigation_item_separator.xml"
     },
     {
-        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
-        "source": "/Users/rohithmacherla/.android/build-cache/b151f66336d9303e7f9a3fa06c2f2bd171d1d75c/output/res/layout/notification_template_part_chronometer.xml"
-    },
-    {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar_include.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/79928759ec4ae497f5879217622455d7685b224e/output/res/layout/design_layout_snackbar_include.xml"
+    },
+    {
+        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/b151f66336d9303e7f9a3fa06c2f2bd171d1d75c/output/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/layout/welcome_screen.xml",

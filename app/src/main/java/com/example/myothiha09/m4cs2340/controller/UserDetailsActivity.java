@@ -16,6 +16,7 @@ import android.content.Intent;
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
 import com.example.myothiha09.m4cs2340.model.UserType;
+import com.google.firebase.auth.FirebaseAuth;
 
 // Team 27
 
@@ -36,6 +37,7 @@ public class UserDetailsActivity extends AppCompatActivity {
 
     //progress bar for fire base registering
     private ProgressDialog progressDialog;
+    private FirebaseAuth firebaseAuth;
 
     /**
      * Sets references to all the views, creates the adapter,
@@ -62,6 +64,9 @@ public class UserDetailsActivity extends AppCompatActivity {
 
         //instantiate the progressBar
         progressDialog = new ProgressDialog(this);
+
+        //instantiate the firebaseAuth
+        //firebaseAuth = FirebaseAuth.getInstance();
 
         //create the spinner for usertype
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, User.userTypeList);
@@ -110,7 +115,8 @@ public class UserDetailsActivity extends AppCompatActivity {
                         }
                         finish();
                     }
-                    else {progressDialog.setMessage("Registering user! Please wait :)");
+                    else {
+                        progressDialog.setMessage("Registering user! Please wait :)");
                         progressDialog.show();
                         User user = new User(userName.getText().toString(),
                                 password.getText().toString(),

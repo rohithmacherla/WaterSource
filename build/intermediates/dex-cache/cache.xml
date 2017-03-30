@@ -12,15 +12,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/rohithmacherla/.android/build-cache/1ba64f4c5065a886be46d9fdeb21ff5abebe4441/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2506c5893e125e2f9cfc522378e893620c21b109">
-        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f3954599d981c7a11fb80f9ce01818a5f6f8f03f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/rohithmacherla/.android/build-cache/6084d1cff7a733544eb914715960d0270b82aa95/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -48,6 +39,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/rohithmacherla/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_1541575bdce8ac7c29be015085e7197b326686b5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/rohithmacherla/.android/build-cache/f14f3a5e1b888488b30ee85697adaf305e825ded/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -57,12 +57,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/rohithmacherla/.android/build-cache/da99082ceb869257d2f7db13a4511d670e033829/output/jars/classes.jar"
+        jar="/Users/rohithmacherla/.android/build-cache/f7efb4e60614d7625d23d7991822255491397a68/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="35a01d7cb4ff6b5976777bf5827fd8f206fb8757">
-        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_593b4e040fc9eb4ee60ec4f7ce8ce54fd02c8861/classes.dex" />
+        sha1="a378adc3106cb3560ab3dfed05f1fda26cff5b49">
+        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_225022a8055b09bd9a9c214b27daf13d7e44abfa/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,12 +75,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/rohithmacherla/.android/build-cache/f3e9640b4c34deba186ed2f087ba67df6f3fb378/output/jars/classes.jar"
+        jar="/Users/rohithmacherla/.android/build-cache/e6f9a10be6d75e1079a308cdd6ae7f1b9b49c000/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ee409046028e5657a2a69edaa2eba00d6511a74c">
-        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7e56ac9678a0f1f429b623424e4e7422c9ebd52b/classes.dex" />
+        sha1="33203b081101ca6242a4cd746aafe5fc2dd98a34">
+        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3995b846144e5b8fb834a866a660be45113240f9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rohithmacherla/.android/build-cache/d75ba12e895ad445175d1ee046937dbd064162e9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7572433ba21aa9e4624c819fa738b2748b82d05">
+        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b566cbaf97ad28ab7ad1a0dce2623e4725c740df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rohithmacherla/.android/build-cache/4de1ef63ccbc56f067c606c0d13ae1487c5dc30d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c76f6507a42aec274953e882bf3c49a570843ef5">
+        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d1884cee8c6e5c92233333039b92abdacae0ea4a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rohithmacherla/.android/build-cache/e7e915123c170c1d24c5ecf3c19ac0ef0ed56fb7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa6c324604383981fb74c4cb036d4171ed0a9a02">
+        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5516c3721d1e0040cec6416d8b2982bd9059cd7e/classes.dex" />
     </item>
 
 </items>

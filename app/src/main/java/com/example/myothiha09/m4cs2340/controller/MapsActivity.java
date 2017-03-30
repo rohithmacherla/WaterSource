@@ -1,6 +1,7 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
@@ -36,6 +37,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static GoogleMap mMap;
     private Model model;
     private User user;
+    private ProgressDialog progressDialog;
     @Override
     /**
      * Do the initials setup necessary for a map activity and show instruction to users throguh alert..
@@ -46,6 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      *                           Note: Otherwise it is null.
      */
     protected void onCreate(Bundle savedInstanceState) {
+        progressDialog = new ProgressDialog(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         user = getIntent().getParcelableExtra("User");
@@ -323,6 +326,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param v the view back is pressed at
      */
     public void onGoBackPressed(View v) {
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
         this.onBackPressed();
     }
 

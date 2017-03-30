@@ -20,6 +20,7 @@ ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-maps:9.6.0] /Users/rohithmacherla/.android/build-cache/e4bed103ab387d598fddade475e262641ff2d19a/output/AndroidManifest.xml:20:5-66
+MERGED from [com.firebaseui:firebase-ui-database:0.4.0] /Users/rohithmacherla/.android/build-cache/4de1ef63ccbc56f067c606c0d13ae1487c5dc30d/output/AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/rohithmacherla/.android/build-cache/c67264310fc57307f96dc736ac5862d92d2f62de/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/rohithmacherla/.android/build-cache/6084d1cff7a733544eb914715960d0270b82aa95/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/rohithmacherla/.android/build-cache/34cbf8286dc241eb33240c4171ac7a532cd4a923/output/AndroidManifest.xml:20:5-66
@@ -28,14 +29,14 @@ MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/rohithmacherla/.andr
 application
 ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:13:5-61:19
 MERGED from [com.android.support:design:25.1.1] /Users/rohithmacherla/.android/build-cache/79928759ec4ae497f5879217622455d7685b224e/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/rohithmacherla/.android/build-cache/b151f66336d9303e7f9a3fa06c2f2bd171d1d75c/output/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/rohithmacherla/.android/build-cache/7cfcfe400ecddfdeb1700408ffd8969ebf0e8725/output/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/rohithmacherla/.android/build-cache/62be30919a281d7daf9f7820534b7e34612eecdb/output/AndroidManifest.xml:23:5-20
 MERGED from [com.android.support:transition:25.1.1] /Users/rohithmacherla/.android/build-cache/82b4e30567082927101a955f43c664da51646bc2/output/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-maps:9.6.0] /Users/rohithmacherla/.android/build-cache/e4bed103ab387d598fddade475e262641ff2d19a/output/AndroidManifest.xml:24:5-19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] /Users/rohithmacherla/.android/build-cache/adcbc03dc8394cca31e74f7a78f9f20a0ac7eaae/output/AndroidManifest.xml:9:5-20
-MERGED from [com.google.firebase:firebase-auth:9.2.1] /Users/rohithmacherla/.android/build-cache/1ba64f4c5065a886be46d9fdeb21ff5abebe4441/output/AndroidManifest.xml:20:5-21:19
-MERGED from [com.google.firebase:firebase-auth-common:9.2.1] /Users/rohithmacherla/.android/build-cache/f3e9640b4c34deba186ed2f087ba67df6f3fb378/output/AndroidManifest.xml:20:5-21:19
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/rohithmacherla/.android/build-cache/b151f66336d9303e7f9a3fa06c2f2bd171d1d75c/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/rohithmacherla/.android/build-cache/7cfcfe400ecddfdeb1700408ffd8969ebf0e8725/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/rohithmacherla/.android/build-cache/62be30919a281d7daf9f7820534b7e34612eecdb/output/AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-auth:9.2.0] /Users/rohithmacherla/.android/build-cache/2631871fc2643ff9965938004f9976374db7b67d/output/AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.firebase:firebase-auth-common:9.2.0] /Users/rohithmacherla/.android/build-cache/4209eb1a0e6949921c57b41f2c4165d6c4527488/output/AndroidManifest.xml:20:5-21:19
 MERGED from [com.google.android.gms:play-services-base:9.6.0] /Users/rohithmacherla/.android/build-cache/9de3c0174d6509ea45955ac719ffcd0ac815ce24/output/AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.firebase:firebase-core:9.6.0] /Users/rohithmacherla/.android/build-cache/1a690c2a29ab4edbb253cc59ab77aa7e09bf7d6d/output/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/rohithmacherla/.android/build-cache/c67264310fc57307f96dc736ac5862d92d2f62de/output/AndroidManifest.xml:24:5-33:19
@@ -133,16 +134,21 @@ ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml
 uses-sdk
 INJECTED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.1.1] /Users/rohithmacherla/.android/build-cache/79928759ec4ae497f5879217622455d7685b224e/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:transition:25.1.1] /Users/rohithmacherla/.android/build-cache/82b4e30567082927101a955f43c664da51646bc2/output/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:9.6.0] /Users/rohithmacherla/.android/build-cache/e4bed103ab387d598fddade475e262641ff2d19a/output/AndroidManifest.xml:23:5-42
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] /Users/rohithmacherla/.android/build-cache/adcbc03dc8394cca31e74f7a78f9f20a0ac7eaae/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-storage:9.2.0] /Users/rohithmacherla/.android/build-cache/f7efb4e60614d7625d23d7991822255491397a68/output/AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-storage-common:9.2.0] /Users/rohithmacherla/.android/build-cache/e7e915123c170c1d24c5ecf3c19ac0ef0ed56fb7/output/AndroidManifest.xml:5:5-43
+MERGED from [com.firebaseui:firebase-ui-database:0.4.0] /Users/rohithmacherla/.android/build-cache/4de1ef63ccbc56f067c606c0d13ae1487c5dc30d/output/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/rohithmacherla/.android/build-cache/b151f66336d9303e7f9a3fa06c2f2bd171d1d75c/output/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/rohithmacherla/.android/build-cache/7cfcfe400ecddfdeb1700408ffd8969ebf0e8725/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/rohithmacherla/.android/build-cache/62be30919a281d7daf9f7820534b7e34612eecdb/output/AndroidManifest.xml:21:5-43
 MERGED from [com.android.support:recyclerview-v7:25.1.1] /Users/rohithmacherla/.android/build-cache/3922515a171236a28053b3ce06445ceff94860f7/output/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:transition:25.1.1] /Users/rohithmacherla/.android/build-cache/82b4e30567082927101a955f43c664da51646bc2/output/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:9.6.0] /Users/rohithmacherla/.android/build-cache/e4bed103ab387d598fddade475e262641ff2d19a/output/AndroidManifest.xml:23:5-42
-MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] /Users/rohithmacherla/.android/build-cache/adcbc03dc8394cca31e74f7a78f9f20a0ac7eaae/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-auth:9.2.1] /Users/rohithmacherla/.android/build-cache/1ba64f4c5065a886be46d9fdeb21ff5abebe4441/output/AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-common:9.2.1] /Users/rohithmacherla/.android/build-cache/f3e9640b4c34deba186ed2f087ba67df6f3fb378/output/AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-module:9.2.1] /Users/rohithmacherla/.android/build-cache/da99082ceb869257d2f7db13a4511d670e033829/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-database:9.2.0] /Users/rohithmacherla/.android/build-cache/d75ba12e895ad445175d1ee046937dbd064162e9/output/AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-database-connection:9.2.0] /Users/rohithmacherla/.android/build-cache/e6f9a10be6d75e1079a308cdd6ae7f1b9b49c000/output/AndroidManifest.xml:5:5-43
+MERGED from [com.google.firebase:firebase-auth:9.2.0] /Users/rohithmacherla/.android/build-cache/2631871fc2643ff9965938004f9976374db7b67d/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-common:9.2.0] /Users/rohithmacherla/.android/build-cache/4209eb1a0e6949921c57b41f2c4165d6c4527488/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-module:9.2.0] /Users/rohithmacherla/.android/build-cache/ef19bcc28585f4aed9394279c4729eaef2df2ffc/output/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-base:9.6.0] /Users/rohithmacherla/.android/build-cache/9de3c0174d6509ea45955ac719ffcd0ac815ce24/output/AndroidManifest.xml:17:5-42
 MERGED from [com.google.firebase:firebase-core:9.6.0] /Users/rohithmacherla/.android/build-cache/1a690c2a29ab4edbb253cc59ab77aa7e09bf7d6d/output/AndroidManifest.xml:4:5-42
 MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/rohithmacherla/.android/build-cache/c67264310fc57307f96dc736ac5862d92d2f62de/output/AndroidManifest.xml:17:5-42

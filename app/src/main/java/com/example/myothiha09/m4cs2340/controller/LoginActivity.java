@@ -1,6 +1,7 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.AlertDialog;
@@ -26,6 +27,9 @@ public class LoginActivity extends AppCompatActivity {
     //References to the text views.
     EditText username;
     EditText password;
+    private ProgressDialog progressDialog;
+
+
 
     /**
      * Assign the edit text views.
@@ -43,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         //initialize views
         username = (EditText) findViewById(R.id.userNameText);
         password = (EditText) findViewById(R.id.passwordText);
+        progressDialog = new ProgressDialog(this);
     }
 
     /**
@@ -53,6 +58,9 @@ public class LoginActivity extends AppCompatActivity {
      */
     public void onLoginPressed(View v) {
         if (checkPassword()) {
+            //ProgressDialog
+            progressDialog.setMessage("Loading! Please wait:)");
+            progressDialog.show();
             Intent intent = new Intent(this, MainScreenActivity.class);
             intent.putExtra("Username", username.getText().toString());
             startActivity(intent);

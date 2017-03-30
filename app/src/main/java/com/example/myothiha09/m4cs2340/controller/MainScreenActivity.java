@@ -1,5 +1,6 @@
 package com.example.myothiha09.m4cs2340.controller;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -35,6 +36,7 @@ public class MainScreenActivity extends AppCompatActivity {
     private static TextView userHeader;
     private static TextView userTypeHeader;
     private Intent mapIntent;
+    private ProgressDialog progressDialog;
 
     public static User getCurrentUser() {
         return user;
@@ -52,6 +54,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        progressDialog = new ProgressDialog(this);
         mapIntent = new Intent(getApplicationContext(), MapsActivity.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen2);
@@ -61,7 +64,6 @@ public class MainScreenActivity extends AppCompatActivity {
         for (User user2: User.usersList) {
             if (user2.getName().equals(username)) {
                 user = user2;
-
             }
         }
 
@@ -75,6 +77,9 @@ public class MainScreenActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //ProgressDialog
+                progressDialog.setMessage("Loading...");
+                progressDialog.show();
                 mapIntent.putExtra("User", user);
                 startActivity(mapIntent);
             }
@@ -118,6 +123,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        progressDialog.dismiss();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
@@ -165,6 +171,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onRestart() {
+        progressDialog.dismiss();
         super.onRestart();
         userHeader.setText(user.getName());
         userTypeHeader.setText(user.getUserType().toString());
