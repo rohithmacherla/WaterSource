@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:2:1-62:12
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml
@@ -17,8 +17,16 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:10:5-79
 	android:name
 		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:10:22-76
+uses-permission#android.permission.INTERNET
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.gms:play-services-maps:9.6.0] /Users/rohithmacherla/.android/build-cache/e4bed103ab387d598fddade475e262641ff2d19a/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/rohithmacherla/.android/build-cache/c67264310fc57307f96dc736ac5862d92d2f62de/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/rohithmacherla/.android/build-cache/6084d1cff7a733544eb914715960d0270b82aa95/output/AndroidManifest.xml:20:5-66
+MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/rohithmacherla/.android/build-cache/34cbf8286dc241eb33240c4171ac7a532cd4a923/output/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:11:22-64
 application
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:12:5-60:19
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:13:5-61:19
 MERGED from [com.android.support:design:25.1.1] /Users/rohithmacherla/.android/build-cache/79928759ec4ae497f5879217622455d7685b224e/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/rohithmacherla/.android/build-cache/b151f66336d9303e7f9a3fa06c2f2bd171d1d75c/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/rohithmacherla/.android/build-cache/7cfcfe400ecddfdeb1700408ffd8969ebf0e8725/output/AndroidManifest.xml:22:5-20
@@ -26,8 +34,8 @@ MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/rohithma
 MERGED from [com.android.support:transition:25.1.1] /Users/rohithmacherla/.android/build-cache/82b4e30567082927101a955f43c664da51646bc2/output/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-maps:9.6.0] /Users/rohithmacherla/.android/build-cache/e4bed103ab387d598fddade475e262641ff2d19a/output/AndroidManifest.xml:24:5-19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] /Users/rohithmacherla/.android/build-cache/adcbc03dc8394cca31e74f7a78f9f20a0ac7eaae/output/AndroidManifest.xml:9:5-20
-MERGED from [com.google.firebase:firebase-auth:9.2.0] /Users/rohithmacherla/.android/build-cache/2631871fc2643ff9965938004f9976374db7b67d/output/AndroidManifest.xml:20:5-21:19
-MERGED from [com.google.firebase:firebase-auth-common:9.2.0] /Users/rohithmacherla/.android/build-cache/4209eb1a0e6949921c57b41f2c4165d6c4527488/output/AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.firebase:firebase-auth:9.2.1] /Users/rohithmacherla/.android/build-cache/1ba64f4c5065a886be46d9fdeb21ff5abebe4441/output/AndroidManifest.xml:20:5-21:19
+MERGED from [com.google.firebase:firebase-auth-common:9.2.1] /Users/rohithmacherla/.android/build-cache/f3e9640b4c34deba186ed2f087ba67df6f3fb378/output/AndroidManifest.xml:20:5-21:19
 MERGED from [com.google.android.gms:play-services-base:9.6.0] /Users/rohithmacherla/.android/build-cache/9de3c0174d6509ea45955ac719ffcd0ac815ce24/output/AndroidManifest.xml:18:5-20:19
 MERGED from [com.google.firebase:firebase-core:9.6.0] /Users/rohithmacherla/.android/build-cache/1a690c2a29ab4edbb253cc59ab77aa7e09bf7d6d/output/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/rohithmacherla/.android/build-cache/c67264310fc57307f96dc736ac5862d92d2f62de/output/AndroidManifest.xml:24:5-33:19
@@ -43,92 +51,85 @@ MERGED from [com.android.support:support-core-ui:25.1.1] /Users/rohithmacherla/.
 MERGED from [com.android.support:support-core-utils:25.1.1] /Users/rohithmacherla/.android/build-cache/94609e4e39e92786d9590220139af19e663fc63c/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.1.1] /Users/rohithmacherla/.android/build-cache/ff7974a6d17b9d3126cdb233638800458c1557cd/output/AndroidManifest.xml:25:5-20
 	android:label
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:16:9-41
 	android:supportsRtl
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:17:9-35
 	android:allowBackup
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:14:9-35
 	android:icon
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:15:9-43
 	android:theme
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:17:9-40
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:18:9-40
 activity#com.example.myothiha09.m4cs2340.controller.WelcomeActivity
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:18:9-24:20
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:19:9-25:20
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:18:19-61
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:19:19-61
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:19:13-23:29
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:20:17-69
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:20:25-66
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:23:27-74
 activity#com.example.myothiha09.m4cs2340.controller.LoginActivity
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:25:9-62
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:26:9-62
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:25:19-59
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:26:19-59
 activity#com.example.myothiha09.m4cs2340.controller.UserDetailsActivity
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:26:9-68
-	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:26:19-65
-activity#com.example.myothiha09.m4cs2340.controller.WaterReportActivity
 ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:27:9-68
 	android:name
 		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:27:19-65
+activity#com.example.myothiha09.m4cs2340.controller.WaterReportActivity
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:28:9-68
+	android:name
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:28:19-65
 activity#com.example.myothiha09.m4cs2340.controller.WaterPurityReportActivity
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:28:9-73
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:29:9-73
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:28:19-71
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:29:19-71
 activity#com.example.myothiha09.m4cs2340.controller.MainScreenActivity
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:29:9-32:59
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:30:9-33:59
 	android:label
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:31:13-63
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:32:13-63
 	android:theme
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:32:13-56
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:33:13-56
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:30:13-58
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:31:13-58
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:34:9-83
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:35:9-83
 MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/rohithmacherla/.android/build-cache/c67264310fc57307f96dc736ac5862d92d2f62de/output/AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/rohithmacherla/.android/build-cache/6084d1cff7a733544eb914715960d0270b82aa95/output/AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/rohithmacherla/.android/build-cache/34cbf8286dc241eb33240c4171ac7a532cd4a923/output/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:34:26-80
-uses-permission#android.permission.INTERNET
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:35:9-71
-MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/rohithmacherla/.android/build-cache/c67264310fc57307f96dc736ac5862d92d2f62de/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-analytics-impl:9.6.0] /Users/rohithmacherla/.android/build-cache/6084d1cff7a733544eb914715960d0270b82aa95/output/AndroidManifest.xml:20:5-66
-MERGED from [com.google.firebase:firebase-iid:9.6.0] /Users/rohithmacherla/.android/build-cache/34cbf8286dc241eb33240c4171ac7a532cd4a923/output/AndroidManifest.xml:20:5-66
-	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:35:26-68
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:35:26-80
 permission#com.pkg.map.permission.MAPS_RECEIVE
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:37:9-39:51
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:38:9-40:51
 	android:protectionLevel
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:39:13-48
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:40:13-48
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:38:13-63
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:39:13-63
 meta-data#com.google.android.gms.version
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:41:9-43:69
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:42:9-44:69
 MERGED from [com.google.android.gms:play-services-basement:9.6.0] /Users/rohithmacherla/.android/build-cache/78d5abcd27770ebb94bfabdb246641f7712ffff4/output/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:43:13-66
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:44:13-66
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:42:13-58
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:43:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:53:9-55:55
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:54:9-56:55
 	android:value
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:55:13-52
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:56:13-52
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:54:13-58
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:55:13-58
 activity#com.example.myothiha09.m4cs2340.controller.MapsActivity
-ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:57:9-59:59
+ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:58:9-60:59
 	android:label
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:59:13-56
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:60:13-56
 	android:name
-		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:58:13-52
+		ADDED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml:59:13-52
 uses-sdk
 INJECTED from /Users/rohithmacherla/Desktop/bob/M4/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.1.1] /Users/rohithmacherla/.android/build-cache/79928759ec4ae497f5879217622455d7685b224e/output/AndroidManifest.xml:21:5-23:62
@@ -139,9 +140,9 @@ MERGED from [com.android.support:recyclerview-v7:25.1.1] /Users/rohithmacherla/.
 MERGED from [com.android.support:transition:25.1.1] /Users/rohithmacherla/.android/build-cache/82b4e30567082927101a955f43c664da51646bc2/output/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:9.6.0] /Users/rohithmacherla/.android/build-cache/e4bed103ab387d598fddade475e262641ff2d19a/output/AndroidManifest.xml:23:5-42
 MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] /Users/rohithmacherla/.android/build-cache/adcbc03dc8394cca31e74f7a78f9f20a0ac7eaae/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-auth:9.2.0] /Users/rohithmacherla/.android/build-cache/2631871fc2643ff9965938004f9976374db7b67d/output/AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-common:9.2.0] /Users/rohithmacherla/.android/build-cache/4209eb1a0e6949921c57b41f2c4165d6c4527488/output/AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-module:9.2.0] /Users/rohithmacherla/.android/build-cache/ef19bcc28585f4aed9394279c4729eaef2df2ffc/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.firebase:firebase-auth:9.2.1] /Users/rohithmacherla/.android/build-cache/1ba64f4c5065a886be46d9fdeb21ff5abebe4441/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-common:9.2.1] /Users/rohithmacherla/.android/build-cache/f3e9640b4c34deba186ed2f087ba67df6f3fb378/output/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-module:9.2.1] /Users/rohithmacherla/.android/build-cache/da99082ceb869257d2f7db13a4511d670e033829/output/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-base:9.6.0] /Users/rohithmacherla/.android/build-cache/9de3c0174d6509ea45955ac719ffcd0ac815ce24/output/AndroidManifest.xml:17:5-42
 MERGED from [com.google.firebase:firebase-core:9.6.0] /Users/rohithmacherla/.android/build-cache/1a690c2a29ab4edbb253cc59ab77aa7e09bf7d6d/output/AndroidManifest.xml:4:5-42
 MERGED from [com.google.firebase:firebase-analytics:9.6.0] /Users/rohithmacherla/.android/build-cache/c67264310fc57307f96dc736ac5862d92d2f62de/output/AndroidManifest.xml:17:5-42
