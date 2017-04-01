@@ -1,6 +1,7 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.ProgressDialog;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,9 @@ import android.content.Intent;
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
 import com.example.myothiha09.m4cs2340.model.UserType;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 // Team 27
@@ -35,9 +39,10 @@ public class UserDetailsActivity extends AppCompatActivity {
     Spinner userType;
     boolean newAccount;
 
-    //progress bar for fire base registering
+    //progress bar for fire base registering and firebaseAuth
     private ProgressDialog progressDialog;
     private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     /**
      * Sets references to all the views, creates the adapter,
@@ -66,7 +71,8 @@ public class UserDetailsActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
 
         //instantiate the firebaseAuth
-        //firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+
 
         //create the spinner for usertype
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, User.userTypeList);
@@ -105,6 +111,8 @@ public class UserDetailsActivity extends AppCompatActivity {
                 } else {
                     progressDialog.setMessage("Registering user! Please wait :)");
                     progressDialog.show();
+
+
                     if (getIntent().hasExtra(User.ARG_USER)) {
                         for (User user : User.usersList) {
                             if (user.getName().equals(userName.getText().toString())) {
@@ -118,6 +126,23 @@ public class UserDetailsActivity extends AppCompatActivity {
                     else {
                         progressDialog.setMessage("Registering user! Please wait :)");
                         progressDialog.show();
+
+                        //firebase
+                        firebaseAuth.createUserWithEmailAndPassword(userName.getText().toString(),
+                                password.getText().toString()).addOnCompleteListener(UserDetailsActivity.this,
+                                new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()) {
+                                    Toast.makeText(UserDetailsActivity.this, "FireBase successfully" +
+                                            "registered user.", Toast.LENGTH_LONG).show();
+                                } else {
+                                    Toast.makeText(UserDetailsActivity.this, "FireBase failed to " +
+                                            "register user.", Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
+
                         User user = new User(userName.getText().toString(),
                                 password.getText().toString(),
                                 email.getText().toString(),
