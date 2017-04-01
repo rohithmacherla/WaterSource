@@ -13,6 +13,7 @@ import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.content.Intent;
+import android.util.Log;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
@@ -21,6 +22,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 // Team 27
 
@@ -38,6 +40,8 @@ public class UserDetailsActivity extends AppCompatActivity {
     EditText email;
     Spinner userType;
     boolean newAccount;
+
+    private static final String TAG = "UserDetailsActivity";
 
     //progress bar for fire base registering and firebaseAuth
     private ProgressDialog progressDialog;
@@ -72,6 +76,24 @@ public class UserDetailsActivity extends AppCompatActivity {
 
         //instantiate the firebaseAuth
         firebaseAuth = FirebaseAuth.getInstance();
+
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                } else {
+                    // User is signed out
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                }
+                // ...
+            }
+        };
+
+
+
 
 
         //create the spinner for usertype
@@ -127,21 +149,26 @@ public class UserDetailsActivity extends AppCompatActivity {
                         progressDialog.setMessage("Registering user! Please wait :)");
                         progressDialog.show();
 
+                        FirebaseAuth mAuth = firebaseAuth;
                         //firebase
-                        firebaseAuth.createUserWithEmailAndPassword(userName.getText().toString(),
-                                password.getText().toString()).addOnCompleteListener(UserDetailsActivity.this,
-                                new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()) {
-                                    Toast.makeText(UserDetailsActivity.this, "FireBase successfully" +
-                                            "registered user.", Toast.LENGTH_LONG).show();
-                                } else {
-                                    Toast.makeText(UserDetailsActivity.this, "FireBase failed to " +
-                                            "register user.", Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
+                        mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                                .addOnCompleteListener(UserDetailsActivity.this, new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+
+                                        // If sign in fails, display a message to the user. If sign in succeeds
+                                        // the auth state listener will be notified and logic to handle the
+                                        // signed in user can be handled in the listener.
+                                        if (!task.isSuccessful()) {
+                                            Toast.makeText(UserDetailsActivity.this, R.string.auth_failed,
+                                                    Toast.LENGTH_SHORT).show();
+                                        }
+
+                                        // ...
+                                    }
+                                });
+
 
                         User user = new User(userName.getText().toString(),
                                 password.getText().toString(),
@@ -150,6 +177,8 @@ public class UserDetailsActivity extends AppCompatActivity {
                         User.usersList.add(user);
                         Intent intent = new Intent(getApplicationContext(), MainScreenActivity.class);
                         intent.putExtra("Username", user.getName());
+
+
                         startActivity(intent);
                     }
                 }
@@ -186,6 +215,17 @@ public class UserDetailsActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+        if(mAuthListener != null) {
+            firebaseAuth.removeAuthStateListener(mAuthListener);
+        }
         finish();
     }
+
+    //experimental
+    @Override
+    public void onStart() {
+        super.onStart();
+        firebaseAuth.addAuthStateListener(mAuthListener);
+    }
+
 }
