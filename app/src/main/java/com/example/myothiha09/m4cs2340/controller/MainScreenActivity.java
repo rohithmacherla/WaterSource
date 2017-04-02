@@ -94,7 +94,8 @@ public class MainScreenActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 // Handle navigation view item clicks here.
                 int id = item.getItemId();
-
+                progressDialog.setMessage("Loading...");
+                progressDialog.show();
                 if (id == R.id.nav_home_screen) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
                 } else if (id == R.id.nav_edit_screen) {
