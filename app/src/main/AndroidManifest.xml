@@ -27,6 +27,7 @@
         <activity android:name=".controller.UserDetailsActivity" />
         <activity android:name=".controller.WaterReportActivity" />
         <activity android:name=".controller.WaterPurityReportActivity"/>
+        <activity android:name=".controller.GraphSetupActivity"/>
         <activity
             android:name=".controller.MainScreenActivity"
             android:label="@string/title_activity_main_screen"

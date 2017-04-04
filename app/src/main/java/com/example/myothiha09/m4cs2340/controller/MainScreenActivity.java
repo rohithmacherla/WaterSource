@@ -1,10 +1,12 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
+import com.example.myothiha09.m4cs2340.model.UserType;
 
 // Team: 27
 
@@ -36,6 +39,7 @@ public class MainScreenActivity extends AppCompatActivity {
     private static TextView userHeader;
     private static TextView userTypeHeader;
     private Intent mapIntent;
+    private Intent graphIntent;
     private ProgressDialog progressDialog;
 
     public static User getCurrentUser() {
@@ -56,6 +60,7 @@ public class MainScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         progressDialog = new ProgressDialog(this);
         mapIntent = new Intent(getApplicationContext(), MapsActivity.class);
+        graphIntent = new Intent(getApplicationContext(), GraphSetupActivity.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -73,20 +78,25 @@ public class MainScreenActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        if (user.getUserType().getUser().equals("Manager")) {
-            FloatingActionButton purity= (FloatingActionButton) findViewById(R.id.fab);
-            purity.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //ProgressDialog
+        FloatingActionButton pure= (FloatingActionButton) findViewById(R.id.purity);
+        pure.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(user.getUserType() == UserType.MANAGER) {
                     progressDialog.setMessage("Loading...");
                     progressDialog.show();
-                    mapIntent.putExtra("User", user);
-                    startActivity(mapIntent);
-                }
-            });
+                    //graphIntent.putExtra("User", user);
+                    Log.wtf("came through", "work");
+                    startActivity(graphIntent);
+                } else {
+                    createDialogBox().show();
 
-        }
+                }
+                //ProgressDialog
+
+            }
+        });
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -148,6 +158,25 @@ public class MainScreenActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    private android.app.AlertDialog createDialogBox() {
+        android.app.AlertDialog.Builder myDialogBuilder = new android.app.AlertDialog.Builder(this);
+        myDialogBuilder.setTitle("Error!");
+        myDialogBuilder.setMessage("You are not a Manager and therfore cannot access the \n " +
+                "historical reports ");
+        myDialogBuilder.setIcon(R.mipmap.ic_launcher);
+
+
+        myDialogBuilder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+
+        return myDialogBuilder.create();
     }
 
     /**

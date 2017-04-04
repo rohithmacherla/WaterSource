@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M9 Implementation\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/nidhi/cs1331/M4/C:\\Users\\Kevin\\Documents\\Android_Apps\\M9 Implementation\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,31 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "C:\\Users\\Kevin\\.android\\build-cache\\18a00e4c90a977c5cfd4d01d2dfa850d8607e2ed\\output\\res\\values\\values.xml",
+                    "file": "/Users/nidhi/cs1331/M4/C:\\Users\\Kevin\\.android\\build-cache\\18a00e4c90a977c5cfd4d01d2dfa850d8607e2ed\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 45,
+                        "endOffset": 270
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/nidhi/cs1331/M4/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "/Users/nidhi/.android/build-cache/5a66bed7ba2dba16426ed2edb0b847bac8febba4/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

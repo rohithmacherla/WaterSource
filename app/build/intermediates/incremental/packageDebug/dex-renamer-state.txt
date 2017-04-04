@@ -1,7 +1,4 @@
-#Tue Apr 04 00:17:14 EDT 2017
-base.0=C\:\\Users\\Kevin\\Documents\\Android_Apps\\M9 Implementation\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d4adff5c158496fd00e59c6e46e1054bb2ad40ed
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\Kevin\\Documents\\Android_Apps\\M9 Implementation\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a5903d5a4dc502a0a242ce64566b1de0ac938138\\classes.dex
-base.1=C\:\\Users\\Kevin\\Documents\\Android_Apps\\M9 Implementation\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_a5903d5a4dc502a0a242ce64566b1de0ac938138
-file.0=C\:\\Users\\Kevin\\Documents\\Android_Apps\\M9 Implementation\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_d4adff5c158496fd00e59c6e46e1054bb2ad40ed\\classes.dex
+#Tue Apr 04 09:02:03 EDT 2017
+base.0=/Users/nidhi/cs1331/M4/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/nidhi/cs1331/M4/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
