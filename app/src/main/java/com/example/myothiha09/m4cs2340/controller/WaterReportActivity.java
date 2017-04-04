@@ -170,10 +170,11 @@ public class WaterReportActivity extends AppCompatActivity {
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
                 }
 
+                /*
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("Source " + Integer.toString(reportNumber));
 
-                myRef.setValue(waterSourceReport);
+                myRef.setValue(waterSourceReport);*/
 
                 WaterReportActivity.super.onBackPressed();
             }

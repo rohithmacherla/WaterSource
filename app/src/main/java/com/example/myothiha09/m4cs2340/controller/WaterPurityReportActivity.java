@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.support.v7.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import android.widget.Button;
@@ -181,10 +182,17 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
                 }
 
+                /*
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("Purity " + Integer.toString(reportNumber));
 
-                myRef.setValue(waterPurityReport);
+                myRef.setValue(waterPurityReport);*/
+
+                /*
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("message");
+
+                myRef.setValue("Hello, World!");*/
 
                 WaterPurityReportActivity.super.onBackPressed();
             }

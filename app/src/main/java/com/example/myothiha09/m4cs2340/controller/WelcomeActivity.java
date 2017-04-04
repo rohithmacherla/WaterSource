@@ -6,6 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.myothiha09.m4cs2340.R;
+import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
+import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 // Team 27
 
