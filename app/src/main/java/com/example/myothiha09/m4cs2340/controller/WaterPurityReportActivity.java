@@ -36,6 +36,8 @@ import com.example.myothiha09.m4cs2340.model.Model;
 import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
 import com.example.myothiha09.m4cs2340.model.WaterType;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**
@@ -178,6 +180,11 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                     waterPurityReport.setReportNumber(reportNumber);
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
                 }
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("Purity " + Integer.toString(reportNumber));
+
+                myRef.setValue(waterPurityReport);
 
                 WaterPurityReportActivity.super.onBackPressed();
             }
