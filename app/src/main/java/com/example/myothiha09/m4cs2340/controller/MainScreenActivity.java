@@ -73,6 +73,22 @@ public class MainScreenActivity extends AppCompatActivity {
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+        if (user.getUserType().getUser().equals("Manager")) {
+            FloatingActionButton purity= (FloatingActionButton) findViewById(R.id.fab);
+            purity.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //ProgressDialog
+                    progressDialog.setMessage("Loading...");
+                    progressDialog.show();
+                    mapIntent.putExtra("User", user);
+                    startActivity(mapIntent);
+                }
+            });
+
+        }
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
