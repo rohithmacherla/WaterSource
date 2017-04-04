@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:2:1-64:12
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:2:1-65:12
 	package
 		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml
@@ -27,7 +27,7 @@ MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/nidhi/.android/buil
 	android:name
 		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:11:22-64
 application
-ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:13:5-62:19
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:13:5-63:19
 MERGED from [com.android.support:design:25.1.1] /Users/nidhi/.android/build-cache/78dfb8f027e678e1d0a7b5d56b68e10144f231e0/output/AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:transition:25.1.1] /Users/nidhi/.android/build-cache/f8047f40ece385428ba60fa295207df305d2647a/output/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-maps:10.0.1] /Users/nidhi/.android/build-cache/b5e270abc5e5c01157b4eb252b3fcb080b05dbb7/output/AndroidManifest.xml:24:5-19
@@ -95,46 +95,50 @@ activity#com.example.myothiha09.m4cs2340.controller.GraphSetupActivity
 ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:30:9-66
 	android:name
 		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:30:19-64
-activity#com.example.myothiha09.m4cs2340.controller.MainScreenActivity
-ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:31:9-34:59
-	android:label
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:33:13-63
-	android:theme
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:34:13-56
+activity#com.example.myothiha09.m4cs2340.controller.GraphActivity
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:31:9-61
 	android:name
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:32:13-58
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:31:19-59
+activity#com.example.myothiha09.m4cs2340.controller.MainScreenActivity
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:32:9-35:59
+	android:label
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:34:13-63
+	android:theme
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:35:13-56
+	android:name
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:33:13-58
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:36:9-83
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:37:9-83
 MERGED from [com.google.firebase:firebase-analytics:10.0.1] /Users/nidhi/.android/build-cache/b8b9fd10b495d344fae1bdc887e1a979095cb102/output/AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/nidhi/.android/build-cache/d502e6c1308187963b1b2799fc1c56625147e2ad/output/AndroidManifest.xml:21:5-78
 MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/nidhi/.android/build-cache/0c8b35ad822f3bb92605438df7148ff23a85af13/output/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:36:26-80
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:37:26-80
 permission#com.pkg.map.permission.MAPS_RECEIVE
-ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:39:9-41:51
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:40:9-42:51
 	android:protectionLevel
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:41:13-48
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:42:13-48
 	android:name
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:40:13-63
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:41:13-63
 meta-data#com.google.android.gms.version
-ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:43:9-45:69
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:44:9-46:69
 MERGED from [com.google.android.gms:play-services-basement:10.0.1] /Users/nidhi/.android/build-cache/26311010212ba9ea8f5057dbee12de245b1f186b/output/AndroidManifest.xml:20:9-121
 	android:value
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:45:13-66
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:46:13-66
 	android:name
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:44:13-58
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:45:13-58
 meta-data#com.google.android.geo.API_KEY
-ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:55:9-57:55
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:56:9-58:55
 	android:value
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:57:13-52
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:58:13-52
 	android:name
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:56:13-58
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:57:13-58
 activity#com.example.myothiha09.m4cs2340.controller.MapsActivity
-ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:59:9-61:59
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:60:9-62:59
 	android:label
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:61:13-56
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:62:13-56
 	android:name
-		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:60:13-52
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:61:13-52
 uses-sdk
 INJECTED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.1.1] /Users/nidhi/.android/build-cache/78dfb8f027e678e1d0a7b5d56b68e10144f231e0/output/AndroidManifest.xml:21:5-23:62

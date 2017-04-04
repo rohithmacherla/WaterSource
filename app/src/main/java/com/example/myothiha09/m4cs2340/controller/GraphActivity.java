@@ -18,9 +18,12 @@ public class GraphActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
         GraphView graph = (GraphView) findViewById(R.id.graph);
+
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
                 new DataPoint(0, 1),
                 new DataPoint(1, 5),
@@ -29,5 +32,7 @@ public class GraphActivity extends AppCompatActivity {
                 new DataPoint(4, 6)
         });
         graph.addSeries(series);
+
     }
+
 }
