@@ -114,6 +114,7 @@ public class MainScreenActivity extends AppCompatActivity {
                 progressDialog.show();
                 if (id == R.id.nav_home_screen) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
+                    progressDialog.dismiss();
                 } else if (id == R.id.nav_edit_screen) {
                     Intent intent = new Intent(getApplicationContext(), UserDetailsActivity.class);
                     intent.putExtra(User.ARG_USER, user);

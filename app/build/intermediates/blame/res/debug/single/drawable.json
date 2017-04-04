@@ -84,12 +84,12 @@
         "source": "/Users/nidhi/.android/build-cache/84ad36cb71ed2b0c83db268f17eba52524fd0e22/output/res/drawable/common_google_signin_btn_icon_dark_focused.xml"
     },
     {
-        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
-        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/drawable/abc_item_background_holo_light.xml"
-    },
-    {
         "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/drawable/ic_menu_slideshow.xml",
         "source": "/Users/nidhi/Desktop/M4/app/src/main/res/drawable/ic_menu_slideshow.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/drawable/abc_item_background_holo_light.xml"
     },
     {
         "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",

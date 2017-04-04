@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="5ee23f68f8f8b18daa288ab6da00cf5a9a454290">
+        sha1="ac3a0a1a161fe3210d300389f2f2698590ba5bdd">
         <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ad920653c7bebed76aded3a7610658f4fdf7bd73/classes.dex" />
     </item>
     <item
@@ -243,6 +243,15 @@
         revision="25.0.2"
         sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
         <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6f28120656dc78b70ecd9ccd022038bc1aaa35be/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/rohithmacherla/.android/build-cache/c4c9fc346c290c7e2bdebd1aac89271eaebd3e42/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="987adec819c9a98faf215814f41195da48fc724e">
+        <dex dex="/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c55b11774b0c53ee70fa588b8443532d99dd9e67/classes.dex" />
     </item>
     <item
         is-multidex="true"
