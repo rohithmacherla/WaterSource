@@ -1,5 +1,57 @@
 [
     {
+        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
+        "source": "/Users/nidhi/.android/build-cache/78dfb8f027e678e1d0a7b5d56b68e10144f231e0/output/res/anim/design_fab_in.xml"
+    },
+    {
+        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/Users/nidhi/.android/build-cache/78dfb8f027e678e1d0a7b5d56b68e10144f231e0/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/nidhi/.android/build-cache/78dfb8f027e678e1d0a7b5d56b68e10144f231e0/output/res/anim/design_snackbar_out.xml"
+    },
+    {
+        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/anim/design_fab_out.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/anim/design_snackbar_in.xml"
     },
@@ -16,43 +68,47 @@
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
-        "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
-        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
-        "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/anim/design_snackbar_out.xml"
-    },
-    {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_fade_in.xml"
     },
     {
-        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
-        "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_popup_enter.xml"
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
+        "source": "/Users/nidhi/.android/build-cache/78dfb8f027e678e1d0a7b5d56b68e10144f231e0/output/res/anim/design_fab_out.xml"
     },
     {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
     },
     {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/anim/design_fab_in.xml"
     },
     {
-        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
-        "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_slide_in_bottom.xml"
-    },
-    {
-        "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
-        "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/anim/design_fab_out.xml"
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_slide_in_top.xml"
     },
     {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/anim/abc_grow_fade_in_from_bottom.xml"
     }
 ]

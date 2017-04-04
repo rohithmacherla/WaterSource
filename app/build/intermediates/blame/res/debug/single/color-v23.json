@@ -12,16 +12,44 @@
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/color-v23/abc_tint_spinner.xml"
     },
     {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_tint_edittext.xml"
     },
     {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/color-v23/abc_color_highlight_material.xml"
     },
     {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/Users/nidhi/.android/build-cache/78dfb8f027e678e1d0a7b5d56b68e10144f231e0/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_color_highlight_material.xml"
     },
     {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
@@ -32,8 +60,16 @@
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/color-v23/abc_tint_default.xml"
     },
     {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_tint_switch_thumb.xml"
     },
     {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
@@ -42,5 +78,13 @@
     {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/color-v23/abc_tint_spinner.xml"
     }
 ]

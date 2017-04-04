@@ -1,7 +1,4 @@
-#Sat Apr 01 19:07:10 EDT 2017
-base.0=/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7ebf3c6683e1a14623268df098535d374917ca21
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ad920653c7bebed76aded3a7610658f4fdf7bd73/classes.dex
-base.1=/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_ad920653c7bebed76aded3a7610658f4fdf7bd73
-file.0=/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7ebf3c6683e1a14623268df098535d374917ca21/classes.dex
+#Mon Apr 03 20:57:39 EDT 2017
+base.0=/Users/nidhi/Desktop/M4/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/nidhi/Desktop/M4/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

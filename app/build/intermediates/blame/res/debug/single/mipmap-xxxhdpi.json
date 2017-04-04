@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/nidhi/Desktop/M4/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/Users/nidhi/Desktop/M4/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
         "merged": "/Users/rohithmacherla/Desktop/bob/M4/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
         "source": "/Users/rohithmacherla/Desktop/bob/M4/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     }
