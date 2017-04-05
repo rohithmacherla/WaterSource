@@ -1,5 +1,9 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Tue Apr 04 12:59:00 EDT 2017
+=======
+#Tue Apr 04 09:36:46 EDT 2017
+>>>>>>> e95f0710f5251c86424e3e2ae41e2c9e065d247e
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=C\:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\abc_list_menu_item_checkbox.xml

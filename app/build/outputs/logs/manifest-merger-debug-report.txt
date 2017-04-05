@@ -1,6 +1,10 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:2:1-65:12
+=======
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:2:1-65:12
+>>>>>>> e95f0710f5251c86424e3e2ae41e2c9e065d247e
 	package
 		ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:3:5-46
 		INJECTED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml
@@ -27,6 +31,7 @@ MERGED from [com.google.firebase:firebase-iid:10.0.1] C:\Users\myoth\.android\bu
 	android:name
 		ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:11:22-64
 application
+<<<<<<< HEAD
 ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:13:5-63:19
 MERGED from [com.android.support:design:25.1.1] C:\Users\myoth\.android\build-cache\3a19b00f6c7abd919721b26da0d6cc089e4058a0\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:transition:25.1.1] C:\Users\myoth\.android\build-cache\1bf71735ea2920af9d8fa4dd1735b55719ca0433\output\AndroidManifest.xml:22:5-20
@@ -51,6 +56,32 @@ MERGED from [com.android.support:support-media-compat:25.1.1] C:\Users\myoth\.an
 MERGED from [com.android.support:support-core-ui:25.1.1] C:\Users\myoth\.android\build-cache\b7a7e35663879345b276e90acd2add9529ab44ce\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-utils:25.1.1] C:\Users\myoth\.android\build-cache\a6ea5463755efa03edfbf46cc81d01ea9834b286\output\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-compat:25.1.1] C:\Users\myoth\.android\build-cache\3afe41716ef190a5b4cb6d4cc613fc62b66a9aa9\output\AndroidManifest.xml:25:5-20
+=======
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:13:5-63:19
+MERGED from [com.android.support:design:25.1.1] /Users/nidhi/.android/build-cache/78dfb8f027e678e1d0a7b5d56b68e10144f231e0/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:transition:25.1.1] /Users/nidhi/.android/build-cache/f8047f40ece385428ba60fa295207df305d2647a/output/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:10.0.1] /Users/nidhi/.android/build-cache/b5e270abc5e5c01157b4eb252b3fcb080b05dbb7/output/AndroidManifest.xml:24:5-19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.0-beta4] /Users/nidhi/.android/build-cache/a38aa0ce9305516ac9a8e75873eb86d9db5bc548/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:appcompat-v7:25.1.1] /Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.1.1] /Users/nidhi/.android/build-cache/37747251b52194318235d76b500d5b105a10a075/output/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:25.1.1] /Users/nidhi/.android/build-cache/0dd1da4453280acc6ff8707cc41e17b0f12d685e/output/AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-auth:10.0.1] /Users/nidhi/.android/build-cache/db0c7b4e6d30f4e8a4ce4d8ce4089730632f8919/output/AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.0.1] /Users/nidhi/.android/build-cache/84ad36cb71ed2b0c83db268f17eba52524fd0e22/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.jjoe64:graphview:4.2.1] /Users/nidhi/.android/build-cache/65c8302cf71003a530bce04484ae2064ff4aeb16/output/AndroidManifest.xml:11:5-12:19
+MERGED from [com.google.firebase:firebase-core:10.0.1] /Users/nidhi/.android/build-cache/57020036dd7c444afaeb27ae381b93c8df76cb59/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] /Users/nidhi/.android/build-cache/b8b9fd10b495d344fae1bdc887e1a979095cb102/output/AndroidManifest.xml:24:5-33:19
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/nidhi/.android/build-cache/d502e6c1308187963b1b2799fc1c56625147e2ad/output/AndroidManifest.xml:24:5-28:19
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/nidhi/.android/build-cache/0c8b35ad822f3bb92605438df7148ff23a85af13/output/AndroidManifest.xml:28:5-50:19
+MERGED from [com.google.firebase:firebase-common:10.0.1] /Users/nidhi/.android/build-cache/cd100f646082b7faabd7f89524fcb8daf1abc101/output/AndroidManifest.xml:4:5-7:19
+MERGED from [com.google.android.gms:play-services-tasks:10.0.1] /Users/nidhi/.android/build-cache/422f2fd08051be643ffb73b9bbe2b2a68b551e10/output/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] /Users/nidhi/.android/build-cache/26311010212ba9ea8f5057dbee12de245b1f186b/output/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:support-v4:25.1.1] /Users/nidhi/.android/build-cache/d2e07846c3de7f38220aa99bd58692a3c789194d/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.1.1] /Users/nidhi/.android/build-cache/611e2f55889702debc3c97eee4b7a36f138a2b90/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.1.1] /Users/nidhi/.android/build-cache/863d162e0c6d6bbd26347298cd766269e9d98d94/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.1.1] /Users/nidhi/.android/build-cache/e8ddec06ab295a0cccd0a6f421e2a766ae0371f5/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.1.1] /Users/nidhi/.android/build-cache/59be243069a0ce70ab483b74f0e59032f11619ec/output/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.1.1] /Users/nidhi/.android/build-cache/d0edeac0e33d786cc45fb19926f6d5459ac89677/output/AndroidManifest.xml:25:5-20
+>>>>>>> e95f0710f5251c86424e3e2ae41e2c9e065d247e
 	android:label
 		ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:16:9-41
 	android:supportsRtl
@@ -94,6 +125,7 @@ ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:29:9-73
 activity#com.example.myothiha09.m4cs2340.controller.GraphSetupActivity
 ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:30:9-66
 	android:name
+<<<<<<< HEAD
 		ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:30:19-64
 activity#com.example.myothiha09.m4cs2340.controller.GraphActivity
 ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:31:9-61
@@ -139,6 +171,53 @@ ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:60:9-62:59
 		ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:62:13-56
 	android:name
 		ADDED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml:61:13-52
+=======
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:30:19-64
+activity#com.example.myothiha09.m4cs2340.controller.GraphActivity
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:31:9-61
+	android:name
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:31:19-59
+activity#com.example.myothiha09.m4cs2340.controller.MainScreenActivity
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:32:9-35:59
+	android:label
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:34:13-63
+	android:theme
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:35:13-56
+	android:name
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:33:13-58
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:37:9-83
+MERGED from [com.google.firebase:firebase-analytics:10.0.1] /Users/nidhi/.android/build-cache/b8b9fd10b495d344fae1bdc887e1a979095cb102/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /Users/nidhi/.android/build-cache/d502e6c1308187963b1b2799fc1c56625147e2ad/output/AndroidManifest.xml:21:5-78
+MERGED from [com.google.firebase:firebase-iid:10.0.1] /Users/nidhi/.android/build-cache/0c8b35ad822f3bb92605438df7148ff23a85af13/output/AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:37:26-80
+permission#com.pkg.map.permission.MAPS_RECEIVE
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:40:9-42:51
+	android:protectionLevel
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:42:13-48
+	android:name
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:41:13-63
+meta-data#com.google.android.gms.version
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:44:9-46:69
+MERGED from [com.google.android.gms:play-services-basement:10.0.1] /Users/nidhi/.android/build-cache/26311010212ba9ea8f5057dbee12de245b1f186b/output/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:46:13-66
+	android:name
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:45:13-58
+meta-data#com.google.android.geo.API_KEY
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:56:9-58:55
+	android:value
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:58:13-52
+	android:name
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:57:13-58
+activity#com.example.myothiha09.m4cs2340.controller.MapsActivity
+ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:60:9-62:59
+	android:label
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:62:13-56
+	android:name
+		ADDED from /Users/nidhi/cs1331/M4/app/src/main/AndroidManifest.xml:61:13-52
+>>>>>>> e95f0710f5251c86424e3e2ae41e2c9e065d247e
 uses-sdk
 INJECTED from C:\Users\myoth\Desktop\M4\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:25.1.1] C:\Users\myoth\.android\build-cache\3a19b00f6c7abd919721b26da0d6cc089e4058a0\output\AndroidManifest.xml:21:5-23:62
