@@ -17,14 +17,12 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import com.example.myothiha09.m4cs2340.R;
 
-<<<<<<< HEAD
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
 import static com.example.myothiha09.m4cs2340.controller.MapsActivity.convertStringtoLatLng;
-=======
->>>>>>> e95f0710f5251c86424e3e2ae41e2c9e065d247e
+
 
 public class GraphActivity extends AppCompatActivity {
 
@@ -40,7 +38,6 @@ public class GraphActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph);
         GraphView graph = (GraphView) findViewById(R.id.graph);
-<<<<<<< HEAD
         graph.setTitle("Purity vs Time");
         String lat = getIntent().getStringExtra("SetUpInformationLat");
         String lng = getIntent().getStringExtra("SetUpInformationLong");
@@ -97,18 +94,7 @@ public class GraphActivity extends AppCompatActivity {
 
     public double distance(double x1, double y1, double x2, double y2) {
         return Math.sqrt(Math.pow(x2 - x1, 2.0) + Math.pow(y2 - y1, 2.0));
-=======
 
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, 1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
-        });
-        graph.addSeries(series);
-
->>>>>>> e95f0710f5251c86424e3e2ae41e2c9e065d247e
     }
 
 }
