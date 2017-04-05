@@ -57,6 +57,8 @@ public class Model {
      * @return the an report number
      */
     public int getReportNumber() {
+        if (getWaterSourceReports().size() != 0)
+            reportNumber = getWaterSourceReports().size() - 1;
 
         return (++reportNumber);
     }
@@ -67,6 +69,8 @@ public class Model {
      */
 
     public int getPurityReportNumber() {
+        if (getWaterPurityReports().size() != 0)
+            purityReportNumber = getWaterPurityReports().size() - 1;
 
         return (++purityReportNumber);
     }

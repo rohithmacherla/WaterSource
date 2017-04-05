@@ -3,6 +3,7 @@ package com.example.myothiha09.m4cs2340.controller;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -19,8 +20,12 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.myothiha09.m4cs2340.R;
+import com.example.myothiha09.m4cs2340.model.Model;
 import com.example.myothiha09.m4cs2340.model.User;
 import com.example.myothiha09.m4cs2340.model.UserType;
+import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
+import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
+import com.google.gson.Gson;
 
 // Team: 27
 
@@ -40,7 +45,9 @@ public class MainScreenActivity extends AppCompatActivity {
     private static TextView userTypeHeader;
     private Intent mapIntent;
     private Intent graphIntent;
+    SharedPreferences mPrefs;
     private ProgressDialog progressDialog;
+    Model model;
 
     public static User getCurrentUser() {
         return user;
@@ -70,6 +77,23 @@ public class MainScreenActivity extends AppCompatActivity {
             if (user2.getName().equals(username)) {
                 user = user2;
             }
+        }
+        model = Model.getInstance();
+        int index = 1;
+        mPrefs = getSharedPreferences("WaterCrowdSource", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = mPrefs.getString("WaterSourceReport"+index++, "");
+        while (json != "") {
+            WaterSourceReport obj = gson.fromJson(json, WaterSourceReport.class);
+            model.getWaterSourceReports().add(obj);
+            json = mPrefs.getString("WaterSourceReport"+index++, "");
+        }
+        index = 1;
+        json = mPrefs.getString("WaterPurityReport"+index++, "");
+        while (json != "") {
+            WaterPurityReport obj = gson.fromJson(json, WaterPurityReport.class);
+            model.getWaterPurityReports().add(obj);
+            json = mPrefs.getString("WaterPurityReport"+index++, "");
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -110,7 +134,11 @@ public class MainScreenActivity extends AppCompatActivity {
                 startActivity(mapIntent);
             }
         });
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
+        if (user.getUserType() == UserType.USER) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
+        }
 
 
 
@@ -123,7 +151,11 @@ public class MainScreenActivity extends AppCompatActivity {
                 progressDialog.setMessage("Loading...");
                 progressDialog.show();
                 if (id == R.id.nav_home_screen) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
+                    if (user.getUserType() == UserType.USER) {
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
+                    } else {
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
+                    }
                     progressDialog.dismiss();
                 } else if (id == R.id.nav_edit_screen) {
                     Intent intent = new Intent(getApplicationContext(), UserDetailsActivity.class);
@@ -222,5 +254,38 @@ public class MainScreenActivity extends AppCompatActivity {
         super.onRestart();
         userHeader.setText(user.getName());
         userTypeHeader.setText(user.getUserType().toString());
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (user.getUserType() == UserType.USER) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        SharedPreferences.Editor prefsEditor = mPrefs.edit();
+        Gson gson = new Gson();
+        int index = 1;
+        for (WaterSourceReport report: model.getWaterSourceReports()) {
+            String json = gson.toJson(report);
+            prefsEditor.putString("WaterSourceReport" + index++, json);
+        }
+        index = 1;
+        for (WaterPurityReport report: model.getWaterPurityReports()) {
+            String json = gson.toJson(report);
+            prefsEditor.putString("WaterPurityReport" + index++, json);
+        }
+        index = 1;
+        for (User user: User.usersList) {
+            String json = gson.toJson(user);
+            prefsEditor.putString("User" + index++, json);
+        }
+        prefsEditor.commit();
     }
 }

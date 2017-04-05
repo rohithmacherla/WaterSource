@@ -38,28 +38,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.11"
-            android:text="Longitude " />
+            android:text="Latitude " />
 
         <EditText
             android:id="@+id/latitude_field"
             android:layout_width="73dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
+            android:ems="10" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.11"
-            android:text="Latitude" />
+            android:text="Longtitude" />
 
 
         <EditText
             android:id="@+id/longitude_field"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number" />
+            android:ems="10" />
 
 
     </LinearLayout>

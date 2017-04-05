@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.EditText;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
+import com.google.gson.Gson;
 
 //Team: 27
 
@@ -48,6 +50,16 @@ public class LoginActivity extends AppCompatActivity {
         username = (EditText) findViewById(R.id.userNameText);
         password = (EditText) findViewById(R.id.passwordText);
         progressDialog = new ProgressDialog(this);
+        SharedPreferences mPrefs = getSharedPreferences("WaterCrowdSource", MODE_PRIVATE);
+        SharedPreferences.Editor prefsEditor = mPrefs.edit();
+        Gson gson = new Gson();
+        int index = 1;
+        String json = mPrefs.getString("User"+index++, "");
+        while (json != "") {
+            User obj = gson.fromJson(json, User.class);
+            User.usersList.add(obj);
+            json = mPrefs.getString("User"+index++, "");
+        }
     }
 
     /**

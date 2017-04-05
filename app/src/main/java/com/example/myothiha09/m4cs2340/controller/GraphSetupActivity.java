@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.R;
 
@@ -40,11 +41,13 @@ public class GraphSetupActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setup);
 
         year = (EditText) findViewById(R.id.year_field);
-        final String yearStr = year.toString();
+        year.setText("2017");
+        year.setEnabled(false);
+
         longtitude = (EditText) findViewById(R.id.longitude_field);
-        final String longStr = longtitude.toString();
+
         latitude = (EditText) findViewById(R.id.latitude_field);
-        final String latitStr = latitude.toString();
+
 
 
 
@@ -60,10 +63,13 @@ public class GraphSetupActivity extends AppCompatActivity {
 
         graphButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                graphIntent.putExtra("SetUpInformation", longStr+" "+latitStr+" "+ yearStr);
+                final String yearStr = year.getText().toString();
+                final String longStr = longtitude.getText().toString();
+                final String latitStr = latitude.getText().toString();
+                graphIntent.putExtra("SetUpInformationLong", longStr);
+                graphIntent.putExtra("SetUpInformationLat", latitStr+"");
+                graphIntent.putExtra("SetUpInformationYear", yearStr+"");
                 startActivity(graphIntent);
-
-
                 GraphSetupActivity.super.onBackPressed();
             }
 

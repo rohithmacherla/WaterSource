@@ -123,7 +123,6 @@ public class WaterReportActivity extends AppCompatActivity {
             user.setText(report.getReporterName());
             waterTypes.setSelection(report.getWaterType().getPosition());
             waterConditions.setSelection(report.getWaterCondition().getPosition());
-            location.setText(chosenLocation);
         }
         //Setting the Location of the Water
         location = (EditText) findViewById(R.id.waterLocation_field);
