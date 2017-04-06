@@ -6,9 +6,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.AlertDialog;
 import android.content.SharedPreferences;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 
 import com.example.myothiha09.m4cs2340.R;
@@ -30,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username;
     EditText password;
     private ProgressDialog progressDialog;
+    Vibrator vibrator;
 
 
 
@@ -45,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         setContentView(R.layout.login_screen);
         //initialize views
         username = (EditText) findViewById(R.id.userNameText);
@@ -69,6 +74,8 @@ public class LoginActivity extends AppCompatActivity {
      * @param v The view that triggered this event.
      */
     public void onLoginPressed(View v) {
+
+
         if (checkPassword()) {
             //ProgressDialog
             progressDialog.setMessage("Loading! Please wait:)");
@@ -76,9 +83,11 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(this, MainScreenActivity.class);
             intent.putExtra("Username", username.getText().toString());
             startActivity(intent);
+            vibrator.vibrate(25);
         } else {
             AlertDialog dialog = createDialogBox();
             dialog.show();
+            vibrator.vibrate(75);
         }
     }
 
@@ -88,6 +97,7 @@ public class LoginActivity extends AppCompatActivity {
      */
 
     public void onCancelPressed(View v) {
+        vibrator.vibrate(25);
         finish();
     }
 

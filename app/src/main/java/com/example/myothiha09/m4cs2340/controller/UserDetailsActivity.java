@@ -1,6 +1,7 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.ProgressDialog;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -40,6 +41,7 @@ public class UserDetailsActivity extends AppCompatActivity {
     EditText email;
     Spinner userType;
     boolean newAccount;
+    Vibrator vibrator;
 
     private static final String TAG = "UserDetailsActivity";
 
@@ -63,6 +65,7 @@ public class UserDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
 
         //instantiate views from activity_registration.xml
         userName = (EditText) findViewById(R.id.name_field);
@@ -123,16 +126,21 @@ public class UserDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!getIntent().hasExtra(User.ARG_USER) && checkUsername()) {
+                    vibrator.vibrate(60);
                     Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_LONG).show();
                 } else if (userName.getText().toString().equals("")) {
+                    vibrator.vibrate(60);
                     Toast.makeText(getApplicationContext(), "Please input a username", Toast.LENGTH_LONG).show();
                 } else if (password.getText().toString().length() < 6) {
+                    vibrator.vibrate(60);
                     Toast.makeText(getApplicationContext(), "Password requirement not met", Toast.LENGTH_LONG).show();
                 }  else if (email.getText().toString().equals("")) {
+                    vibrator.vibrate(60);
                     Toast.makeText(getApplicationContext(), "Please input an email", Toast.LENGTH_LONG).show();
                 } else {
                     progressDialog.setMessage("Registering user! Please wait :)");
                     progressDialog.show();
+                    vibrator.vibrate(25);
 
 
                     if (getIntent().hasExtra(User.ARG_USER)) {
@@ -191,6 +199,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         registerCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrator.vibrate(25);
                 finish();
             }
         });
