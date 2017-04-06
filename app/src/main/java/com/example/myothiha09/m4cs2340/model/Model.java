@@ -8,10 +8,10 @@ import java.util.ArrayList;
  */
 public class Model {
     ArrayList<User> users = new ArrayList<>();
-    ArrayList<WaterSourceReport> waterSourceReports = new ArrayList<>();
-    ArrayList<WaterPurityReport> waterPurityReports = new ArrayList<>();
-    int reportNumber = 0;
-    int purityReportNumber = 0;
+    private final ArrayList<WaterSourceReport> waterSourceReports = new ArrayList<>();
+    private final ArrayList<WaterPurityReport> waterPurityReports = new ArrayList<>();
+    private int reportNumber = 0;
+    private int purityReportNumber = 0;
 
     private static Model model;
 

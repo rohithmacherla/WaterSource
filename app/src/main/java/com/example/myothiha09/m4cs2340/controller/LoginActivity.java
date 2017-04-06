@@ -1,6 +1,5 @@
 package com.example.myothiha09.m4cs2340.controller;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -35,8 +34,8 @@ import com.google.gson.Gson;
 public class LoginActivity extends AppCompatActivity {
 
     //References to the text views.
-    EditText username;
-    EditText password;
+    private EditText username;
+    private EditText password;
     private ProgressDialog progressDialog;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -149,7 +148,6 @@ public class LoginActivity extends AppCompatActivity {
      * Verifies the login credentials entered by the user.
      * @return Whether the login credentials are valid.
      */
-
     private boolean checkPassword() {
         String username2 = username.getText().toString();
         String password2 = password.getText().toString();

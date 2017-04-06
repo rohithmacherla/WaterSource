@@ -45,9 +45,9 @@ public class MainScreenActivity extends AppCompatActivity {
     private static TextView userTypeHeader;
     private Intent mapIntent;
     private Intent graphIntent;
-    SharedPreferences mPrefs;
+    private SharedPreferences mPrefs;
     private ProgressDialog progressDialog;
-    Model model;
+    private Model model;
 
     public static User getCurrentUser() {
         return user;
@@ -192,6 +192,11 @@ public class MainScreenActivity extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * Creates the dialog box for alert function. It also tells permission information.
+     * @return nothing. Just prompts a dialog box.
+     */
     private android.app.AlertDialog createDialogBox() {
         android.app.AlertDialog.Builder myDialogBuilder = new android.app.AlertDialog.Builder(this);
         myDialogBuilder.setTitle("Error!");
@@ -216,7 +221,6 @@ public class MainScreenActivity extends AppCompatActivity {
      * @param menu The menu to inflate
      * @return whether this was successful.
      */
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -247,7 +251,6 @@ public class MainScreenActivity extends AppCompatActivity {
     /**
      * Obtains the user data if this activity is restarted.
      */
-
     @Override
     protected void onRestart() {
         progressDialog.dismiss();

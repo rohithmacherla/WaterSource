@@ -8,8 +8,6 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.Model;
@@ -21,7 +19,7 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ReportFragment extends ListFragment {
-    CustomArrayAdapter adapter;
+    private CustomArrayAdapter adapter;
 
     /**
      * Returns a simple list view.

@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * Created by vgiridhar on 3/1/17.
  */
 
-public class CustomArrayAdapter extends ArrayAdapter<WaterSourceReport> {
+class CustomArrayAdapter extends ArrayAdapter<WaterSourceReport> {
     private final Context context;
     private final ArrayList<WaterSourceReport> report;
 
@@ -38,7 +38,7 @@ public class CustomArrayAdapter extends ArrayAdapter<WaterSourceReport> {
      *                 view we want.
      * @param convertView The old view to reuse, if possible.
      * @param parent The parent that this view will eventually be attached to
-     * @return
+     * @return The view that is being looked at
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

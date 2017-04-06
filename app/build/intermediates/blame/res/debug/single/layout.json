@@ -36,24 +36,24 @@
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/layout/abc_popup_menu_header_item_layout.xml"
     },
     {
-        "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
-        "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/layout/design_text_input_password_icon.xml"
+        "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/welcome_screen.xml",
+        "source": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/src/main/res/layout/welcome_screen.xml"
     },
     {
         "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/design_layout_tab_text.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/layout/design_layout_tab_text.xml"
     },
     {
-        "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/welcome_screen.xml",
-        "source": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/src/main/res/layout/welcome_screen.xml"
-    },
-    {
-        "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
-        "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
+        "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/c52ee65cc5c31661eb2be51af9f7e63df16c2276/output/res/layout/design_text_input_password_icon.xml"
     },
     {
         "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
         "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/layout/abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
+        "source": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",

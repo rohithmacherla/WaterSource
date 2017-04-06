@@ -2,14 +2,12 @@ package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.ProgressDialog;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.content.Intent;
@@ -35,11 +33,11 @@ public class UserDetailsActivity extends AppCompatActivity {
     /**
      * References to the views.
      */
-    EditText userName;
-    EditText password;
-    EditText email;
-    Spinner userType;
-    boolean newAccount;
+    private EditText userName;
+    private EditText password;
+    private EditText email;
+    private Spinner userType;
+    private boolean newAccount;
 
     private static final String TAG = "UserDetailsActivity";
 

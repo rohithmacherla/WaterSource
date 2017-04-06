@@ -26,8 +26,8 @@ public enum WaterType implements Serializable {
 
     /**
      * Constructor for the enum WaterType
-     * @param n
-     * @param p
+     * @param n the name of the user
+     * @param p the position
      */
     private WaterType(String n, int p) {
         name = n;

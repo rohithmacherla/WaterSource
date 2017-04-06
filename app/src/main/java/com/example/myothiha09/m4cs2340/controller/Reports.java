@@ -1,7 +1,7 @@
 package com.example.myothiha09.m4cs2340.controller;
 
-/**
- * Created by myothiha09 on 3/28/2017.
+/*
+  Created by myothiha09 on 3/28/2017.
  */
 
 import android.content.Context;
@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.TabHost;
-import android.widget.TextView;
 
 import com.example.myothiha09.m4cs2340.R;
 
@@ -26,9 +25,9 @@ import java.util.List;
 public class Reports extends Fragment implements TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener{
 
 
-    ViewPager viewPager;
-    TabHost tabHost;
-    View view;
+    private ViewPager viewPager;
+    private TabHost tabHost;
+    private View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,7 +43,7 @@ public class Reports extends Fragment implements TabHost.OnTabChangeListener, Vi
      * Add the fragments to the view pager
      */
     private void initiateViewPager(){
-        List<Fragment> list = new ArrayList<Fragment>();
+        List<Fragment> list = new ArrayList<>();
         viewPager =   (ViewPager) view.findViewById(R.id.myViewPager);
         list.add(new ReportFragment());
         list.add(new PurityFragment());

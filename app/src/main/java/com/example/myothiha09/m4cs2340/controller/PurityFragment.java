@@ -2,7 +2,6 @@ package com.example.myothiha09.m4cs2340.controller;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.view.ViewGroup;
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.Model;
 import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
-import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
 
 import java.util.ArrayList;
 
@@ -20,7 +18,7 @@ import java.util.ArrayList;
  */
 
 public class PurityFragment extends ListFragment {
-    CustomPurityAdapter adapter;
+    private CustomPurityAdapter adapter;
 
     /**
      * Returns a simple list view.
