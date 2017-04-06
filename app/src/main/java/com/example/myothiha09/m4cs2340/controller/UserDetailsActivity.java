@@ -151,7 +151,7 @@ public class UserDetailsActivity extends AppCompatActivity {
 
                         FirebaseAuth mAuth = firebaseAuth;
                         //firebase
-                        mAuth.createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                        mAuth.createUserWithEmailAndPassword(userName.getText().toString(), password.getText().toString())
                                 .addOnCompleteListener(UserDetailsActivity.this, new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -161,8 +161,11 @@ public class UserDetailsActivity extends AppCompatActivity {
                                         // the auth state listener will be notified and logic to handle the
                                         // signed in user can be handled in the listener.
                                         if (!task.isSuccessful()) {
-                                           /* Toast.makeText(UserDetailsActivity.this, R.string.auth_failed,
-                                                    Toast.LENGTH_SHORT).show()*/;
+                                            Toast.makeText(UserDetailsActivity.this, "Authentication Failed",
+                                                    Toast.LENGTH_LONG).show();
+                                        } else {
+                                            Toast.makeText(UserDetailsActivity.this, "Authentication Passed",
+                                                    Toast.LENGTH_LONG).show();
                                         }
 
                                         // ...

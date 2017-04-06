@@ -6,13 +6,21 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.AlertDialog;
 import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.User;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.Gson;
 
 //Team: 27
@@ -30,7 +38,9 @@ public class LoginActivity extends AppCompatActivity {
     EditText username;
     EditText password;
     private ProgressDialog progressDialog;
-
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private static final String TAG = "LoginActivity";
 
 
     /**
@@ -60,6 +70,21 @@ public class LoginActivity extends AppCompatActivity {
             User.usersList.add(obj);
             json = mPrefs.getString("User"+index++, "");
         }
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                } else {
+                    // User is signed out
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                }
+                // ...
+            }
+        };
     }
 
     /**
@@ -73,6 +98,35 @@ public class LoginActivity extends AppCompatActivity {
             //ProgressDialog
             progressDialog.setMessage("Loading! Please wait:)");
             progressDialog.show();
+
+            String username2 = username.getText().toString();
+            String password2 = password.getText().toString();
+
+            mAuth.signInWithEmailAndPassword(username2, password2)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
+
+                            // If sign in fails, display a message to the user. If sign in succeeds
+                            // the auth state listener will be notified and logic to handle the
+                            // signed in user can be handled in the listener.
+                            if (!task.isSuccessful()) {
+                                Log.w(TAG, "signInWithEmail:failed", task.getException());
+                                Toast.makeText(LoginActivity.this, "Authentication Failed",
+                                        Toast.LENGTH_LONG).show();
+                            } else {
+                                Log.w(TAG, "signInWithEmail:passed", task.getException());
+                                Toast.makeText(LoginActivity.this, "Authentication Passed",
+                                        Toast.LENGTH_LONG).show();
+                            }
+
+                            // ...
+                        }
+                    });
+
+
+
             Intent intent = new Intent(this, MainScreenActivity.class);
             intent.putExtra("Username", username.getText().toString());
             startActivity(intent);
@@ -135,6 +189,15 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
         finish();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
     }
 }

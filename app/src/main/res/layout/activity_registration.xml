@@ -11,10 +11,10 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:text="Username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="Email" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -56,10 +56,10 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:text="Email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="Username" />
 
         <EditText
             android:layout_width="wrap_content"
