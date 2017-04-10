@@ -78,23 +78,9 @@ public class MainScreenActivity extends AppCompatActivity {
                 user = user2;
             }
         }
-        model = Model.getInstance();
-        int index = 1;
         mPrefs = getSharedPreferences("WaterCrowdSource", MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = mPrefs.getString("WaterSourceReport"+index++, "");
-        while (!json.equals("")) {
-            WaterSourceReport obj = gson.fromJson(json, WaterSourceReport.class);
-            model.getWaterSourceReports().add(obj);
-            json = mPrefs.getString("WaterSourceReport"+index++, "");
-        }
-        index = 1;
-        json = mPrefs.getString("WaterPurityReport"+index++, "");
-        while (!json.equals("")) {
-            WaterPurityReport obj = gson.fromJson(json, WaterPurityReport.class);
-            model.getWaterPurityReports().add(obj);
-            json = mPrefs.getString("WaterPurityReport"+index++, "");
-        }
+        model = Model.getInstance();
+        loadData();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -290,5 +276,22 @@ public class MainScreenActivity extends AppCompatActivity {
             prefsEditor.putString("User" + index++, json);
         }
         prefsEditor.apply();
+    }
+    private void loadData() {
+        int index = 1;
+        Gson gson = new Gson();
+        String json = mPrefs.getString("WaterSourceReport"+index++, "");
+        while (!json.equals("")) {
+            WaterSourceReport obj = gson.fromJson(json, WaterSourceReport.class);
+            model.getWaterSourceReports().add(obj);
+            json = mPrefs.getString("WaterSourceReport"+index++, "");
+        }
+        index = 1;
+        json = mPrefs.getString("WaterPurityReport"+index++, "");
+        while (!json.equals("")) {
+            WaterPurityReport obj = gson.fromJson(json, WaterPurityReport.class);
+            model.getWaterPurityReports().add(obj);
+            json = mPrefs.getString("WaterPurityReport"+index++, "");
+        }
     }
 }
