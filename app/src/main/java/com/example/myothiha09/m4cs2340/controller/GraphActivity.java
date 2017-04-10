@@ -24,7 +24,7 @@ import static com.example.myothiha09.m4cs2340.controller.MapsActivity.convertStr
 public class GraphActivity extends AppCompatActivity {
 
 
-    private final double MAX_RADIUS = 6.0; //Or whatever value you want
+    private static final double MAX_RADIUS = 6.0; //Or whatever value you want
     private final Model model = Model.getInstance();
 
 
