@@ -38,28 +38,14 @@ public class GraphSetupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setup);
-
         year = (EditText) findViewById(R.id.year_field);
         year.setText("2017");
         year.setEnabled(false);
-
         longtitude = (EditText) findViewById(R.id.longitude_field);
-
         latitude = (EditText) findViewById(R.id.latitude_field);
-
-
-
-
-
         graphIntent = new Intent(getApplicationContext(), GraphActivity.class);
-
-
-
-
-
         //Add button
         final Button graphButton = (Button) findViewById(R.id.graphButton);
-
         graphButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 final String yearStr = year.getText().toString();
@@ -74,10 +60,5 @@ public class GraphSetupActivity extends AppCompatActivity {
 
 
         });
-
-
-
-
     }
-
 }

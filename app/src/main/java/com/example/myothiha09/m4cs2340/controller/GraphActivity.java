@@ -68,7 +68,7 @@ public class GraphActivity extends AppCompatActivity {
      * @param reports The list of water purity reports
      * @return the ArrayList
      */
-    private ArrayList<WaterPurityReport> nearbyReports(double lat, double lng, ArrayList<WaterPurityReport> reports) {
+    private static ArrayList<WaterPurityReport> nearbyReports(double lat, double lng, ArrayList<WaterPurityReport> reports) {
         if (reports == null) {
             return null;
         }
@@ -92,7 +92,7 @@ public class GraphActivity extends AppCompatActivity {
      * @param y2 coordinate 4
      * @return distance
      */
-    private double distance(double x1, double y1, double x2, double y2) {
+    private static double distance(double x1, double y1, double x2, double y2) {
         return Math.sqrt(Math.pow(x2 - x1, 2.0) + Math.pow(y2 - y1, 2.0));
 
     }

@@ -1,27 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M10 Implementation\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
-        "source": "C:\\Users\\Kevin\\.android\\build-cache\\ac7e103ec8643087e317c1a6b35f8ec4b3abda6f\\output\\res\\layout-v21\\notification_template_custom_big.xml"
-    },
-    {
-        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M10 Implementation\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
-        "source": "C:\\Users\\Kevin\\.android\\build-cache\\ac7e103ec8643087e317c1a6b35f8ec4b3abda6f\\output\\res\\layout-v21\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M10 Implementation\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
-        "source": "C:\\Users\\Kevin\\.android\\build-cache\\ac7e103ec8643087e317c1a6b35f8ec4b3abda6f\\output\\res\\layout-v21\\notification_action_tombstone.xml"
-    },
-    {
         "merged": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
         "source": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\layout-v21\\notification_template_custom_big.xml"
     },
     {
         "merged": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
         "source": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\layout-v21\\notification_template_icon_group.xml"
-    },
-    {
-        "merged": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M10 Implementation\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
-        "source": "C:\\Users\\Kevin\\.android\\build-cache\\ac7e103ec8643087e317c1a6b35f8ec4b3abda6f\\output\\res\\layout-v21\\notification_action.xml"
     },
     {
         "merged": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",

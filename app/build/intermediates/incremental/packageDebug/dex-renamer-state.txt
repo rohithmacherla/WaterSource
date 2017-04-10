@@ -1,7 +1,0 @@
-#Mon Apr 10 15:54:40 EDT 2017
-base.0=C\:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_9f71e353d4a572220cc59336c1958699918ad897
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=C\:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_1b61d5e72cde1b59958f9a34cee38ed9641f2f1d\\classes.dex
-base.1=C\:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_1b61d5e72cde1b59958f9a34cee38ed9641f2f1d
-file.0=C\:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_9f71e353d4a572220cc59336c1958699918ad897\\classes.dex
