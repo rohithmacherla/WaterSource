@@ -41,7 +41,7 @@ public class GraphActivity extends AppCompatActivity {
         double lati = Double.parseDouble(lat);
         double lngi = Double.parseDouble(lng);
 
-        ArrayList<WaterPurityReport> toGraph = nearbyReports(lati, lngi);
+        ArrayList<WaterPurityReport> toGraph = nearbyReports(lati, lngi, model.getWaterPurityReports());
         Log.d("TOGRAPHSIZE", toGraph.size()+"");
         DataPoint[] points = new DataPoint[toGraph.size()];
         DataPoint[] points2 = new DataPoint[toGraph.size()];
@@ -65,11 +65,17 @@ public class GraphActivity extends AppCompatActivity {
      * Returns an ArrayList to be graphed.
      * @param lat latitude
      * @param lng longtitude
+     * @param reports The list of water purity reports
      * @return the ArrayList
      */
-    private ArrayList<WaterPurityReport> nearbyReports(double lat, double lng) {
-        ArrayList<WaterPurityReport> reports = new ArrayList<>();
-        for (WaterPurityReport current: model.getWaterPurityReports()) {
+    private ArrayList<WaterPurityReport> nearbyReports(double lat, double lng, ArrayList<WaterPurityReport> reports) {
+        if (reports == null) {
+            return null;
+        }
+        if ((lat < -90 && lat > -90) || (lng > 180 && lng < -180)) {
+            return null;
+        }
+        for (WaterPurityReport current: reports) {
             if (distance(lat, lng, convertStringtoLatLng(current.getWaterLocation()).latitude,
                     convertStringtoLatLng(current.getWaterLocation()).longitude) < MAX_RADIUS) {
                 reports.add(current);
