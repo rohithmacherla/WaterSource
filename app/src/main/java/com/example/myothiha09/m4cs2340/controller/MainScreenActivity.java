@@ -200,7 +200,7 @@ public class MainScreenActivity extends AppCompatActivity {
     private android.app.AlertDialog createDialogBox() {
         android.app.AlertDialog.Builder myDialogBuilder = new android.app.AlertDialog.Builder(this);
         myDialogBuilder.setTitle("Error!");
-        myDialogBuilder.setMessage("You are not a Manager and therefore cannot access the \n " +
+        myDialogBuilder.setMessage("You are not a Manager and therefore cannot access the " +
                 "historical reports ");
         myDialogBuilder.setIcon(R.mipmap.ic_launcher);
 

@@ -84,10 +84,6 @@
         "source": "C:\\Users\\myoth\\.android\\build-cache\\aaa88281859b21ec971c9278fa483c704cf8aee8\\output\\res\\drawable\\common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_trending_up_white_24dp.png",
-        "source": "C:\\Users\\myoth\\Desktop\\M4\\app\\src\\main\\res\\drawable\\ic_trending_up_white_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
         "source": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },

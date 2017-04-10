@@ -20,7 +20,7 @@ import java.util.ArrayList;
 class CustomArrayAdapter extends ArrayAdapter<WaterSourceReport> {
     private final Context context;
     private final ArrayList<WaterSourceReport> report;
-    private View rowView = null;
+
 
 
     /**
@@ -46,8 +46,7 @@ class CustomArrayAdapter extends ArrayAdapter<WaterSourceReport> {
     @Override
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if (rowView == null)
-        rowView = inflater.inflate(R.layout.water_report_view, parent, false);
+        View rowView = inflater.inflate(R.layout.water_report_view, parent, false);
         TextView dateLabel = (TextView) rowView.findViewById(R.id.date_timeLabel);
         TextView nameLabel = (TextView) rowView.findViewById(R.id.nameLabel);
         TextView reportNumber = (TextView) rowView.findViewById(R.id.numLabel);

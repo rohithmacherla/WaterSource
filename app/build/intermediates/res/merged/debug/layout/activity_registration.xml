@@ -1,8 +1,7 @@
-<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_height="match_parent"
+<LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,9 +10,8 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Email" />
 
         <EditText
@@ -34,18 +32,17 @@
 
         <TextView
             android:text="Password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/password_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Must be at least\nsix characters long"
+            android:layout_weight="1"
             android:ems="10"
-            android:id="@+id/password_field"
-            android:layout_weight="1" />
+            android:hint="Must be at least \nsix characters long"
+            android:inputType="textPassword" />
 
     </LinearLayout>
 
@@ -56,18 +53,16 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Username" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:id="@+id/email_field"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:id="@+id/email_field"
-            android:layout_weight="1"
-            android:inputType="text" />
+            android:inputType="textWebEmailAddress" />
     </LinearLayout>
 
     <LinearLayout
@@ -77,9 +72,10 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:text="User Type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:id="@+id/textView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="User Type" />
 
         <Spinner
             android:layout_width="match_parent"

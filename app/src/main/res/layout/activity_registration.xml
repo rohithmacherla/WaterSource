@@ -10,9 +10,8 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Email" />
 
         <EditText
@@ -20,8 +19,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/name_field"
-            android:layout_weight="1" />
+            android:id="@+id/name_field" />
 
     </LinearLayout>
 
@@ -33,18 +31,16 @@
 
         <TextView
             android:text="Password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/password_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Must be at least six characters long"
             android:ems="10"
-            android:id="@+id/password_field"
-            android:layout_weight="1" />
+            android:hint="Must be at least \nsix characters long"
+            android:inputType="textPassword" />
 
     </LinearLayout>
 
@@ -55,13 +51,13 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="Username" />
 
         <EditText
             android:id="@+id/email_field"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textWebEmailAddress" />
@@ -74,9 +70,10 @@
         android:layout_margin="5dp">
 
         <TextView
-            android:text="User Type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:id="@+id/textView"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="User Type" />
 
         <Spinner
             android:layout_width="match_parent"

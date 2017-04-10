@@ -20,7 +20,6 @@ import java.util.ArrayList;
 class CustomPurityAdapter extends ArrayAdapter<WaterPurityReport> {
     private final Context context;
     private final ArrayList<WaterPurityReport> report;
-    private View rowView = null;
 
 
     /**
@@ -46,8 +45,7 @@ class CustomPurityAdapter extends ArrayAdapter<WaterPurityReport> {
     @Override
     public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if (rowView == null)
-        rowView = inflater.inflate(R.layout.water_purity_view, parent, false);
+        View rowView = inflater.inflate(R.layout.water_purity_view, parent, false);
         WaterPurityReport current = report.get(position);
         TextView dateLabel = (TextView) rowView.findViewById(R.id.date_time);
         TextView nameLabel = (TextView) rowView.findViewById(R.id.name);
