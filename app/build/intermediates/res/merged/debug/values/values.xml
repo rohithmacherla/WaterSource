@@ -103,9 +103,9 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="colorAccent">#1565c0</color>
-    <color name="colorPrimary">#4db6ac</color>
-    <color name="colorPrimaryDark">#00897b</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#3dbe9a</color>
+    <color name="colorPrimaryDark">#303F9F</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -713,7 +713,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_settings">Log Out</string>
-    <string name="app_name">WaterCrowdSource</string>
+    <string name="app_name">M5CS2340</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>

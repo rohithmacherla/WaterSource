@@ -1,18 +1,11 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.content.Intent;
-import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.myothiha09.m4cs2340.R;
-import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
-import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.ArrayList;
 
 // Team 27
 
@@ -32,7 +25,6 @@ public class WelcomeActivity extends AppCompatActivity {
      *                           Note: Otherwise it is null.
      */
     @Override
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_screen);
@@ -43,8 +35,6 @@ public class WelcomeActivity extends AppCompatActivity {
      * @param v The view that triggered the event
      */
     public void onClick(View v) {
-        Vibrator vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-        vibrator.vibrate(25);
         //If login button was selected, go the LoginActivity.
         if (v.getId() == R.id.loginButton) {
             Intent intent = new Intent(this, LoginActivity.class);

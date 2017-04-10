@@ -20,8 +20,8 @@ public enum OverallCondition implements Serializable {
 
     /**
      * Constructor for the enum WaterConditon
-     * @param n
-     * @param p
+     * @param n the string that is the name.
+     * @param p the string that is the position
      */
     private OverallCondition(String n, int p) {
         name = n;

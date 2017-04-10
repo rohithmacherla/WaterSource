@@ -2,25 +2,15 @@ package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Vibrator;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.ShareCompat;
 import android.support.v7.app.AlertDialog;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.R;
-import com.example.myothiha09.m4cs2340.model.Model;
-import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
-import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -41,22 +31,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Model model;
     private User user;
     private ProgressDialog progressDialog;
-    Vibrator vibrator;
-
     @Override
-    /**
-     * Do the initials setup necessary for a map activity and show instruction to users throguh alert..
-     * @param savedInstanceState If the activity is being re-initialized after
+    /*
+      Do the initials setup necessary for a map activity and show instruction to users throguh alert..
+      @param savedInstanceState If the activity is being re-initialized after
      *                           previously being shut down then this Bundle
      *                           contains the data it most recently supplied in
      *                           onSaveInstanceState(Bundle).
      *                           Note: Otherwise it is null.
      */
     protected void onCreate(Bundle savedInstanceState) {
-
         progressDialog = new ProgressDialog(this);
         super.onCreate(savedInstanceState);
-        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         setContentView(R.layout.activity_maps);
         user = getIntent().getParcelableExtra("User");
         AlertDialog alertDialog = new AlertDialog.Builder(MapsActivity.this).create();
@@ -115,7 +101,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public boolean onMarkerClick(final Marker marker2) {
         final Marker marker = marker2;
-        vibrator.vibrate(25);
         if (user.getUserType() == USER) {
             Intent intent = null;
             ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
@@ -149,7 +134,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             startActivity(intent);
                         }
                     }
-                    vibrator.vibrate(25);
                     dialog.dismiss();
                 }
             });
@@ -169,7 +153,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     if (intent == null) {
                         startWaterPurityReport(marker.getPosition());
                     }
-                    vibrator.vibrate(25);
                     dialog.dismiss();
                 }
             });
@@ -192,7 +175,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapLongClick(final LatLng latLng) {
-        vibrator.vibrate(50);
         if (user.getUserType() == USER) {
                 startWaterSourceReport(latLng);
             } else {
@@ -284,7 +266,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * Start water purity report activity at the clicked location.
      * @param latLng clicked location
      */
-    public void startWaterPurityReport(LatLng latLng) {
+    private void startWaterPurityReport(LatLng latLng) {
         latLng = convertStringtoLatLng(latLng.toString());
 
         Intent intent = new Intent(this, WaterPurityReportActivity.class);
@@ -297,7 +279,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param latLng clicked location.
      */
 
-    public void startWaterSourceReport(LatLng latLng) {
+    private void startWaterSourceReport(LatLng latLng) {
         latLng = convertStringtoLatLng(latLng.toString());
 
         Intent intent = new Intent(this, WaterReportActivity.class);
@@ -339,7 +321,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onGoBackPressed(View v) {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
-        vibrator.vibrate(10);
         this.onBackPressed();
     }
 

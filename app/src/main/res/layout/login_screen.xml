@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.myothiha09.m4cs2340.controller.controller.LoginActivity"
+    tools:context="com.example.myothiha09.m4cs2340.controller.LoginActivity"
     android:gravity="center_vertical"
     android:paddingLeft="16dp">
 
@@ -13,19 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
-            android:text="Username"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="Email" />
 
         <EditText
+            android:id="@+id/userNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/userNameText" />
+            android:inputType="textPersonName" />
     </LinearLayout>
 
     <LinearLayout

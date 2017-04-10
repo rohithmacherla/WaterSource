@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
-import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
 
 import java.util.ArrayList;
 
@@ -17,7 +16,7 @@ import java.util.ArrayList;
  * Created by myothiha09 on 3/28/2017.
  */
 
-public class CustomPurityAdapter extends ArrayAdapter<WaterPurityReport> {
+class CustomPurityAdapter extends ArrayAdapter<WaterPurityReport> {
     private final Context context;
     private final ArrayList<WaterPurityReport> report;
 
@@ -39,7 +38,7 @@ public class CustomPurityAdapter extends ArrayAdapter<WaterPurityReport> {
      *                 view we want.
      * @param convertView The old view to reuse, if possible.
      * @param parent The parent that this view will eventually be attached to
-     * @return
+     * @return The View that is being looked at
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {

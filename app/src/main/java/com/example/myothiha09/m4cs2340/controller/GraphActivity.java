@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.model.Model;
 import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
@@ -17,9 +16,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 
 import com.example.myothiha09.m4cs2340.R;
 
-import java.sql.Time;
 import java.util.ArrayList;
-import java.util.Date;
 
 import static com.example.myothiha09.m4cs2340.controller.MapsActivity.convertStringtoLatLng;
 
@@ -28,7 +25,7 @@ public class GraphActivity extends AppCompatActivity {
 
 
     private final double MAX_RADIUS = 6.0; //Or whatever value you want
-    Model model = Model.getInstance();
+    private final Model model = Model.getInstance();
 
 
     @Override
@@ -72,7 +69,7 @@ public class GraphActivity extends AppCompatActivity {
      * @param lng longtitude
      * @return the arraylist
      */
-    public ArrayList<WaterPurityReport> nearbyReports(double lat, double lng) {
+    private ArrayList<WaterPurityReport> nearbyReports(double lat, double lng) {
         ArrayList<WaterPurityReport> reports = new ArrayList<>();
         for (WaterPurityReport current: model.getWaterPurityReports()) {
             if (distance(lat, lng, convertStringtoLatLng(current.getWaterLocation()).latitude,
@@ -91,8 +88,7 @@ public class GraphActivity extends AppCompatActivity {
      * @param y2 cooridinate 4
      * @return distance
      */
-
-    public double distance(double x1, double y1, double x2, double y2) {
+    private double distance(double x1, double y1, double x2, double y2) {
         return Math.sqrt(Math.pow(x2 - x1, 2.0) + Math.pow(y2 - y1, 2.0));
 
     }

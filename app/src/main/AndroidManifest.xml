@@ -9,8 +9,12 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <permission
+        android:name="com.pkg.map.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
 
     <application
         android:allowBackup="true"
@@ -18,14 +22,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".controller.Splash">
+        <activity android:name=".controller.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".controller.WelcomeActivity" />
         <activity android:name=".controller.LoginActivity" />
         <activity android:name=".controller.UserDetailsActivity" />
         <activity android:name=".controller.WaterReportActivity" />
@@ -37,12 +40,7 @@
             android:label="@string/title_activity_main_screen"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-        <uses-permission android:name="android.permission.INTERNET" />
 
-        <permission
-            android:name="com.pkg.map.permission.MAPS_RECEIVE"
-            android:protectionLevel="signature" />
 
         <meta-data
             android:name="com.google.android.gms.version"

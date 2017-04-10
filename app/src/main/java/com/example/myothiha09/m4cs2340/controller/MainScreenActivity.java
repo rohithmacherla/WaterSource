@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
@@ -46,10 +45,9 @@ public class MainScreenActivity extends AppCompatActivity {
     private static TextView userTypeHeader;
     private Intent mapIntent;
     private Intent graphIntent;
-    Vibrator vibrator;
-    SharedPreferences mPrefs;
+    private SharedPreferences mPrefs;
     private ProgressDialog progressDialog;
-    Model model;
+    private Model model;
 
     public static User getCurrentUser() {
         return user;
@@ -72,7 +70,6 @@ public class MainScreenActivity extends AppCompatActivity {
         graphIntent = new Intent(getApplicationContext(), GraphSetupActivity.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen2);
-        vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         String username = getIntent().getStringExtra("Username");
@@ -116,7 +113,6 @@ public class MainScreenActivity extends AppCompatActivity {
                     //graphIntent.putExtra("User", user);
                     Log.wtf("came through", "work");
                     startActivity(graphIntent);
-                    vibrator.vibrate(25);
                 } else {
                     createDialogBox().show();
 
@@ -136,7 +132,6 @@ public class MainScreenActivity extends AppCompatActivity {
                 progressDialog.show();
                 mapIntent.putExtra("User", user);
                 startActivity(mapIntent);
-                vibrator.vibrate(25);
             }
         });
         if (user.getUserType() == UserType.USER) {
@@ -153,7 +148,6 @@ public class MainScreenActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 // Handle navigation view item clicks here.
                 int id = item.getItemId();
-                vibrator.vibrate(25);
                 progressDialog.setMessage("Loading...");
                 progressDialog.show();
                 if (id == R.id.nav_home_screen) {
@@ -198,13 +192,16 @@ public class MainScreenActivity extends AppCompatActivity {
         }
     }
 
+
+    /**
+     * Creates the dialog box for alert function. It also tells permission information.
+     * @return nothing. Just prompts a dialog box.
+     */
     private android.app.AlertDialog createDialogBox() {
-        vibrator.vibrate(200);
         android.app.AlertDialog.Builder myDialogBuilder = new android.app.AlertDialog.Builder(this);
         myDialogBuilder.setTitle("Error!");
         myDialogBuilder.setMessage("You are not a Manager and therfore cannot access the \n " +
                 "historical reports ");
-
         myDialogBuilder.setIcon(R.mipmap.ic_launcher);
 
 
@@ -224,7 +221,6 @@ public class MainScreenActivity extends AppCompatActivity {
      * @param menu The menu to inflate
      * @return whether this was successful.
      */
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -247,7 +243,6 @@ public class MainScreenActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             finish();
-            vibrator.vibrate(50);
         }
 
         return super.onOptionsItemSelected(item);
@@ -256,7 +251,6 @@ public class MainScreenActivity extends AppCompatActivity {
     /**
      * Obtains the user data if this activity is restarted.
      */
-
     @Override
     protected void onRestart() {
         progressDialog.dismiss();

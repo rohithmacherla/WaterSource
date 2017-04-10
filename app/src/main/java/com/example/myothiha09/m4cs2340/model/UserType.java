@@ -24,8 +24,8 @@ public enum UserType implements Serializable {
 
     /**
      * Constructor for the enum UserType
-     * @param str
-     * @param position
+     * @param str the name of the user
+     * @param position the number of the position
      */
     private UserType(String str, int position) {
         user = str;
