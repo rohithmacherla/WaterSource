@@ -1,6 +1,7 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,12 +20,13 @@ import java.util.ArrayList;
 class CustomPurityAdapter extends ArrayAdapter<WaterPurityReport> {
     private final Context context;
     private final ArrayList<WaterPurityReport> report;
+    private View rowView = null;
 
 
     /**
      * A constructor for the ArrayAdapter
      * @param context the context from which this adapter was created
-     * @param report The arraylist of reports to create this adapter.
+     * @param report The ArrayList of reports to create this adapter.
      */
     public CustomPurityAdapter(Context context, ArrayList<WaterPurityReport> report) {
         super(context,-1,report);
@@ -40,10 +42,12 @@ class CustomPurityAdapter extends ArrayAdapter<WaterPurityReport> {
      * @param parent The parent that this view will eventually be attached to
      * @return The View that is being looked at
      */
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.water_purity_view, parent, false);
+        if (rowView == null)
+        rowView = inflater.inflate(R.layout.water_purity_view, parent, false);
         WaterPurityReport current = report.get(position);
         TextView dateLabel = (TextView) rowView.findViewById(R.id.date_time);
         TextView nameLabel = (TextView) rowView.findViewById(R.id.name);

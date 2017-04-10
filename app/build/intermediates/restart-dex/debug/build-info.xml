@@ -1,105 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86_64,x86"
+    abi="x86"
     api-level="25"
     build-mode="FULL"
     density="xxhdpi"
     format="10"
     plugin-version="2.3.0"
-    timestamp="1491447743482"
-    token="9052818155089220389"
+    timestamp="1491848890123"
+    token="6733878308811311331"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1959" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="2062" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1139" />
 
     <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/outputs/apk/app-debug.apk"
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="C:\Users\myoth\Desktop\M4\app\build\outputs\apk\app-debug.apk"
         type="SPLIT_MAIN" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-        type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1491447743482"
+        timestamp="1491848890123"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/outputs/apk/app-debug.apk"
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\myoth\Desktop\M4\app\build\outputs\apk\app-debug.apk"
             type="SPLIT_MAIN" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
     </build>
 
 </instant-run>

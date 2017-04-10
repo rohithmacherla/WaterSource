@@ -103,9 +103,9 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#0d47a1</color>
     <color name="colorPrimary">#3dbe9a</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#00796b</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_dark_focused">@android:color/black</color>
@@ -715,7 +715,6 @@
     <string name="action_settings">Log Out</string>
     <string name="app_name">M5CS2340</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="auth_failed">Authentication failed</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Enable</string>
@@ -735,14 +734,9 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
-    <string name="create_account">Create Account</string>
-    <string name="custom_token">Custom Token</string>
     <string name="default_web_client_id" translatable="false">756759131781-kegk96s3aql3hnsv8snscf2bilhmseod.apps.googleusercontent.com</string>
-    <string name="desc_firebase_lockup">Firebase logo and name</string>
-    <string name="disconnect">Disconnect</string>
     <string name="firebase_database_url" translatable="false">https://watercrowdsource.firebaseio.com</string>
     <string name="gcm_defaultSenderId" translatable="false">756759131781</string>
-    <string name="get_custom_token">Get Token</string>
     <string name="google_api_key" translatable="false">AIzaSyAoDc83crbUbjg8zWj75M6GOwNNTTml9wY</string>
     <string name="google_app_id" translatable="false">1:756759131781:android:1020382d431d0f96</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAoDc83crbUbjg8zWj75M6GOwNNTTml9wY</string>
@@ -750,11 +744,7 @@
         AIzaSyAGgyrrMYZcklzH5JRAJHt3DCuMe4dUcG0
     </string>
     <string name="google_storage_bucket" translatable="false">watercrowdsource.appspot.com</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
-    <string name="hint_user_id">User ID</string>
-    <string name="loading">Loading…</string>
+    <string name="hello_blank_fragment" ns2:ignore="UnusedResources">Hello blank fragment</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="password_toggle_content_description">Toggle password visibility</string>
@@ -763,14 +753,9 @@
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
     <string name="search_menu_title">Search</string>
-    <string name="sign_in">Sign In</string>
-    <string name="sign_out">Sign Out</string>
-    <string name="signed_out">Signed Out</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_main_screen">MainScreenActivity</string>
     <string name="title_activity_maps">Map</string>
-    <string name="token_null">Token: null</string>
-    <string name="verify_email">Verify Email</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

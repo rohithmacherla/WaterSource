@@ -36,7 +36,6 @@
     <uses-permission android:name="com.example.myothiha09.m4cs2340.permission.C2D_MESSAGE" />
 
     <application
-        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"

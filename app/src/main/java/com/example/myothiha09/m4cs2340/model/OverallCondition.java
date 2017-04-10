@@ -15,15 +15,15 @@ public enum OverallCondition implements Serializable {
     UNSAFE("Unsafe", 2);
     //POTABLE("Potable", 3);
 
-    private String name;
-    private int position;
+    private final String name;
+    private final int position;
 
     /**
-     * Constructor for the enum WaterConditon
+     * Constructor for the enum WaterCondition
      * @param n the string that is the name.
      * @param p the string that is the position
      */
-    private OverallCondition(String n, int p) {
+    OverallCondition(String n, int p) {
         name = n;
         position = p;
     }

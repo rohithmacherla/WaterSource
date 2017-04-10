@@ -19,15 +19,15 @@ public enum UserType implements Serializable {
     MANAGER("Manager", 2),
     ADMIN("Admin", 3);
 
-    String user;
-    int position;
+    final String user;
+    final int position;
 
     /**
      * Constructor for the enum UserType
      * @param str the name of the user
      * @param position the number of the position
      */
-    private UserType(String str, int position) {
+    UserType(String str, int position) {
         user = str;
         this.position = position;
     }

@@ -22,9 +22,9 @@ public class GraphSetupActivity extends AppCompatActivity {
 
 
 
-    private static EditText year;
-    private static EditText longtitude;
-    private static EditText latitude;
+    private EditText year;
+    private EditText longtitude;
+    private EditText latitude;
 
     private Intent graphIntent;
 

@@ -74,20 +74,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp">
 
         <TextView
             android:text="Water Type"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.11" />
+            android:layout_height="wrap_content" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/waterType_spinner"
-            android:layout_weight="1"
             android:gravity="top" />
 
     </LinearLayout>
@@ -96,20 +93,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp">
 
         <TextView
             android:text="Overall Condition"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.11" />
+            android:layout_height="wrap_content" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/overallCondition_spinner"
-            android:layout_weight="1"
             android:gravity="top" />
 
     </LinearLayout>
@@ -119,20 +113,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp">
 
         <TextView
             android:text="Contaminant PPM"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.11" />
+            android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/contaminantPPM_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:inputType="number" />
 
@@ -143,45 +134,43 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp">
 
         <TextView
             android:text="Virus PPM"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.11" />
+            android:layout_height="wrap_content" />
 
         <EditText
             android:id="@+id/virusPPM_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:ems="10"
             android:inputType="number" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp">
+
+        <Button
+            android:id="@+id/backButton"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_gravity="left"/>
 
         <Button
             android:text="Add"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
             android:id="@+id/addButton"
-            android:layout_weight="0.11" />
+            android:layout_gravity="right"/>
 
-        <Button
-            android:text="Back"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/backButton"
-            android:layout_weight="0.11" />
-
-    </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
 </LinearLayout>

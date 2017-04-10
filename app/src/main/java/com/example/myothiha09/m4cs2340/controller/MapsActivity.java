@@ -33,7 +33,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ProgressDialog progressDialog;
     @Override
     /*
-      Do the initials setup necessary for a map activity and show instruction to users throguh alert..
+      Do the initials setup necessary for a map activity and show instruction to users through alert..
       @param savedInstanceState If the activity is being re-initialized after
      *                           previously being shut down then this Bundle
      *                           contains the data it most recently supplied in
@@ -78,7 +78,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
         mMap.setOnMarkerClickListener(this);
         mMap.setOnMapLongClickListener(this);
         for (WaterSourceReport report: model.getWaterSourceReports()) {
@@ -95,12 +94,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     /**
      * The listener method to decide action if a user click a marker
-     * @param marker2 the marker that is clicked
+     * @param marker the marker that is clicked
      * @return whether an action is executed or not
      */
     @Override
-    public boolean onMarkerClick(final Marker marker2) {
-        final Marker marker = marker2;
+    public boolean onMarkerClick(final Marker marker) {
         if (user.getUserType() == USER) {
             Intent intent = null;
             ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
@@ -296,12 +294,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     /**
-     * Format the latLng to be more readble
-     * @param str LatLng passed in as string
+     * Format the latLng to be more readable
+     * @param latLongLocation LatLng passed in as string
      * @return the formatted LatLng
      */
-    public static LatLng convertStringtoLatLng(String str) {
-        String latLongLocation = str;
+    public static LatLng convertStringtoLatLng(String latLongLocation) {
         int index = latLongLocation.indexOf(",");
         int index2 = latLongLocation.indexOf("(");
         String lat = latLongLocation.substring(index2+1, index).trim();

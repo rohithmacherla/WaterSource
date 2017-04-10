@@ -1,6 +1,7 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -31,22 +32,22 @@ import com.example.myothiha09.m4cs2340.model.WaterType;
  */
 
 public class WaterReportActivity extends AppCompatActivity {
-    private static WaterSourceReport waterSourceReport;
-    private static Model model;
+    private WaterSourceReport waterSourceReport;
+    private Model model;
 
 
-    private static String dateAndTime;
+    private String dateAndTime;
 
-    private static int reportNumber;
+    private int reportNumber;
 
-    private static String reporterName;
+    private String reporterName;
 
-    private static EditText location;
-    private static String chosenLocation;
+    private EditText location;
+    private String chosenLocation;
 
-    private static Spinner waterTypes;
+    private Spinner waterTypes;
 
-    private static Spinner waterConditions;
+    private Spinner waterConditions;
     private WaterSourceReport report;
 
     /**
@@ -54,6 +55,7 @@ public class WaterReportActivity extends AppCompatActivity {
      * @param savedInstanceState If the fragment is being re-created from a previous saved state,
      *                           this is the state.
      */
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +63,7 @@ public class WaterReportActivity extends AppCompatActivity {
 
         //Autogenerating Date and Time
         Calendar rightNow = Calendar.getInstance();
-        SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
         dateAndTime = format.format(rightNow.getTime());
 
         model = Model.getInstance();
@@ -134,15 +136,15 @@ public class WaterReportActivity extends AppCompatActivity {
         }
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                waterSourceReport.setWaterLocation(chosenLocation.toString());
+                waterSourceReport.setWaterLocation(chosenLocation);
                 waterSourceReport.setDateAndTime(dateAndTime);
 
                 waterSourceReport.setReporterName(reporterName);
 
-                //watertype
+                //WaterType
                 waterSourceReport.setWaterType((WaterType) waterTypes.getSelectedItem());
 
-                //watercondition
+                //WaterCondition
                 waterSourceReport.setWaterConditionW(
                         (WaterCondition) waterConditions.getSelectedItem());
 

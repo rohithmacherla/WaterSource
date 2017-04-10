@@ -20,15 +20,15 @@ public enum WaterCondition implements Serializable{
     TREATABLE_MUDDY("Treatable-Muddy", 2),
     POTABLE("Potable", 3);
 
-    private String name;
-    private int position;
+    private final String name;
+    private final int position;
 
     /**
-     * Constructor for the enum WaterConditon
+     * Constructor for the enum WaterCondition
      * @param n the name string
      * @param p the position string
      */
-    private WaterCondition(String n, int p) {
+    WaterCondition(String n, int p) {
         name = n;
         position = p;
     }

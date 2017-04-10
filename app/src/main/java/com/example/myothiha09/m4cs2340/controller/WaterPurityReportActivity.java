@@ -1,6 +1,7 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -31,25 +32,25 @@ import com.example.myothiha09.m4cs2340.model.WaterType;
  */
 
 public class WaterPurityReportActivity extends AppCompatActivity {
-    private static WaterPurityReport waterPurityReport;
+    private WaterPurityReport waterPurityReport;
 
-    private static Model model;
+    private Model model;
 
 
-    private static String dateAndTime;
+    private String dateAndTime;
 
-    private static int reportNumber;
+    private int reportNumber;
 
-    private static String reporterName;
+    private String reporterName;
 
-    private static EditText location;
-    private static String chosenLocation;
+    private EditText location;
+    private String chosenLocation;
 
-    private static Spinner waterTypes;
+    private Spinner waterTypes;
 
-    private static Spinner overallConditions;
-    private static EditText contaminantPPM_field;
-    private static EditText virusPPM_field;
+    private Spinner overallConditions;
+    private EditText contaminantPPM_field;
+    private EditText virusPPM_field;
 
     private WaterPurityReport report;
 
@@ -58,6 +59,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
      * @param savedInstanceState If the fragment is being re-created from a previous saved state,
      *                           this is the state.
      */
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +67,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
 
         //Autogenerating Date and Time
         Calendar rightNow = Calendar.getInstance();
-        SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss");
         dateAndTime = format.format(rightNow.getTime());
 
         model = Model.getInstance();
@@ -142,7 +144,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         }
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                waterPurityReport.setWaterLocation(chosenLocation.toString());
+                waterPurityReport.setWaterLocation(chosenLocation);
                 waterPurityReport.setDateAndTime(dateAndTime);
 
                 waterPurityReport.setReporterName(reporterName);

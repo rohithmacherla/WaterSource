@@ -41,8 +41,8 @@ public class MainScreenActivity extends AppCompatActivity {
      */
 
     private static User user;
-    private static TextView userHeader;
-    private static TextView userTypeHeader;
+    private TextView userHeader;
+    private TextView userTypeHeader;
     private Intent mapIntent;
     private Intent graphIntent;
     private SharedPreferences mPrefs;
@@ -83,14 +83,14 @@ public class MainScreenActivity extends AppCompatActivity {
         mPrefs = getSharedPreferences("WaterCrowdSource", MODE_PRIVATE);
         Gson gson = new Gson();
         String json = mPrefs.getString("WaterSourceReport"+index++, "");
-        while (json != "") {
+        while (!json.equals("")) {
             WaterSourceReport obj = gson.fromJson(json, WaterSourceReport.class);
             model.getWaterSourceReports().add(obj);
             json = mPrefs.getString("WaterSourceReport"+index++, "");
         }
         index = 1;
         json = mPrefs.getString("WaterPurityReport"+index++, "");
-        while (json != "") {
+        while (!json.equals("")) {
             WaterPurityReport obj = gson.fromJson(json, WaterPurityReport.class);
             model.getWaterPurityReports().add(obj);
             json = mPrefs.getString("WaterPurityReport"+index++, "");
@@ -200,7 +200,7 @@ public class MainScreenActivity extends AppCompatActivity {
     private android.app.AlertDialog createDialogBox() {
         android.app.AlertDialog.Builder myDialogBuilder = new android.app.AlertDialog.Builder(this);
         myDialogBuilder.setTitle("Error!");
-        myDialogBuilder.setMessage("You are not a Manager and therfore cannot access the \n " +
+        myDialogBuilder.setMessage("You are not a Manager and therefore cannot access the \n " +
                 "historical reports ");
         myDialogBuilder.setIcon(R.mipmap.ic_launcher);
 
@@ -289,6 +289,6 @@ public class MainScreenActivity extends AppCompatActivity {
             String json = gson.toJson(user);
             prefsEditor.putString("User" + index++, json);
         }
-        prefsEditor.commit();
+        prefsEditor.apply();
     }
 }

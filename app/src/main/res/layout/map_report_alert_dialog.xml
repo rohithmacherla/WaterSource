@@ -16,24 +16,28 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="Cancel" />
+
+        <Button
             android:id="@+id/sourceButton"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
             android:text="Source" />
 
         <Button
             android:id="@+id/purityButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_weight="1"
             android:text="Purity" />
 
-        <Button
-            android:id="@+id/cancelButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Cancel" />
     </LinearLayout>
 </LinearLayout>

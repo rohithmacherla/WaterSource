@@ -60,11 +60,10 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.passwordText);
         progressDialog = new ProgressDialog(this);
         SharedPreferences mPrefs = getSharedPreferences("WaterCrowdSource", MODE_PRIVATE);
-        SharedPreferences.Editor prefsEditor = mPrefs.edit();
         Gson gson = new Gson();
         int index = 1;
         String json = mPrefs.getString("User"+index++, "");
-        while (json != "") {
+        while (!json.equals("")) {
             User obj = gson.fromJson(json, User.class);
             User.usersList.add(obj);
             json = mPrefs.getString("User"+index++, "");

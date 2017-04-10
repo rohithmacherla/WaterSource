@@ -7,7 +7,6 @@ import java.util.ArrayList;
  * The POJO that represents a model that stores the data during a run of the app.
  */
 public class Model {
-    ArrayList<User> users = new ArrayList<>();
     private final ArrayList<WaterSourceReport> waterSourceReports = new ArrayList<>();
     private final ArrayList<WaterPurityReport> waterPurityReports = new ArrayList<>();
     private int reportNumber = 0;

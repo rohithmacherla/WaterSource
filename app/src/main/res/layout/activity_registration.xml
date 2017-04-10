@@ -1,8 +1,7 @@
-<LinearLayout
-    android:layout_height="match_parent"
+<LinearLayout android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Must be at least\nsix characters long"
+            android:hint="Must be at least six characters long"
             android:ems="10"
             android:id="@+id/password_field"
             android:layout_weight="1" />
@@ -58,64 +57,60 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Username" />
 
         <EditText
+            android:id="@+id/email_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:id="@+id/email_field"
-            android:layout_weight="1"
-            android:inputType="text" />
+            android:inputType="textWebEmailAddress" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp">
 
         <TextView
             android:text="User Type"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.11" />
+            android:layout_height="wrap_content" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/spinner"
-            android:layout_weight="1"
             android:gravity="top" />
 
 
 
     </LinearLayout>
 
-    <LinearLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:orientation="horizontal">
 
         <Button
-            android:text="Register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/registerButton"
-            android:layout_weight="0.11" />
-
-        <Button
-            android:text="Cancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/registerCancel"
-            android:layout_weight="0.11" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="Cancel" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            style="?android:attr/buttonBarButtonStyle"
+            android:text="Register" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
 
 
 </LinearLayout>

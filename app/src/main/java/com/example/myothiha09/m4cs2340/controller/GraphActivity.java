@@ -38,10 +38,8 @@ public class GraphActivity extends AppCompatActivity {
         graph.setTitle("Purity vs Time");
         String lat = getIntent().getStringExtra("SetUpInformationLat");
         String lng = getIntent().getStringExtra("SetUpInformationLong");
-        String year2 = getIntent().getStringExtra("SetUpInformationYear");
         double lati = Double.parseDouble(lat);
         double lngi = Double.parseDouble(lng);
-        int year = Integer.parseInt(year2);
 
         ArrayList<WaterPurityReport> toGraph = nearbyReports(lati, lngi);
         Log.d("TOGRAPHSIZE", toGraph.size()+"");
@@ -64,10 +62,10 @@ public class GraphActivity extends AppCompatActivity {
     }
 
     /**
-     * Returns a arraylist to be graphed.
+     * Returns an ArrayList to be graphed.
      * @param lat latitude
      * @param lng longtitude
-     * @return the arraylist
+     * @return the ArrayList
      */
     private ArrayList<WaterPurityReport> nearbyReports(double lat, double lng) {
         ArrayList<WaterPurityReport> reports = new ArrayList<>();
@@ -85,7 +83,7 @@ public class GraphActivity extends AppCompatActivity {
      * @param x1 coordinate 1
      * @param y1 coordinate 2
      * @param x2 coordinate 3
-     * @param y2 cooridinate 4
+     * @param y2 coordinate 4
      * @return distance
      */
     private double distance(double x1, double y1, double x2, double y2) {

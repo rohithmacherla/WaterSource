@@ -22,8 +22,8 @@ public class WaterPurityReport implements Parcelable {
     private OverallCondition overallCondition;
     public static final String ARG_REPORT = "REPORT_TAGNAME";
     public static final String NEW_ARG_REPORT = "NEW REPORT_TAGNAME";
-    public static List<WaterType> waterTypeList = Arrays.asList(WaterType.values());
-    public static List<OverallCondition> overallConditionList = Arrays.asList(OverallCondition.values());
+    public static final List<WaterType> waterTypeList = Arrays.asList(WaterType.values());
+    public static final List<OverallCondition> overallConditionList = Arrays.asList(OverallCondition.values());
     private int virusPPM;
     private int contaminantPPM;
 

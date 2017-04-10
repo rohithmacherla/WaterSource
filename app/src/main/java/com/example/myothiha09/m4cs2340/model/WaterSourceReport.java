@@ -21,8 +21,8 @@ public class WaterSourceReport implements Parcelable{
     private WaterCondition waterCondition;
     public static final String ARG_REPORT = "REPORT_TAGNAME";
     public static final String NEW_ARG_REPORT = "NEW REPORT_TAGNAME";
-    public static List<WaterType> waterTypeList = Arrays.asList(WaterType.values());
-    public static List<WaterCondition> waterConditionList = Arrays.asList(WaterCondition.values());
+    public static final List<WaterType> waterTypeList = Arrays.asList(WaterType.values());
+    public static final List<WaterCondition> waterConditionList = Arrays.asList(WaterCondition.values());
 
     /**
      * Constructor for WaterSourceReport

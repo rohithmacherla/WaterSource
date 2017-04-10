@@ -37,7 +37,6 @@ public class UserDetailsActivity extends AppCompatActivity {
     private EditText password;
     private EditText email;
     private Spinner userType;
-    private boolean newAccount;
 
     private static final String TAG = "UserDetailsActivity";
 
@@ -57,6 +56,7 @@ public class UserDetailsActivity extends AppCompatActivity {
      *                           Note: Otherwise it is null.
      */
 
+    @SuppressWarnings("unchecked")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -94,7 +94,7 @@ public class UserDetailsActivity extends AppCompatActivity {
 
 
 
-        //create the spinner for usertype
+        //create the spinner for UserType
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, User.userTypeList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userType.setAdapter(adapter);
@@ -102,7 +102,6 @@ public class UserDetailsActivity extends AppCompatActivity {
         //Sets the views to the current details of the user if the user is just
         //editing their profile.
         if (getIntent().hasExtra(User.ARG_USER)) {
-            newAccount = false;
             User user = getIntent().getParcelableExtra(User.ARG_USER);
             userName.setText(user.getName());
             userName.setEnabled(false);
@@ -110,8 +109,6 @@ public class UserDetailsActivity extends AppCompatActivity {
             email.setText(user.getEmail());
             userType.setSelection(user.getUserType().getPosition());
             registerButton.setText("Save Changes");
-        } else {
-            newAccount = true;
         }
 
         //Creates the user if the register button is pressed.

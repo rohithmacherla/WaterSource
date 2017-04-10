@@ -21,15 +21,15 @@ public enum WaterType implements Serializable {
     OTHER("Other", 5);
 
 
-    private String name;
-    private int position;
+    private final String name;
+    private final int position;
 
     /**
      * Constructor for the enum WaterType
      * @param n the name of the user
      * @param p the position
      */
-    private WaterType(String n, int p) {
+    WaterType(String n, int p) {
         name = n;
         position = p;
     }

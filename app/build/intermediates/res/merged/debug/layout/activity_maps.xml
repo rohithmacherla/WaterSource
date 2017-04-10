@@ -1,4 +1,4 @@
-<FrameLayout android:layout_width="match_parent"
+<merge android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -20,6 +20,6 @@ tools:context="com.example.myothiha09.m4cs2340.controller.MapsActivity" />
         android:onClick="onGoBackPressed"
         android:text="Go Back" />
 
-</FrameLayout>
+</merge>
 
 

@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="C:\Users\myoth\Desktop\M4\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="822918cc44b371a96d85c2f1f1c23d249b79a837">
-        <dex dex="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b66af4ca5f373688c09bd0300c86eff03b9a1b48/classes.dex" />
+        sha1="62d2b6ee305b370f1272eaa7144a45bc5ecd1216">
+        <dex dex="C:\Users\myoth\Desktop\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_9f71e353d4a572220cc59336c1958699918ad897\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="C:\Users\myoth\Desktop\M4\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
-        <dex dex="/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_2d1107fdfea0dca396d66288c1133229bb4d14a0/classes.dex" />
+        <dex dex="C:\Users\myoth\Desktop\M4\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1b61d5e72cde1b59958f9a34cee38ed9641f2f1d\classes.dex" />
     </item>
 
 </items>

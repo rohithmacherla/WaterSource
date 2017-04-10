@@ -15,8 +15,8 @@ import java.util.List;
  */
 public class User implements Parcelable {
     // The list of users.
-    public static List<UserType> userTypeList = Arrays.asList(UserType.values());
-    public static ArrayList<User> usersList = new ArrayList<>();
+    public static final List<UserType> userTypeList = Arrays.asList(UserType.values());
+    public static final ArrayList<User> usersList = new ArrayList<>();
     public static final String ARG_USER = "M5.GATECH.USER";
     // The attributes of a user.
     private String name;

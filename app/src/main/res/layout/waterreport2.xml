@@ -74,20 +74,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp">
 
         <TextView
             android:text="Water Type"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.11" />
+            android:layout_height="wrap_content" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/waterType_spinner"
-            android:layout_weight="1"
             android:gravity="top" />
 
     </LinearLayout>
@@ -96,20 +93,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp">
 
         <TextView
             android:text="Water Condition"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.11" />
+            android:layout_height="wrap_content" />
 
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/waterCondition_spinner"
-            android:layout_weight="1"
             android:gravity="top" />
 
     </LinearLayout>
@@ -118,22 +112,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_margin="5dp"
-        android:layout_weight="1">
+        android:layout_margin="5dp" >
 
         <Button
             android:text="Add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/addButton"
-            android:layout_weight="0.11" />
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/addButton" />
 
         <Button
             android:text="Back"
             android:layout_width="match_parent"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_height="wrap_content"
-            android:id="@+id/backButton"
-            android:layout_weight="0.11" />
+            android:id="@+id/backButton" />
 
     </LinearLayout>
 </LinearLayout>

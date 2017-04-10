@@ -79,7 +79,7 @@ public class Reports extends Fragment implements TabHost.OnTabChangeListener, Vi
         viewPager.setCurrentItem(currentTab);
         HorizontalScrollView hsv = (HorizontalScrollView)view.findViewById(R.id.myScrollView);
         View tabView = tabHost.getCurrentTabView();
-        int x = tabView.getLeft()-((hsv.getWidth()-tabView.getWidth())/1);
+        int x = tabView.getLeft()-((hsv.getWidth() - tabView.getWidth()));
         hsv.smoothScrollTo(x,0);
     }
 
@@ -99,7 +99,7 @@ public class Reports extends Fragment implements TabHost.OnTabChangeListener, Vi
     }
 
     public class MyContent implements TabHost.TabContentFactory{
-        Context context;
+        final Context context;
         public MyContent(Context context){
             this.context = context;
         }

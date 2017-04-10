@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/rohithmacherla/OneDrive/term2/cs2340/project/M4/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml",
+        "outputFile": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 327
                 },
                 "from": {
-                    "file": "/Users/rohithmacherla/.android/build-cache/0274caa0635ad5762434075eba95e4570ccbdb1a/output/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "file": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
