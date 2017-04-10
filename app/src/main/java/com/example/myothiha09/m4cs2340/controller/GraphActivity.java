@@ -68,20 +68,22 @@ public class GraphActivity extends AppCompatActivity {
      * @param reports The list of water purity reports
      * @return the ArrayList
      */
-    private static ArrayList<WaterPurityReport> nearbyReports(double lat, double lng, ArrayList<WaterPurityReport> reports) {
+    public static ArrayList<WaterPurityReport> nearbyReports(double lat, double lng, ArrayList<WaterPurityReport> reports) {
+        ArrayList<WaterPurityReport> finalList = new ArrayList<>();
         if (reports == null) {
             return null;
         }
-        if ((lat < -90 && lat > -90) || (lng > 180 && lng < -180)) {
+        if ((lat < -90 || lat > 90) || (lng > 180 || lng < -180)) {
             return null;
         }
-        for (WaterPurityReport current: reports) {
+        for (int i = 0; i < reports.size(); i++) {
+            WaterPurityReport current = reports.get(i);
             if (distance(lat, lng, convertStringtoLatLng(current.getWaterLocation()).latitude,
                     convertStringtoLatLng(current.getWaterLocation()).longitude) < MAX_RADIUS) {
-                reports.add(current);
+                finalList.add(current);
             }
         }
-        return reports;
+        return finalList;
     }
 
     /**
@@ -96,5 +98,4 @@ public class GraphActivity extends AppCompatActivity {
         return Math.sqrt(Math.pow(x2 - x1, 2.0) + Math.pow(y2 - y1, 2.0));
 
     }
-
 }

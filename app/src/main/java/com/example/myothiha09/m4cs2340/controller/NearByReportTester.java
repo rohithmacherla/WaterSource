@@ -1,6 +1,6 @@
 package com.example.myothiha09.m4cs2340.controller;
 
-import com.example.myothiha09.m4cs2340.model.Model;
+import com.example.myothiha09.m4cs2340.controller.GraphActivity;
 import com.example.myothiha09.m4cs2340.model.OverallCondition;
 import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
 import com.example.myothiha09.m4cs2340.model.WaterType;
@@ -10,6 +10,9 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertNull;
 
 /**
  * Created by myothiha09 on 4/10/2017.
@@ -25,17 +28,46 @@ public class NearByReportTester {
     }
 
     @Test(timeout = TIMEOUT)
-    public void testMethodWithValidData(){
+    public void testMethodWithValidData() {
         int number = 1;
         //no real date since only testing distance calculation
         reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.75, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        ArrayList<WaterPurityReport> nearBy = GraphActivity.nearbyReports(5,20, reports);
+        assertEquals(1, nearBy.size());
+        reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.25, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(55.25, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        nearBy = GraphActivity.nearbyReports(5.75, 20, reports);
+        assertEquals(2, nearBy.size());
     }
     @Test(timeout = TIMEOUT)
     public void testMethodWithInValidData(){
+        int number = 1;
+        //no real date since only testing distance calculation
+        reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.75, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        ArrayList<WaterPurityReport> nearBy = GraphActivity.nearbyReports(5,20, reports);
+        reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.25, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        nearBy = GraphActivity.nearbyReports(-91, 50, reports);
+        assertNull(nearBy);
+        nearBy = GraphActivity.nearbyReports(91, 50, reports);
+        assertNull(nearBy);
+        nearBy = GraphActivity.nearbyReports(0, -181, reports);
+        assertNull(nearBy);
+        nearBy = GraphActivity.nearbyReports(0, 181, reports);
+        assertNull(nearBy);
+        nearBy = GraphActivity.nearbyReports(0, 0, null);
+        assertNull(nearBy);
 
     }
     @Test(timeout = TIMEOUT)
     public void testMethodWithValidDataButNoNearBy(){
-
+        int number = 1;
+        //no real date since only testing distance calculation
+        reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.75, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        ArrayList<WaterPurityReport> nearBy;
+        reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.25, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(10.25, 14.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(54.25, 25.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
+        nearBy = GraphActivity.nearbyReports(40, 50, reports);
+        assertEquals(0, nearBy.size());
     }
 }
