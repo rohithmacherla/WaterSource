@@ -301,14 +301,30 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public static LatLng convertStringtoLatLng(String latLongLocation) {
         int index = latLongLocation.indexOf(",");
         int index2 = latLongLocation.indexOf("(");
+        if (index == -1 || index2 == -1) {
+            throw new IllegalArgumentException("String input must contain a comma and "
+                    + "set of parenthesis");
+        }
         String lat = latLongLocation.substring(index2+1, index).trim();
         String lng = latLongLocation.substring(index+1, latLongLocation.length()-1).trim();
-        double latitude = Double.parseDouble(lat);
-        double longitude = Double.parseDouble(lng);
-        DecimalFormat format = new DecimalFormat("###.00");
-        latitude = Double.parseDouble(format.format(latitude));
-        longitude = Double.parseDouble(format.format(longitude));
-        return new LatLng(latitude, longitude);
+        try {
+            double latitude = Double.parseDouble(lat);
+            double longitude = Double.parseDouble(lng);
+            DecimalFormat format = new DecimalFormat("###.00");
+            latitude = Double.parseDouble(format.format(latitude));
+            longitude = Double.parseDouble(format.format(longitude));
+            if (latitude < -180.0 || latitude > 180.0 ||
+                    longitude < -180.0 || longitude > 180.0) {
+                throw new IllegalArgumentException("Latitude and longitude must be" +
+                        "between -180.0 and 180.0, inclusive.");
+            }
+            return new LatLng(latitude, longitude);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("String input does not consist of two" +
+                    "doubles that represent latitude and longitude");
+        }
+
+
     }
 
     /**
