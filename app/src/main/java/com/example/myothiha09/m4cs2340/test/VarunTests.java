@@ -46,6 +46,11 @@ public class VarunTests {
 
     @Test
     public void test_NullArgs() {
+        assertFalse(UserDetailsActivity.checkUsername(null, null));
+    }
+
+    @Test
+    public void test_EmptyStringEmptyList() {
         ArrayList<User> users2 = new ArrayList<>();
 
         assertFalse(UserDetailsActivity.checkUsername("", users));
