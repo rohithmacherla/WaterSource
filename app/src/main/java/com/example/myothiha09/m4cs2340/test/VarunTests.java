@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 /**
- * Varun Giridhar's JUnit Tests on 4/10/17.
+ * Varun Giridhar's JUnit Tests on 4/10/17. (VERSION 2.0)
  * The JUnit tests for the checkUserName(String username, ArrayList<User> list) method in the
  *  UserDetailsActivity.java class in the controller.
  */
