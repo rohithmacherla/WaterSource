@@ -9,7 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertNull;
@@ -38,13 +37,15 @@ public class MyoTests {
         reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(55.25, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
         nearBy = GraphActivity.nearbyReports(5.75, 20, reports);
         assertEquals(2, nearBy.size());
+        nearBy = GraphActivity.nearbyReports(55.25, 20, reports);
+        assertEquals(1, nearBy.size());
     }
     @Test(timeout = TIMEOUT)
     public void testMethodWithInValidData(){
         int number = 1;
         //no real date since only testing distance calculation
         reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.75, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
-        ArrayList<WaterPurityReport> nearBy = GraphActivity.nearbyReports(5,20, reports);
+        ArrayList<WaterPurityReport> nearBy;
         reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.25, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
         nearBy = GraphActivity.nearbyReports(-91, 50, reports);
         assertNull(nearBy);
