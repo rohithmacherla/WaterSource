@@ -27,7 +27,7 @@ public class MyoTests {
     }
 
     @Test(timeout = TIMEOUT)
-    public void testMethodWithValidData() {
+    public void testMethodWithValidInput() {
         int number = 1;
         //no real date since only testing distance calculation
         reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.75, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
@@ -41,7 +41,7 @@ public class MyoTests {
         assertEquals(1, nearBy.size());
     }
     @Test(timeout = TIMEOUT)
-    public void testMethodWithInValidData(){
+    public void testMethodWithInvalidInput(){
         int number = 1;
         //no real date since only testing distance calculation
         reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.75, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
@@ -60,7 +60,7 @@ public class MyoTests {
 
     }
     @Test(timeout = TIMEOUT)
-    public void testMethodWithValidDataButNoNearBy(){
+    public void testMethodWithValidInputButNoNearBy(){
         int number = 1;
         //no real date since only testing distance calculation
         reports.add(new WaterPurityReport("Date "+number++, number, "Reporter", "lat/Lng:(5.75, 20.08)", WaterType.BOTTLED, OverallCondition.SAFE, 20, 20));
