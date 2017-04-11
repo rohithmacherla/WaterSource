@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M10 Tests\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+        "outputFile": "/Users/vgiridhar/Google Drive/Academic/College/Year 2/Spring 2017/classes/cs 2340/project/real_water_project/M4/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v18/values-v18.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 99
                 },
                 "from": {
-                    "file": "C:\\Users\\Kevin\\.android\\build-cache\\ac7e103ec8643087e317c1a6b35f8ec4b3abda6f\\output\\res\\values-v18\\values-v18.xml",
+                    "file": "/Users/vgiridhar/.android/build-cache/b34fcd3e839c550420255d9be55fbca6dd98e632/output/res/values-v18/values-v18.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
