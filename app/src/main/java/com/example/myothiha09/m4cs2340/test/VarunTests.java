@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 /**
- * Varun Giridhar's JUnit Tests on 4/10/17. (VERSION 2.0)
+ * Varun Giridhar's JUnit Tests on 4/10/17. (VERSION 3.0)
  * The JUnit tests for the checkUserName(String username, ArrayList<User> list) method in the
  *  UserDetailsActivity.java class in the controller.
  */
@@ -46,6 +46,11 @@ public class VarunTests {
 
     @Test
     public void test_NullArgs() {
+        assertFalse(UserDetailsActivity.checkUsername(null, null));
+    }
+
+    @Test
+    public void test_EmptyStringEmptyList() {
         ArrayList<User> users2 = new ArrayList<>();
 
         assertFalse(UserDetailsActivity.checkUsername("", users));
