@@ -22,6 +22,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import  java.util.ArrayList;
+
 // Team 27
 
 /**
@@ -117,7 +119,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!getIntent().hasExtra(User.ARG_USER) && checkUsername()) {
+                if (!getIntent().hasExtra(User.ARG_USER) && checkUsername(userName.getText().toString(), User.usersList)) {
                     Toast.makeText(getApplicationContext(), "Username already taken", Toast.LENGTH_LONG).show();
                 } else if (userName.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "Please input a username", Toast.LENGTH_LONG).show();
@@ -196,13 +198,19 @@ public class UserDetailsActivity extends AppCompatActivity {
 
     /**
      * Checks to see if the username is not taken.
+     * @param username the username to be checked
+     * @param list the list of users stored
      * @return if the username was taken or not (true if taken).
      */
-    private boolean checkUsername() {
-        String username2 = userName.getText().toString();
-        for(User user: User.usersList) {
-            if (user.getName().equals(username2))
+    public static boolean checkUsername(String username, ArrayList<User> list) {
+        if (username == null || list == null ) {
+            return false;
+        }
+
+        for(int i = 0; i < list.size(); i++) {
+            if (list.get(i).getName().equals(username)) {
                 return true;
+            }
         }
         return false;
     }
