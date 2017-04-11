@@ -297,6 +297,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * Format the latLng to be more readable
      * @param latLongLocation LatLng passed in as string
      * @return the formatted LatLng
+     * @throws IllegalArgumentException if latLongLocation cannot be
+     * converted to LatLng object.
      */
     public static LatLng convertStringtoLatLng(String latLongLocation) {
         int index = latLongLocation.indexOf(",");
@@ -313,18 +315,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             DecimalFormat format = new DecimalFormat("###.00");
             latitude = Double.parseDouble(format.format(latitude));
             longitude = Double.parseDouble(format.format(longitude));
-            if (latitude < -180.0 || latitude > 180.0 ||
-                    longitude < -180.0 || longitude > 180.0) {
-                throw new IllegalArgumentException("Latitude and longitude must be" +
-                        "between -180.0 and 180.0, inclusive.");
+            if (latitude < -90.0 || latitude > 90.0 ||
+                    longitude < -180.0 || longitude >= 180.0) {
+                throw new IllegalArgumentException("Longitude must be" +
+                        "between -180.0 and 180.0 and latitude " +
+                        "must be between -90.0 and 90.0");
             }
             return new LatLng(latitude, longitude);
         } catch (NumberFormatException e) {
             throw new IllegalArgumentException("String input does not consist of two" +
                     "doubles that represent latitude and longitude");
         }
-
-
     }
 
     /**
