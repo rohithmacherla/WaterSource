@@ -203,9 +203,14 @@ public class UserDetailsActivity extends AppCompatActivity {
      * @return if the username was taken or not (true if taken).
      */
     public static boolean checkUsername(String username, ArrayList<User> list) {
+        if (username == null || list == null ) {
+            return false;
+        }
+
         for(int i = 0; i < list.size(); i++) {
-            if (list.get(i).getName().equals(username))
+            if (list.get(i).getName().equals(username)) {
                 return true;
+            }
         }
         return false;
     }

@@ -45,6 +45,15 @@ public class VarunTests {
     }
 
     @Test
+    public void test_NullArgs() {
+        ArrayList<User> users2 = new ArrayList<>();
+
+        assertFalse(UserDetailsActivity.checkUsername("", users));
+        assertFalse(UserDetailsActivity.checkUsername("", users2));
+        assertFalse(UserDetailsActivity.checkUsername("shambamdam", users2));
+    }
+
+    @Test
     public void test_UserNameValid() {
         assertTrue(UserDetailsActivity.checkUsername(user1.getName(), users));
         assertTrue(UserDetailsActivity.checkUsername(user2.getName(), users));
