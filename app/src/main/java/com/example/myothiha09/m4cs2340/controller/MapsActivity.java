@@ -341,9 +341,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void useCurrentLocation(View v) {
-        progressDialog.setMessage("Loading...");
-        progressDialog.show();
-        onMapLongClick(convertStringtoLatLng("33.7756,84.3963"));
+       // progressDialog.show();
+       // progressDialog.setMessage("Loading...");
+        onMapLongClick(convertStringtoLatLng("(33.777220, -84.396363)"));
     }
 
 
