@@ -19,6 +19,16 @@
         android:onClick="onGoBackPressed"
         android:text="Go Back" />
 
+    <Button
+        android:id="@+id/location"
+        style="@android:style/Widget.DeviceDefault.Light.Button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="20dp"
+        android:layout_gravity="center_horizontal|top"
+        android:onClick="useCurrentLocation"
+        android:text="Add Report at Current Location" />
+
 </merge>
 
 

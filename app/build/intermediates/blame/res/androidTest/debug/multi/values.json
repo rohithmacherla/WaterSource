@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "outputFile": "/Users/nidhi/M4/C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,31 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "C:\\Users\\myoth\\.android\\build-cache\\ff6702e1ceb5da3fece3fe2a0739f9eb597be6c9\\output\\res\\values\\values.xml",
+                    "file": "/Users/nidhi/M4/C:\\Users\\myoth\\.android\\build-cache\\ff6702e1ceb5da3fece3fe2a0739f9eb597be6c9\\output\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 229,
+                        "endColumn": 45,
+                        "endOffset": 270
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/nidhi/M4/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 45,
+                    "endOffset": 96
+                },
+                "from": {
+                    "file": "/Users/nidhi/.android/build-cache/5a66bed7ba2dba16426ed2edb0b847bac8febba4/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

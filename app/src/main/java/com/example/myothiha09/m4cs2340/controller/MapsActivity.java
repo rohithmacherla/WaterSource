@@ -60,6 +60,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        final Button locationButton = (Button) findViewById(R.id.location);
         
     }
 
@@ -337,6 +339,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         progressDialog.show();
         this.onBackPressed();
     }
+
+    public void useCurrentLocation(View v) {
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
+        onMapLongClick(convertStringtoLatLng("33.7756,84.3963"));
+    }
+
 
 
 }
