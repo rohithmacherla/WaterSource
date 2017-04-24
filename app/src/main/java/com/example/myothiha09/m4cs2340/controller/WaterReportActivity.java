@@ -2,7 +2,9 @@ package com.example.myothiha09.m4cs2340.controller;
 
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -34,7 +36,7 @@ import com.example.myothiha09.m4cs2340.model.WaterType;
 public class WaterReportActivity extends AppCompatActivity {
     private WaterSourceReport waterSourceReport;
     private Model model;
-
+    private Vibrator vibrator;
 
     private String dateAndTime;
 
@@ -60,6 +62,7 @@ public class WaterReportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.waterreport2);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         //Autogenerating Date and Time
         Calendar rightNow = Calendar.getInstance();
@@ -120,6 +123,7 @@ public class WaterReportActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrator.vibrate(25);
                 WaterReportActivity.super.onBackPressed();
                 //implement deleting marker
             }
@@ -136,6 +140,7 @@ public class WaterReportActivity extends AppCompatActivity {
         }
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                vibrator.vibrate(25);
                 waterSourceReport.setWaterLocation(chosenLocation);
                 waterSourceReport.setDateAndTime(dateAndTime);
 

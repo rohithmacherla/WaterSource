@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Users/nidhi/M4/app/build/intermediates/res/merged/debug/drawable-v23/abc_control_background_material.xml",
-        "source": "/Users/nidhi/.android/build-cache/75dd817c18f673791ce0393c95d35dce50f37b86/output/res/drawable-v23/abc_control_background_material.xml"
-    },
-    {
-        "merged": "/Users/nidhi/M4/C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "/Users/nidhi/M4/C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\drawable-v23\\abc_control_background_material.xml"
+        "merged": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
+        "source": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\drawable-v23\\abc_control_background_material.xml"
     }
 ]

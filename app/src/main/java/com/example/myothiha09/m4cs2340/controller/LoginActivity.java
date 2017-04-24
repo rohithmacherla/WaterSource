@@ -1,10 +1,12 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.app.AlertDialog;
 import android.content.SharedPreferences;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private static final String TAG = "LoginActivity";
+    private Vibrator vibrator;
 
 
     /**
@@ -55,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         //initialize views
         username = (EditText) findViewById(R.id.userNameText);
         password = (EditText) findViewById(R.id.passwordText);
@@ -132,6 +136,7 @@ public class LoginActivity extends AppCompatActivity {
             AlertDialog dialog = createDialogBox();
             dialog.show();
         }
+        vibrator.vibrate(25);
     }
 
     /**
@@ -140,7 +145,7 @@ public class LoginActivity extends AppCompatActivity {
      */
 
     public void onCancelPressed(View v) {
-        finish();
+        vibrator.vibrate(25);finish();
     }
 
     /**
@@ -174,6 +179,7 @@ public class LoginActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+        vibrator.vibrate(100);
 
 
         return myDialogBuilder.create();

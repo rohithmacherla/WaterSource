@@ -1,10 +1,12 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.util.Log;
@@ -48,6 +50,7 @@ public class MainScreenActivity extends AppCompatActivity {
     private SharedPreferences mPrefs;
     private ProgressDialog progressDialog;
     private Model model;
+    private Vibrator vibrator;
 
     public static User getCurrentUser() {
         return user;
@@ -69,6 +72,7 @@ public class MainScreenActivity extends AppCompatActivity {
         mapIntent = new Intent(getApplicationContext(), MapsActivity.class);
         graphIntent = new Intent(getApplicationContext(), GraphSetupActivity.class);
         super.onCreate(savedInstanceState);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         setContentView(R.layout.activity_main_screen2);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -98,6 +102,7 @@ public class MainScreenActivity extends AppCompatActivity {
                     progressDialog.show();
                     //graphIntent.putExtra("User", user);
                     Log.wtf("came through", "work");
+                    vibrator.vibrate(25);
                     startActivity(graphIntent);
                 } else {
                     createDialogBox().show();
@@ -117,6 +122,7 @@ public class MainScreenActivity extends AppCompatActivity {
                 progressDialog.setMessage("Loading...");
                 progressDialog.show();
                 mapIntent.putExtra("User", user);
+                vibrator.vibrate(25);
                 startActivity(mapIntent);
             }
         });
@@ -132,6 +138,7 @@ public class MainScreenActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                vibrator.vibrate(25);
                 // Handle navigation view item clicks here.
                 int id = item.getItemId();
                 progressDialog.setMessage("Loading...");
@@ -184,6 +191,7 @@ public class MainScreenActivity extends AppCompatActivity {
      * @return nothing. Just prompts a dialog box.
      */
     private android.app.AlertDialog createDialogBox() {
+        vibrator.vibrate(100);
         android.app.AlertDialog.Builder myDialogBuilder = new android.app.AlertDialog.Builder(this);
         myDialogBuilder.setTitle("Error!");
         myDialogBuilder.setMessage("You are not a Manager and therefore cannot access the " +

@@ -2,8 +2,10 @@ package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Vibrator;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
@@ -31,6 +33,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Model model;
     private User user;
     private ProgressDialog progressDialog;
+    private Vibrator vibrator;
     @Override
     /*
       Do the initials setup necessary for a map activity and show instruction to users through alert..
@@ -44,6 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         progressDialog = new ProgressDialog(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         user = getIntent().getParcelableExtra("User");
         AlertDialog alertDialog = new AlertDialog.Builder(MapsActivity.this).create();
         alertDialog.setTitle("Alert");
@@ -101,6 +105,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public boolean onMarkerClick(final Marker marker) {
+        vibrator.vibrate(25);
         if (user.getUserType() == USER) {
             Intent intent = null;
             ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
@@ -175,6 +180,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapLongClick(final LatLng latLng) {
+        vibrator.vibrate(50);
         if (user.getUserType() == USER) {
                 startWaterSourceReport(latLng);
             } else {
@@ -267,6 +273,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * @param latLng clicked location
      */
     private void startWaterPurityReport(LatLng latLng) {
+        vibrator.vibrate(25);
         latLng = convertStringtoLatLng(latLng.toString());
 
         Intent intent = new Intent(this, WaterPurityReportActivity.class);
@@ -280,6 +287,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
 
     private void startWaterSourceReport(LatLng latLng) {
+        vibrator.vibrate(25);
         latLng = convertStringtoLatLng(latLng.toString());
 
         Intent intent = new Intent(this, WaterReportActivity.class);
@@ -337,12 +345,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onGoBackPressed(View v) {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         this.onBackPressed();
     }
 
     public void useCurrentLocation(View v) {
        // progressDialog.show();
        // progressDialog.setMessage("Loading...");
+        vibrator.vibrate(25);
         onMapLongClick(convertStringtoLatLng("(33.777220, -84.396363)"));
     }
 

@@ -1,8 +1,10 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +29,7 @@ public class GraphSetupActivity extends AppCompatActivity {
     private EditText latitude;
 
     private Intent graphIntent;
+    private Vibrator vibrator;
 
 
     /**
@@ -41,6 +44,7 @@ public class GraphSetupActivity extends AppCompatActivity {
         year = (EditText) findViewById(R.id.year_field);
         year.setText("2017");
         year.setEnabled(false);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         longtitude = (EditText) findViewById(R.id.longitude_field);
         latitude = (EditText) findViewById(R.id.latitude_field);
         graphIntent = new Intent(getApplicationContext(), GraphActivity.class);
@@ -48,6 +52,7 @@ public class GraphSetupActivity extends AppCompatActivity {
         final Button graphButton = (Button) findViewById(R.id.graphButton);
         graphButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                vibrator.vibrate(25);
                 final String yearStr = year.getText().toString();
                 final String longStr = longtitude.getText().toString();
                 final String latitStr = latitude.getText().toString();

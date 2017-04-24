@@ -1,6 +1,8 @@
 package com.example.myothiha09.m4cs2340.controller;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +17,7 @@ import com.example.myothiha09.m4cs2340.R;
  */
 
 public class WelcomeActivity extends AppCompatActivity {
+    private Vibrator vibrator;
 
     /**
      * Initializes the activity.
@@ -28,6 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome_screen);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
     }
 
     /**
@@ -45,6 +49,7 @@ public class WelcomeActivity extends AppCompatActivity {
             Intent intent = new Intent(this, UserDetailsActivity.class);
             startActivity(intent);
         }
+        vibrator.vibrate(25);
     }
 
 

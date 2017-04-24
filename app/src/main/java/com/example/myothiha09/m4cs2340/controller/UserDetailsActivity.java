@@ -1,6 +1,8 @@
 package com.example.myothiha09.m4cs2340.controller;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -39,6 +41,7 @@ public class UserDetailsActivity extends AppCompatActivity {
     private EditText password;
     private EditText email;
     private Spinner userType;
+    private Vibrator vibrator;
 
     private static final String TAG = "UserDetailsActivity";
 
@@ -63,6 +66,7 @@ public class UserDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         //instantiate views from activity_registration.xml
         userName = (EditText) findViewById(R.id.name_field);
@@ -130,6 +134,7 @@ public class UserDetailsActivity extends AppCompatActivity {
                 } else {
                     progressDialog.setMessage("Registering user! Please wait :)");
                     progressDialog.show();
+                    vibrator.vibrate(25);
 
 
                     if (getIntent().hasExtra(User.ARG_USER)) {
@@ -191,6 +196,7 @@ public class UserDetailsActivity extends AppCompatActivity {
         registerCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrator.vibrate(25);
                 finish();
             }
         });

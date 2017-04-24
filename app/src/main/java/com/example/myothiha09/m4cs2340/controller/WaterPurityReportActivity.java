@@ -2,7 +2,9 @@ package com.example.myothiha09.m4cs2340.controller;
 
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -51,6 +53,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
     private Spinner overallConditions;
     private EditText contaminantPPM_field;
     private EditText virusPPM_field;
+    private Vibrator vibrator;
 
     private WaterPurityReport report;
 
@@ -64,6 +67,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.water_purity_report);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         //Autogenerating Date and Time
         Calendar rightNow = Calendar.getInstance();
@@ -128,6 +132,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                vibrator.vibrate(25);
                 WaterPurityReportActivity.super.onBackPressed();
                 //implement deleting marker
             }
@@ -144,6 +149,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
         }
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                vibrator.vibrate(25);
                 waterPurityReport.setWaterLocation(chosenLocation);
                 waterPurityReport.setDateAndTime(dateAndTime);
 
