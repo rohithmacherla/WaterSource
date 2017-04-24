@@ -345,7 +345,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onGoBackPressed(View v) {
         progressDialog.setMessage("Loading...");
         progressDialog.show();
-        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vibrator.vibrate(25);
         this.onBackPressed();
     }
 
