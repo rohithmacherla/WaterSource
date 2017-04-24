@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
+        "outputFile": "C:\\Users\\Kevin\\Documents\\Android_Apps\\M13Database\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ldltr-v21\\values-ldltr-v21.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "C:\\Users\\myoth\\.android\\build-cache\\91b07e18d377d962898212d85319f2d19d90f909\\output\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "file": "C:\\Users\\Kevin\\.android\\build-cache\\ac7e103ec8643087e317c1a6b35f8ec4b3abda6f\\output\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
