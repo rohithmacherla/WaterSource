@@ -24,6 +24,11 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import com.example.myothiha09.m4cs2340.model.*;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import static com.example.myothiha09.m4cs2340.model.UserType.USER;
 
@@ -86,6 +91,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         mMap.setOnMarkerClickListener(this);
         mMap.setOnMapLongClickListener(this);
+          /*
         for (WaterSourceReport report: model.getWaterSourceReports()) {
             String latLongLocation = report.getWaterLocation();
             LatLng location = convertStringtoLatLng(latLongLocation);
@@ -95,7 +101,52 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             String latLongLocation = current.getWaterLocation();
             LatLng location = convertStringtoLatLng(latLongLocation);
             mMap.addMarker(new MarkerOptions().position(location));
-        }
+        }*/
+
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference();
+        ValueEventListener waterSourceListener = new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
+                for (DataSnapshot current: iterable) {
+                    //Log.d("SomeRandomInfo", current.getValue(String.class));
+                    WaterSourceReport report = current.getValue(WaterSourceReport.class);
+                    //reports.add(report);
+                    String latLongLocation = report.getWaterLocation();
+                    LatLng location = convertStringtoLatLng(latLongLocation);
+                    mMap.addMarker(new MarkerOptions().position(location));
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+
+        ValueEventListener purityListener = new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
+                for (DataSnapshot current: iterable) {
+                    WaterPurityReport report = current.getValue(WaterPurityReport.class);
+                    //reports.add(report);
+                    String latLongLocation = report.getWaterLocation();
+                    LatLng location = convertStringtoLatLng(latLongLocation);
+                    mMap.addMarker(new MarkerOptions().position(location));
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+        reference.child("SourceReports").addValueEventListener(waterSourceListener);
+        reference.child("PurityReports").addValueEventListener(purityListener);
     }
 
     /**
