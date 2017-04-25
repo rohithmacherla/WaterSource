@@ -3,6 +3,8 @@ package com.example.myothiha09.m4cs2340.controller;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,6 +48,17 @@ public class PurityFragment extends ListFragment {
         Model model = Model.getInstance();
         ArrayList<WaterPurityReport> report = model.getWaterPurityReports();
         adapter = new CustomPurityAdapter(getActivity(), report);
+
+        final SwipeRefreshLayout mySwipeRefreshLayout = (SwipeRefreshLayout) getActivity().findViewById(R.id.swiperefresh2);
+        mySwipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        adapter.notifyDataSetChanged();
+                        mySwipeRefreshLayout.setRefreshing(false);
+                    }
+                }
+        );
         setListAdapter(adapter);
     }
 
@@ -58,4 +71,5 @@ public class PurityFragment extends ListFragment {
         super.onResume();
         adapter.notifyDataSetChanged();
     }
+
 }

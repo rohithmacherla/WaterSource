@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +48,16 @@ public class ReportFragment extends ListFragment {
         Model model = Model.getInstance();
         ArrayList<WaterSourceReport> report = model.getWaterSourceReports();
         adapter = new CustomArrayAdapter(getActivity(), report);
+        final SwipeRefreshLayout mySwipeRefreshLayout = (SwipeRefreshLayout) getActivity().findViewById(R.id.swiperefresh);
+        mySwipeRefreshLayout.setOnRefreshListener(
+                new SwipeRefreshLayout.OnRefreshListener() {
+                    @Override
+                    public void onRefresh() {
+                        adapter.notifyDataSetChanged();
+                        mySwipeRefreshLayout.setRefreshing(false);
+                    }
+                }
+        );
         setListAdapter(adapter);
     }
 

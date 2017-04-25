@@ -20,6 +20,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.R;
 import com.example.myothiha09.m4cs2340.model.Model;
@@ -136,12 +137,13 @@ public class MainScreenActivity extends AppCompatActivity {
                 startActivity(mapIntent);
             }
         });
+        loadData();
         if (user.getUserType() == UserType.USER) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
         } else {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
         }
-        loadData();
+
 
 
 
@@ -298,6 +300,7 @@ public class MainScreenActivity extends AppCompatActivity {
         prefsEditor.apply();*/
     }
     private void loadData() {
+        Toast.makeText(getApplicationContext(), "Swipe down to Refresh", Toast.LENGTH_LONG).show();
         final ArrayList<WaterPurityReport> waterPurityReports = model.getWaterPurityReports();
         final ArrayList<WaterSourceReport> waterSourceReports = model.getWaterSourceReports();
         waterPurityReports.clear();
@@ -342,12 +345,6 @@ public class MainScreenActivity extends AppCompatActivity {
             reference.child("PurityReports").addValueEventListener(purityListener);
         }
         reference.child("SourceReports").addValueEventListener(waterSourceListener);
-
-        if (user.getUserType() == UserType.USER) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
-        } else {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
-        }
        /* int index = 1;
         Gson gson = new Gson();
         String json = mPrefs.getString("WaterSourceReport"+index++, "");
@@ -363,5 +360,11 @@ public class MainScreenActivity extends AppCompatActivity {
             model.getWaterPurityReports().add(obj);
             json = mPrefs.getString("WaterPurityReport"+index++, "");
         }*/
+        if (user.getUserType() == UserType.USER) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
+        }
     }
+
 }
