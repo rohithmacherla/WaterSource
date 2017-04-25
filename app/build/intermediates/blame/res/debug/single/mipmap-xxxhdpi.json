@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\myoth\\Desktop\\CS 2340\\M4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\myoth\\Desktop\\CS 2340\\M4\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\myoth\\Desktop\\M4\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi\\ic_launcher.png",
         "source": "C:\\Users\\myoth\\Desktop\\M4\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     }

@@ -1,19 +1,33 @@
 package com.example.myothiha09.m4cs2340.controller;
 
+import android.Manifest;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Vibrator;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.myothiha09.m4cs2340.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -33,15 +47,19 @@ import com.google.firebase.database.ValueEventListener;
 
 import static com.example.myothiha09.m4cs2340.model.UserType.USER;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMapLongClickListener {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener, GoogleMap.OnMapLongClickListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private static GoogleMap mMap;
     private Model model;
     private User user;
     private ProgressDialog progressDialog;
     private Vibrator vibrator;
+    private GoogleApiClient mGoogleApiClient;
+    private String mLatitudeText;
+    private String mLongitudeText;
     ArrayList<WaterPurityReport> waterPurityReports;
     ArrayList<WaterSourceReport> waterSourceReports;
+
     @Override
     /*
       Do the initials setup necessary for a map activity and show instruction to users through alert..
@@ -69,14 +87,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         alertDialog.show();
         model = Model.getInstance();
         waterSourceReports = model.getWaterSourceReports();
-        waterPurityReports =  model.getWaterPurityReports();
+        waterPurityReports = model.getWaterPurityReports();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
 
         final Button locationButton = (Button) findViewById(R.id.location);
-        
+
     }
 
 
@@ -115,7 +140,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
-                for (DataSnapshot current: iterable) {
+                for (DataSnapshot current : iterable) {
                     //Log.d("SomeRandomInfo", current.getValue(String.class));
                     WaterSourceReport report = current.getValue(WaterSourceReport.class);
                     //reports.add(report);
@@ -157,6 +182,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+    @Override
+    protected void onStart() {
+        mGoogleApiClient.connect();
+        super.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        mGoogleApiClient.disconnect();
+        super.onStop();
+    }
+
     /**
      * The listener method to decide action if a user click a marker
      * @param marker the marker that is clicked
@@ -177,7 +214,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         } else {
-            Log.d("ArrayListSize", arrayList.size()+"");
+            Log.d("ArrayListSize", arrayList.size() + "");
             for (WaterSourceReport current : arrayList) {
                 if (current.getWaterLocation().equals(marker.getPosition().toString())) {
                     Intent intent = new Intent(getApplicationContext(), WaterReportActivity.class);
@@ -206,32 +243,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapLongClick(final LatLng latLng) {
         vibrator.vibrate(50);
         if (user.getUserType() == USER) {
-                startWaterSourceReport(latLng);
-            } else {
-                final Dialog dialog = new Dialog(this);
-                dialog.setContentView(R.layout.map_report_alert_dialog);
-                dialog.setTitle("Type of Report");
-                Button sourceButton = (Button) dialog.findViewById(R.id.sourceButton);
-                Button purityButton = (Button) dialog.findViewById(R.id.purityButton);
-                Button cancelButton = (Button) dialog.findViewById(R.id.cancelButton);
+            startWaterSourceReport(latLng);
+        } else {
+            final Dialog dialog = new Dialog(this);
+            dialog.setContentView(R.layout.map_report_alert_dialog);
+            dialog.setTitle("Type of Report");
+            Button sourceButton = (Button) dialog.findViewById(R.id.sourceButton);
+            Button purityButton = (Button) dialog.findViewById(R.id.purityButton);
+            Button cancelButton = (Button) dialog.findViewById(R.id.cancelButton);
 
-                sourceButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startWaterSourceReport(latLng);
-                        dialog.dismiss();
-                    }
-                });
+            sourceButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startWaterSourceReport(latLng);
+                    dialog.dismiss();
+                }
+            });
 
-                purityButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startWaterPurityReport(latLng);
-                        dialog.dismiss();
-                    }
-                });
+            purityButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startWaterPurityReport(latLng);
+                    dialog.dismiss();
+                }
+            });
 
-                cancelButton.setOnClickListener(new View.OnClickListener() {
+            cancelButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     dialog.dismiss();
@@ -341,8 +378,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             throw new IllegalArgumentException("String input must contain a comma and "
                     + "set of parenthesis");
         }
-        String lat = latLongLocation.substring(index2+1, index).trim();
-        String lng = latLongLocation.substring(index+1, latLongLocation.length()-1).trim();
+        String lat = latLongLocation.substring(index2 + 1, index).trim();
+        String lng = latLongLocation.substring(index + 1, latLongLocation.length() - 1).trim();
         try {
             double latitude = Double.parseDouble(lat);
             double longitude = Double.parseDouble(lng);
@@ -374,12 +411,81 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void useCurrentLocation(View v) {
-       // progressDialog.show();
-       // progressDialog.setMessage("Loading...");
+        // progressDialog.show();
+        // progressDialog.setMessage("Loading...");
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if( !locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) ) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Error!");  // GPS not found
+            builder.setMessage("Location Disabled"); // Want to enable?
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+                }
+            });
+            builder.setNegativeButton("No", null);
+            builder.create().show();
+            return;
+        }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            Toast.makeText(getApplicationContext(), "Location Permission denied", Toast.LENGTH_LONG).show();
+            return;
+        }
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+        String tempLat = mLatitudeText;
+        String tempLong = mLongitudeText;
+        if (mLastLocation != null) {
+            mLatitudeText = (String.valueOf(mLastLocation.getLatitude()));
+            mLongitudeText = (String.valueOf(mLastLocation.getLongitude()));
+        }
         vibrator.vibrate(25);
-        onMapLongClick(convertStringtoLatLng("(33.777220, -84.396363)"));
+        if (!(mLongitudeText.equals(tempLong) && mLatitudeText.equals(tempLat))) {
+            onMapLongClick(convertStringtoLatLng("(" + mLatitudeText + ", " + mLongitudeText + ")"));
+        } else {
+            ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
+            Toast.makeText(getApplicationContext(), "Report already at location", Toast.LENGTH_LONG).show();
+            for (WaterSourceReport current : arrayList) {
+                if (current.getWaterLocation().equals(convertStringtoLatLng("(" + mLatitudeText + ", " + mLongitudeText + ")").toString())) {
+                    Intent intent = new Intent(this, WaterReportActivity.class);
+                    intent.putExtra(WaterSourceReport.ARG_REPORT, current);
+                    startActivity(intent);
+                    return;
+                }
+            }
+
+        }
     }
 
 
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+        if (mLastLocation != null) {
+            mLatitudeText = (String.valueOf(mLastLocation.getLatitude()));
+            mLongitudeText = (String.valueOf(mLastLocation.getLongitude()));
+        }
+    }
 
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
 }
