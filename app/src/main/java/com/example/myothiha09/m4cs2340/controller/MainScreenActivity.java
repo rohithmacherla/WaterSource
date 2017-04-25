@@ -342,6 +342,7 @@ public class MainScreenActivity extends AppCompatActivity {
             reference.child("PurityReports").addValueEventListener(purityListener);
         }
         reference.child("SourceReports").addValueEventListener(waterSourceListener);
+
         if (user.getUserType() == UserType.USER) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
         } else {

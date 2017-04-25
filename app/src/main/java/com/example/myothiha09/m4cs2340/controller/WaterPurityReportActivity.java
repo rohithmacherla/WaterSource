@@ -125,7 +125,6 @@ public class WaterPurityReportActivity extends AppCompatActivity {
             overallConditions.setSelection(report.getOverallCondition().getPosition());
             contaminantPPM_field.setText(Integer.toString(report.getContaminantPPM()));
             virusPPM_field.setText(Integer.toString(report.getVirusPPM()));
-            location.setText(chosenLocation);
         }
         //Setting the Location of the Water
         location = (EditText) findViewById(R.id.waterLocation_field);
@@ -149,7 +148,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
             waterPurityReport = new WaterPurityReport();
         }
         else {
-            waterPurityReport = model.getWaterPurityReports().get(report.getReportNumber()-1);
+            waterPurityReport = model.getWaterPurityReports().get(report.getReportNumber());
             addButton.setText("Save");
         }
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -211,7 +210,7 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                     myRef.child("Purity " + Integer.toString(model.getPurityReportNumber())).setValue(waterPurityReport);
                 } else {
                     waterPurityReport.setReportNumber(report.getReportNumber());
-                    myRef.child("Purity " + Integer.toString(model.getPurityReportNumber())).setValue(waterPurityReport);
+                    myRef.child("Purity " + Integer.toString(report.getReportNumber())).setValue(waterPurityReport);
                 }
                 if (report == null) {
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));

@@ -141,7 +141,7 @@ public class WaterReportActivity extends AppCompatActivity {
             waterSourceReport = new WaterSourceReport();
         }
         else {
-            waterSourceReport = model.getWaterSourceReports().get(report.getReportNumber()-1);
+            waterSourceReport = model.getWaterSourceReports().get(report.getReportNumber());
             addButton.setText("Save");
         }
         FirebaseDatabase database = FirebaseDatabase.getInstance();

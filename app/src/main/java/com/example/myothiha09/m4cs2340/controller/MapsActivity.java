@@ -9,6 +9,7 @@ import android.os.Vibrator;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -39,6 +40,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private User user;
     private ProgressDialog progressDialog;
     private Vibrator vibrator;
+    ArrayList<WaterPurityReport> waterPurityReports;
+    ArrayList<WaterSourceReport> waterSourceReports;
     @Override
     /*
       Do the initials setup necessary for a map activity and show instruction to users through alert..
@@ -65,6 +68,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
         alertDialog.show();
         model = Model.getInstance();
+        waterSourceReports = model.getWaterSourceReports();
+        waterPurityReports =  model.getWaterPurityReports();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -160,70 +165,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public boolean onMarkerClick(final Marker marker) {
         vibrator.vibrate(25);
+        ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
+        ArrayList<WaterPurityReport> arrayList2 = model.getWaterPurityReports();
         if (user.getUserType() == USER) {
-            Intent intent = null;
-            ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
             for (WaterSourceReport current : arrayList) {
                 if (current.getWaterLocation().equals(marker.getPosition().toString())) {
-                    intent = new Intent(this, WaterReportActivity.class);
+                    Intent intent = new Intent(this, WaterReportActivity.class);
                     intent.putExtra(WaterSourceReport.ARG_REPORT, current);
                     startActivity(intent);
                     return true;
                 }
             }
-            if (intent == null) {
-                startWaterSourceReport(marker.getPosition());
-            }
         } else {
-            final Dialog dialog = new Dialog(this);
-            dialog.setContentView(R.layout.map_report_alert_dialog);
-            dialog.setTitle("Type of Report");
-            Button sourceButton = (Button) dialog.findViewById(R.id.sourceButton);
-            Button purityButton = (Button) dialog.findViewById(R.id.purityButton);
-            Button cancelButton = (Button) dialog.findViewById(R.id.cancelButton);
-
-            sourceButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ArrayList<WaterSourceReport> arrayList = model.getWaterSourceReports();
-                    for (WaterSourceReport current : arrayList) {
-                        if (current.getWaterLocation().equals(marker.getPosition().toString())) {
-                            Intent intent = new Intent(getApplicationContext(), WaterReportActivity.class);
-                            intent.putExtra(WaterSourceReport.ARG_REPORT, current);
-                            startActivity(intent);
-                        }
-                    }
-                    dialog.dismiss();
+            Log.d("ArrayListSize", arrayList.size()+"");
+            for (WaterSourceReport current : arrayList) {
+                if (current.getWaterLocation().equals(marker.getPosition().toString())) {
+                    Intent intent = new Intent(getApplicationContext(), WaterReportActivity.class);
+                    intent.putExtra(WaterSourceReport.ARG_REPORT, current);
+                    startActivity(intent);
+                    return true;
                 }
-            });
-
-            purityButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ArrayList<WaterPurityReport> arrayList2 = model.getWaterPurityReports();
-                    Intent intent = null;
-                    for (WaterPurityReport current : arrayList2) {
-                        if (current.getWaterLocation().equals(marker.getPosition().toString())) {
-                            intent = new Intent(getApplicationContext(), WaterPurityReportActivity.class);
-                            intent.putExtra(WaterPurityReport.ARG_REPORT, current);
-                            startActivity(intent);
-                        }
-                    }
-                    if (intent == null) {
-                        startWaterPurityReport(marker.getPosition());
-                    }
-                    dialog.dismiss();
+            }
+            for (WaterPurityReport current : arrayList2) {
+                if (current.getWaterLocation().equals(marker.getPosition().toString())) {
+                    Intent intent = new Intent(getApplicationContext(), WaterPurityReportActivity.class);
+                    intent.putExtra(WaterPurityReport.ARG_REPORT, current);
+                    startActivity(intent);
+                    return true;
                 }
-            });
-
-            cancelButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    dialog.dismiss();
-                }
-            });
-            dialog.show();
-            return true;
+            }
         }
         return false;
     }
