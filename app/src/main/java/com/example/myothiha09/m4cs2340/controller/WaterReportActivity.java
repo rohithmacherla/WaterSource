@@ -175,21 +175,26 @@ public class WaterReportActivity extends AppCompatActivity {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("SourceReports");
                 final DatabaseReference countRef = database.getReference("SourceSize");
-                countRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        model.setSourceNumber(dataSnapshot.getValue(Integer.class));
-                        int reportNumber2 = model.getReportNumber();
-                        countRef.setValue(reportNumber2 + 1);
-                    }
+                if (report == null) {
+                    countRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            model.setSourceNumber(dataSnapshot.getValue(Integer.class));
+                            int reportNumber2 = model.getReportNumber();
+                            countRef.setValue(reportNumber2 + 1);
+                        }
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
 
-                    }
-                });
-                waterSourceReport.setReportNumber(model.getReportNumber());
-                myRef.child("Source " + Integer.toString(model.getReportNumber())).setValue(waterSourceReport);
+                        }
+                    });
+                    waterSourceReport.setReportNumber(model.getReportNumber());
+                    myRef.child("Source " + Integer.toString(model.getReportNumber())).setValue(waterSourceReport);
+                } else {
+                    waterSourceReport.setReportNumber(report.getReportNumber());
+                    myRef.child("Source " + Integer.toString(report.getReportNumber())).setValue(waterSourceReport);
+                }
                 if (report == null) {
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
                 }
@@ -198,9 +203,6 @@ public class WaterReportActivity extends AppCompatActivity {
 
 
         });
-
-
-
 
     }
 }

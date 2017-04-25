@@ -29,6 +29,7 @@ import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
 import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -94,6 +95,7 @@ public class MainScreenActivity extends AppCompatActivity {
         mPrefs = getSharedPreferences("WaterCrowdSource", MODE_PRIVATE);
         model = Model.getInstance();
 
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -139,6 +141,7 @@ public class MainScreenActivity extends AppCompatActivity {
         } else {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
         }
+        loadData();
 
 
 
@@ -152,6 +155,7 @@ public class MainScreenActivity extends AppCompatActivity {
                 progressDialog.setMessage("Loading...");
                 progressDialog.show();
                 if (id == R.id.nav_home_screen) {
+                    loadData();
                     if (user.getUserType() == UserType.USER) {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
                     } else {
@@ -264,6 +268,36 @@ public class MainScreenActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        loadData();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        final ArrayList<WaterPurityReport> waterPurityReports = model.getWaterPurityReports();
+        final ArrayList<WaterSourceReport> waterSourceReports = model.getWaterSourceReports();
+        waterPurityReports.clear();
+        waterSourceReports.clear();
+       /* SharedPreferences.Editor prefsEditor = mPrefs.edit();
+        Gson gson = new Gson();
+        int index = 1;
+        for (WaterSourceReport report: model.getWaterSourceReports()) {
+            String json = gson.toJson(report);
+            prefsEditor.putString("WaterSourceReport" + index++, json);
+        }
+        index = 1;
+        for (WaterPurityReport report: model.getWaterPurityReports()) {
+            String json = gson.toJson(report);
+            prefsEditor.putString("WaterPurityReport" + index++, json);
+        }
+        index = 1;
+        for (User user: User.usersList) {
+            String json = gson.toJson(user);
+            prefsEditor.putString("User" + index++, json);
+        }
+        prefsEditor.apply();*/
+    }
+    private void loadData() {
         final ArrayList<WaterPurityReport> waterPurityReports = model.getWaterPurityReports();
         final ArrayList<WaterSourceReport> waterSourceReports = model.getWaterSourceReports();
         waterPurityReports.clear();
@@ -287,54 +321,32 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         };
 
-        ValueEventListener purityListener = new ValueEventListener() {
+        if (user.getUserType() != UserType.USER) {
 
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
-                for (DataSnapshot current: iterable) {
-                    WaterPurityReport report = current.getValue(WaterPurityReport.class);
-                    waterPurityReports.add(report);
+            ValueEventListener purityListener = new ValueEventListener() {
+
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
+                    for (DataSnapshot current : iterable) {
+                        WaterPurityReport report = current.getValue(WaterPurityReport.class);
+                        waterPurityReports.add(report);
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
-        };
+                }
+            };
+            reference.child("PurityReports").addValueEventListener(purityListener);
+        }
         reference.child("SourceReports").addValueEventListener(waterSourceListener);
-        reference.child("PurityReports").addValueEventListener(purityListener);
         if (user.getUserType() == UserType.USER) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
         } else {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Reports()).commit();
         }
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-       /* SharedPreferences.Editor prefsEditor = mPrefs.edit();
-        Gson gson = new Gson();
-        int index = 1;
-        for (WaterSourceReport report: model.getWaterSourceReports()) {
-            String json = gson.toJson(report);
-            prefsEditor.putString("WaterSourceReport" + index++, json);
-        }
-        index = 1;
-        for (WaterPurityReport report: model.getWaterPurityReports()) {
-            String json = gson.toJson(report);
-            prefsEditor.putString("WaterPurityReport" + index++, json);
-        }
-        index = 1;
-        for (User user: User.usersList) {
-            String json = gson.toJson(user);
-            prefsEditor.putString("User" + index++, json);
-        }
-        prefsEditor.apply();*/
-    }
-    private void loadData() {
        /* int index = 1;
         Gson gson = new Gson();
         String json = mPrefs.getString("WaterSourceReport"+index++, "");

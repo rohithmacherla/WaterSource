@@ -190,24 +190,29 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                 DatabaseReference myRef = database.getReference("PurityReports");
                 final DatabaseReference countRef = database.getReference("PuritySize");
-                countRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        model.setPurityNumber(dataSnapshot.getValue(Integer.class));
-                        int reportNumber2 = model.getPurityReportNumber();
-                        countRef.setValue(reportNumber2 + 1);
+                if (report == null) {
+                    countRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            model.setPurityNumber(dataSnapshot.getValue(Integer.class));
+                            int reportNumber2 = model.getPurityReportNumber();
+                            countRef.setValue(reportNumber2 + 1);
  /*               int reportNumber2 = model.getPurityReportNumber();
                 waterPurityReport.setReportNumber(reportNumber2);
                 countRef.setValue(reportNumber2 + 1);*/
-                    }
+                        }
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
 
-                    }
-                });
-                waterPurityReport.setReportNumber(model.getPurityReportNumber());
-                myRef.child("Purity " + Integer.toString(model.getPurityReportNumber())).setValue(waterPurityReport);
+                        }
+                    });
+                    waterPurityReport.setReportNumber(model.getPurityReportNumber());
+                    myRef.child("Purity " + Integer.toString(model.getPurityReportNumber())).setValue(waterPurityReport);
+                } else {
+                    waterPurityReport.setReportNumber(report.getReportNumber());
+                    myRef.child("Purity " + Integer.toString(model.getPurityReportNumber())).setValue(waterPurityReport);
+                }
                 if (report == null) {
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
                 }

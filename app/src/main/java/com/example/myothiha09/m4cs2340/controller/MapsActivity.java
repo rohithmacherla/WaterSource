@@ -125,28 +125,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
         };
+        if (user.getUserType() != UserType.USER) {
 
-        ValueEventListener purityListener = new ValueEventListener() {
+            ValueEventListener purityListener = new ValueEventListener() {
 
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
-                for (DataSnapshot current: iterable) {
-                    WaterPurityReport report = current.getValue(WaterPurityReport.class);
-                    //reports.add(report);
-                    String latLongLocation = report.getWaterLocation();
-                    LatLng location = convertStringtoLatLng(latLongLocation);
-                    mMap.addMarker(new MarkerOptions().position(location));
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
+                    for (DataSnapshot current : iterable) {
+                        WaterPurityReport report = current.getValue(WaterPurityReport.class);
+                        //reports.add(report);
+                        String latLongLocation = report.getWaterLocation();
+                        LatLng location = convertStringtoLatLng(latLongLocation);
+                        mMap.addMarker(new MarkerOptions().position(location));
+                    }
                 }
-            }
 
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-            }
-        };
+                }
+            };
+            reference.child("PurityReports").addValueEventListener(purityListener);
+        }
         reference.child("SourceReports").addValueEventListener(waterSourceListener);
-        reference.child("PurityReports").addValueEventListener(purityListener);
+
     }
 
     /**
