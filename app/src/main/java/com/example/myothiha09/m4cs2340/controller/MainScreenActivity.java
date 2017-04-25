@@ -27,7 +27,16 @@ import com.example.myothiha09.m4cs2340.model.User;
 import com.example.myothiha09.m4cs2340.model.UserType;
 import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
 import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
+
+import java.util.ArrayList;
 
 // Team: 27
 
@@ -84,7 +93,6 @@ public class MainScreenActivity extends AppCompatActivity {
         }
         mPrefs = getSharedPreferences("WaterCrowdSource", MODE_PRIVATE);
         model = Model.getInstance();
-        loadData();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -256,6 +264,47 @@ public class MainScreenActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        final ArrayList<WaterPurityReport> waterPurityReports = model.getWaterPurityReports();
+        final ArrayList<WaterSourceReport> waterSourceReports = model.getWaterSourceReports();
+        waterPurityReports.clear();
+        waterSourceReports.clear();
+
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference();
+        ValueEventListener waterSourceListener = new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
+                for (DataSnapshot current: iterable) {
+                    WaterSourceReport report = current.getValue(WaterSourceReport.class);
+                    waterSourceReports.add(report);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+
+        ValueEventListener purityListener = new ValueEventListener() {
+
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Iterable<DataSnapshot> iterable = dataSnapshot.getChildren();
+                for (DataSnapshot current: iterable) {
+                    WaterPurityReport report = current.getValue(WaterPurityReport.class);
+                    waterPurityReports.add(report);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+        reference.child("SourceReports").addValueEventListener(waterSourceListener);
+        reference.child("PurityReports").addValueEventListener(purityListener);
         if (user.getUserType() == UserType.USER) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ReportFragment()).commit();
         } else {
@@ -266,7 +315,7 @@ public class MainScreenActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        SharedPreferences.Editor prefsEditor = mPrefs.edit();
+       /* SharedPreferences.Editor prefsEditor = mPrefs.edit();
         Gson gson = new Gson();
         int index = 1;
         for (WaterSourceReport report: model.getWaterSourceReports()) {
@@ -283,10 +332,10 @@ public class MainScreenActivity extends AppCompatActivity {
             String json = gson.toJson(user);
             prefsEditor.putString("User" + index++, json);
         }
-        prefsEditor.apply();
+        prefsEditor.apply();*/
     }
     private void loadData() {
-        int index = 1;
+       /* int index = 1;
         Gson gson = new Gson();
         String json = mPrefs.getString("WaterSourceReport"+index++, "");
         while (!json.equals("")) {
@@ -300,6 +349,6 @@ public class MainScreenActivity extends AppCompatActivity {
             WaterPurityReport obj = gson.fromJson(json, WaterPurityReport.class);
             model.getWaterPurityReports().add(obj);
             json = mPrefs.getString("WaterPurityReport"+index++, "");
-        }
+        }*/
     }
 }

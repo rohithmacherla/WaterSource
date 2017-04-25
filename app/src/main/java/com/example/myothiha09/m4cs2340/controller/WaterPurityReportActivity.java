@@ -24,6 +24,11 @@ import com.example.myothiha09.m4cs2340.model.WaterPurityReport;
 import com.example.myothiha09.m4cs2340.model.User;
 import com.example.myothiha09.m4cs2340.model.Model;
 import com.example.myothiha09.m4cs2340.model.WaterType;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 /**
@@ -147,6 +152,23 @@ public class WaterPurityReportActivity extends AppCompatActivity {
             waterPurityReport = model.getWaterPurityReports().get(report.getReportNumber()-1);
             addButton.setText("Save");
         }
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference countRef = database.getReference("PuritySize");
+        countRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                model.setPurityNumber(dataSnapshot.getValue(Integer.class));
+ /*               int reportNumber2 = model.getPurityReportNumber();
+                waterPurityReport.setReportNumber(reportNumber2);
+                countRef.setValue(reportNumber2 + 1);*/
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 vibrator.vibrate(25);
@@ -165,10 +187,28 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                 waterPurityReport.setContaminantPPM(Integer.parseInt(contaminantPPM_field.getText().toString()));
                 waterPurityReport.setVirusPPM(Integer.parseInt(virusPPM_field.getText().toString()));
 
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("PurityReports");
+                final DatabaseReference countRef = database.getReference("PuritySize");
+                countRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        model.setPurityNumber(dataSnapshot.getValue(Integer.class));
+                        int reportNumber2 = model.getPurityReportNumber();
+                        countRef.setValue(reportNumber2 + 1);
+ /*               int reportNumber2 = model.getPurityReportNumber();
+                waterPurityReport.setReportNumber(reportNumber2);
+                countRef.setValue(reportNumber2 + 1);*/
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+                waterPurityReport.setReportNumber(model.getPurityReportNumber());
+                myRef.child("Purity " + Integer.toString(model.getPurityReportNumber())).setValue(waterPurityReport);
                 if (report == null) {
-                    model.addWaterPurityReport(waterPurityReport);
-                    reportNumber = model.getPurityReportNumber();
-                    waterPurityReport.setReportNumber(reportNumber);
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
                 }
 
@@ -183,6 +223,8 @@ public class WaterPurityReportActivity extends AppCompatActivity {
                 DatabaseReference myRef = database.getReference("message");
 
                 myRef.setValue("Hello, World!");*/
+
+
 
                 WaterPurityReportActivity.super.onBackPressed();
             }

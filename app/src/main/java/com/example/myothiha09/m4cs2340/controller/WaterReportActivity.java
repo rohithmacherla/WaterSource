@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -24,6 +25,11 @@ import com.example.myothiha09.m4cs2340.model.WaterSourceReport;
 import com.example.myothiha09.m4cs2340.model.User;
 import com.example.myothiha09.m4cs2340.model.Model;
 import com.example.myothiha09.m4cs2340.model.WaterType;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 /**
@@ -138,6 +144,19 @@ public class WaterReportActivity extends AppCompatActivity {
             waterSourceReport = model.getWaterSourceReports().get(report.getReportNumber()-1);
             addButton.setText("Save");
         }
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference countRef = database.getReference("SourceSize");
+        countRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                model.setSourceNumber(dataSnapshot.getValue(Integer.class));
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
         addButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 vibrator.vibrate(25);
@@ -153,19 +172,27 @@ public class WaterReportActivity extends AppCompatActivity {
                 waterSourceReport.setWaterConditionW(
                         (WaterCondition) waterConditions.getSelectedItem());
 
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("SourceReports");
+                final DatabaseReference countRef = database.getReference("SourceSize");
+                countRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        model.setSourceNumber(dataSnapshot.getValue(Integer.class));
+                        int reportNumber2 = model.getReportNumber();
+                        countRef.setValue(reportNumber2 + 1);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
+                waterSourceReport.setReportNumber(model.getReportNumber());
+                myRef.child("Source " + Integer.toString(model.getReportNumber())).setValue(waterSourceReport);
                 if (report == null) {
-                    model.addWaterReport(waterSourceReport);
-                    reportNumber = model.getReportNumber();
-                    waterSourceReport.setReportNumber(reportNumber);
                     MapsActivity.addMarker(MapsActivity.convertStringtoLatLng(chosenLocation));
                 }
-
-                /*
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("Source " + Integer.toString(reportNumber));
-
-                myRef.setValue(waterSourceReport);*/
-
                 WaterReportActivity.super.onBackPressed();
             }
 
